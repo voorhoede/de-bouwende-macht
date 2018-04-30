@@ -1,0 +1,123 @@
+{
+  "stories": [
+    {
+      "slug": "erasmusbrug",
+      "title": "Erasmusbrug",
+      "questions": [
+        {
+          "question": "Er is een verbinding tussen de Noord- en Zuidoever van de Nieuwe Maas nodig",
+          "answers": [
+            {
+              "answer": "Eens",
+              "consequences": [
+                {
+                  "question": "De begroting voor de brug van Noord naar Zuid valt vele malen hoger uit",
+                  "answers": [
+                    {
+                      "answer": "Stoppen",
+                      "consequences": [
+                        {
+                          "outcome": {
+                            "ref": "erasmusbrug",
+                            "graphic": "erasmusbrug_alt"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "Doorgaan",
+                      "consequences": [
+                        {
+                          "outcome": {
+                            "ref": "erasmusbrug",
+                            "graphic": "erasmusbrug_orig"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answer": "Oneens",
+              "consequences": [
+                {
+                  "outcome": {
+                    "ref": "erasmusbrug",
+                    "graphic": "erasmusbrug_gone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cs",
+      "title": "Centraal Station",
+      "questions": [
+        {
+          "question": "Er is een nieuw centraal station nodig",
+          "answers": [
+            {
+              "answer": "Doorgaan",
+              "consequences": [
+                {
+                  "question": "Het ontwerp voor het nieuwe station komt uit op 2 miljard euro",
+                  "answers": [
+                    {
+                      "answer": "Doorgaan",
+                      "consequences": [
+                        {
+                          "outcome": {
+                            "ref": "cs",
+                            "graphic": "cs_alsop"
+                          }
+                        },
+                        {
+                          "outcome": {
+                            "ref": "calypso",
+                            "graphic": "calypso_orig"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answer": "Stoppen",
+              "consequences": [
+                {
+                  "question": "Het herontwerp van het centraal station is gepresenteerd, maar de architect van het vorige station huilt",
+                  "answers": [
+                    {
+                      "answer": "Doorgaan",
+                      "consequences": [
+                        {
+                          "outcome": {
+                            "ref": "cs",
+                            "graphic": "cs_teamcs"
+                          }
+                        },
+                        {
+                          "outcome": {
+                            "ref": "calypso",
+                            "graphic": "calypso_alsop"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
