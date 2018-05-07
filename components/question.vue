@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>
-      Welkom bij De Bouwende Macht
+      Question
     </h1>
   </section>
 </template>
