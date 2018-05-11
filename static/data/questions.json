@@ -1,0 +1,223 @@
+[
+  {
+    "id": "286192",
+    "itemType": "question",
+    "updatedAt": "2018-05-11T09:45:35.888Z",
+    "createdAt": "2018-05-11T09:45:35.876Z",
+    "answer": [
+      {
+        "id": "286190",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T09:45:35.356Z",
+        "createdAt": "2018-05-11T09:45:35.344Z",
+        "outcome": [
+          {
+            "id": "286188",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:26:41.756Z",
+            "createdAt": "2018-05-11T11:26:41.751Z",
+            "location": "Champagneglazen (Alsop)",
+            "slug": "champagne-glazen"
+          }
+        ],
+        "label": "... het allergaafste station ooit bouwen!"
+      },
+      {
+        "id": "286191",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T09:45:35.367Z",
+        "createdAt": "2018-05-11T09:45:35.353Z",
+        "outcome": [
+          {
+            "id": "286189",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:28:13.984Z",
+            "createdAt": "2018-05-11T11:28:13.977Z",
+            "location": "Centraal Station (huidig)",
+            "slug": "centraal-station"
+          },
+          {
+            "id": "286161",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:26:49.980Z",
+            "createdAt": "2018-05-11T11:26:49.973Z",
+            "location": "Calypso",
+            "slug": "calypso"
+          }
+        ],
+        "label": "... een functioneel station neerzetten dat in ieder geval binnen de begroting blijft."
+      }
+    ],
+    "question": "Een station is het visitekaartje van een moderne metropool. Daarom ga jij..."
+  },
+  {
+    "id": "286194",
+    "itemType": "question",
+    "updatedAt": "2018-05-11T11:30:17.413Z",
+    "createdAt": "2018-05-11T11:30:17.399Z",
+    "answer": [
+      {
+        "id": "286193",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:30:16.890Z",
+        "createdAt": "2018-05-11T11:30:16.883Z",
+        "outcome": [
+          {
+            "id": "286188",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:26:41.756Z",
+            "createdAt": "2018-05-11T11:26:41.751Z",
+            "location": "Champagneglazen (Alsop)",
+            "slug": "champagne-glazen"
+          }
+        ],
+        "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
+      },
+      {
+        "id": "286275",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:30:16.956Z",
+        "createdAt": "2018-05-11T11:30:16.956Z",
+        "outcome": [
+          {
+            "id": "286189",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:28:13.984Z",
+            "createdAt": "2018-05-11T11:28:13.977Z",
+            "location": "Centraal Station (huidig)",
+            "slug": "centraal-station"
+          },
+          {
+            "id": "286161",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:26:49.980Z",
+            "createdAt": "2018-05-11T11:26:49.973Z",
+            "location": "Calypso",
+            "slug": "calypso"
+          }
+        ],
+        "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
+      }
+    ],
+    "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
+  },
+  {
+    "id": "286282",
+    "itemType": "question",
+    "updatedAt": "2018-05-11T11:35:10.900Z",
+    "createdAt": "2018-05-11T11:35:10.900Z",
+    "answer": [
+      {
+        "id": "286281",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:35:10.261Z",
+        "createdAt": "2018-05-11T11:35:10.261Z",
+        "outcome": [
+          {
+            "id": "286276",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:32:19.659Z",
+            "createdAt": "2018-05-11T11:32:19.659Z",
+            "location": "Brug door Struijs",
+            "slug": "brug-door-Struijs"
+          }
+        ],
+        "label": "Ik ontwerp een brug die wel binnen het budget past."
+      },
+      {
+        "id": "286280",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:35:10.223Z",
+        "createdAt": "2018-05-11T11:35:10.223Z",
+        "outcome": [
+          {
+            "id": "286278",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:34:29.995Z",
+            "createdAt": "2018-05-11T11:34:29.995Z",
+            "location": "Erasmusbrug",
+            "slug": "erasmusbrug"
+          }
+        ],
+        "label": "Ik maak een afspraak bij de minister en vraag om meer geld."
+      },
+      {
+        "id": "286279",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:35:10.214Z",
+        "createdAt": "2018-05-11T11:35:10.214Z",
+        "outcome": [],
+        "label": "Ik blaas de plannen af. De bestaande brug moet maar volstaan."
+      }
+    ],
+    "question": "Er moet een brug van noord naar zuid komen. Dat is te duur voor de gemeente. Wat doe je? "
+  },
+  {
+    "id": "286286",
+    "itemType": "question",
+    "updatedAt": "2018-05-11T11:37:16.122Z",
+    "createdAt": "2018-05-11T11:37:16.122Z",
+    "answer": [
+      {
+        "id": "286284",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:37:15.611Z",
+        "createdAt": "2018-05-11T11:37:15.611Z",
+        "outcome": [],
+        "label": "De Blaak heeft al een logisch én historisch middelpunt: de Laurenskerk. Dat gaat mijn ontwerp benadrukken."
+      },
+      {
+        "id": "286285",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:37:15.639Z",
+        "createdAt": "2018-05-11T11:37:15.639Z",
+        "outcome": [
+          {
+            "id": "286283",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:37:10.108Z",
+            "createdAt": "2018-05-11T11:37:10.108Z",
+            "location": "Markthal",
+            "slug": "markthal"
+          }
+        ],
+        "label": "Mijn ontwerp wordt groot, groter, grootst en bundelt wonen, parkeren en kopen in één iconisch gebouw."
+      }
+    ],
+    "question": "Om de Blaak te verlevendigen, komt er een prijsvraag met als onderwerp ‘de stad als metabolisme’. Daarin strooit men kwistig met begrippen als ‘interactiemilieu’ en ‘fijnmazige functieverstrengeling’. Wat doe je?"
+  },
+  {
+    "id": "286289",
+    "itemType": "question",
+    "updatedAt": "2018-05-11T11:38:41.472Z",
+    "createdAt": "2018-05-11T11:38:41.472Z",
+    "answer": [
+      {
+        "id": "286287",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:38:40.945Z",
+        "createdAt": "2018-05-11T11:38:40.945Z",
+        "outcome": [
+          {
+            "id": "286283",
+            "itemType": "location",
+            "updatedAt": "2018-05-11T11:37:10.108Z",
+            "createdAt": "2018-05-11T11:37:10.108Z",
+            "location": "Markthal",
+            "slug": "markthal"
+          }
+        ],
+        "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+      },
+      {
+        "id": "286288",
+        "itemType": "answer",
+        "updatedAt": "2018-05-11T11:38:40.967Z",
+        "createdAt": "2018-05-11T11:38:40.967Z",
+        "outcome": [],
+        "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+      }
+    ],
+    "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+  }
+]
