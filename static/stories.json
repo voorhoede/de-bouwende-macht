@@ -1,1 +1,100 @@
-{"stories":[{"slug":"erasmusbrug","title":"Erasmusbrug","scenario":{"question":"Er is een verbinding tussen de Noord- en Zuidoever van de Nieuwe Maas\nnodig","answers":[{"answer":"Eens","consequences":[{"question":"De begroting voor de brug van Noord naar Zuid valt vele malen hoger\nuit","answers":[{"answer":"Stoppen","consequences":[{"outcome":{"ref":"erasmusbrug","graphic":"erasmusbrug_alt"}}]},{"answer":"Doorgaan","consequences":[{"outcome":{"ref":"erasmusbrug","graphic":"erasmusbrug_orig"}}]}]}]},{"answer":"Oneens","consequences":[{"outcome":{"ref":"erasmusbrug","graphic":"erasmusbrug_gone"}}]}]}},{"slug":"cs","title":"Centraal Station","scenario":{"question":"Er is een nieuw centraal station nodig","answers":[{"answer":"Doorgaan","consequences":[{"question":"Het ontwerp voor het nieuwe station komt uit op 2 miljard euro","answers":[{"answer":"Doorgaan","consequences":[{"outcome":{"ref":"cs","graphic":"cs_alsop"}},{"outcome":{"ref":"calypso","graphic":"calypso_orig"}}]}]}]},{"answer":"Stoppen","consequences":[{"question":"Het herontwerp van het centraal station is gepresenteerd, maar de\narchitect van het vorige station huilt","answers":[{"answer":"Doorgaan","consequences":[{"outcome":{"ref":"cs","graphic":"cs_teamcs"}},{"outcome":{"ref":"calypso","graphic":"calypso_alsop"}}]}]}]}]}}]}
+[
+  {
+    "slug": "cs",
+    "title": "Centraal Station",
+    "question": {
+      "question": "Een station is het visitekaartje van een moderne metropool. Daarom ga jij…",
+      "answers": [
+        {
+          "answer": "… het allergaafste station ooit bouwen!",
+          "outcome": {
+            "question": {
+              "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?",
+              "answers": [
+                {
+                  "answer": "Ik organiseer inspraakavonden om het protest onder de duim te houden.",
+                  "outcome": {
+                    "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+                    "locations": ["alsop-station"]
+                  }
+                },
+                {
+                  "answer": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden.",
+                  "outcome": {
+                    "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
+                    "locations": ["calypso", "current-station"]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "answer": "… een functioneel station neerzetten dat in ieder geval binnen begroting blijft.",
+          "outcome": {
+            "feedback": "De architect die had gerekend op het allergaafste station ooit, is niet blij. Je moet hem een andere opdracht geven.",
+            "locations": ["calypso", "current-station"]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "slug": "",
+    "title": "Erasmusbrug",
+    "question": {
+      "question": "Er moet een brug van noord naar zuid komen. Dat is te duur voor de gemeente. Wat doe je?",
+      "answers": [
+        {
+          "answer": "Ik ontwerp een brug die wel binnen het budget past.",
+          "outcome": {
+            "locations": ["struijs"],
+            "question":{ 
+              "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?",
+              "answers": [
+                {
+                  "answer": "Nu mag de markt het overnemen. Het geld is op.",
+                  "outcome": {}
+                },
+                {
+                  "answer": "Ik bezuinig elders en gebruik dat geld om te gaan bouwen.",
+                  "outcome": {
+                    "locations": ["hotel-new-york", "luxor", "de-rotterdam"]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "answer": "Ik maak een afspraak bij de minister en vraag om meer geld.",
+          "outcome": {
+            "locations": ["erasmusbrug"],
+            "question":{ 
+              "question": "Gefeliciteerd! Dat ging goed. En nu?",
+              "answers": [
+                {
+                  "answer": "Nu mag de markt het overnemen. Het geld is op.",
+                  "outcome": {}
+                },
+                {
+                  "answer": "Ik bezuinig elders en gebruik dat geld om te gaan bouwen.",
+                  "outcome": {
+                    "locations": ["hotel-new-york", "luxor", "de-rotterdam"]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "answer": "Ik blaas de plannen af. De bestaande brug moet maar volstaan.",
+          "outcome": {
+            "locations": ["hotel-new-york"]
+          }
+
+        }
+      ]
+    }
+  }
+]

@@ -1,33 +1,50 @@
 import Vuex from 'vuex'
 import stories from '~/static/stories.json'
 
-const createStore = () => {
-  return new Vuex.Store({
-    state: {
-      currentQuestion: {},
-      questions: stories.stories.map(story => story.scenario),
-      importantQuestions: [],
-      questionsCount: 0,
-    },
-    mutations: {
-     increment (state) {
-       state.questionsCount++
-     },
-     nextQuestion (state) {
-      if ((state.questionsCount % 4) === 0) {
-        return state.currentQuestion = state.importantQuestions.shift()
-      }
-      
-      if (!state.questions.length) {
-        return alert('No more questions!')
-      }
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
-      state.currentQuestion = state.questions.shift()
-     },
-     insertQuestion (state, payload) {
-        console.log(payload)
-        state.questions.push(payload)
-     }
+const createStore = () => {
+  const initialState = {
+    currentQuestion: {},
+    questions: shuffle(stories),
+    importantQuestions: [],
+    questionsCount: 0,
+    currentScenario: [],
+    gameEnded: false,
+  }
+
+  return new Vuex.Store({
+    state: initialState,
+    mutations: {
+      increment (state) {
+       state.questionsCount++
+      },
+
+      nextQuestion (state) {
+        if (!state.questions.length) {
+          return state.gameEnded = true
+        }
+        const nextQuestion = state.questions.shift()
+        state.currentQuestion = nextQuestion.question
+      },
+
+      updateCity (state, payload) {
+        state.currentScenario.push(...payload)
+      },
+
+      addFollowUpQuestion (state, payload) {
+        state.currentQuestion = payload
+      },
+
+      endGame (state) {
+        state.gameEnded = true
+      }
     }
   })
 }
