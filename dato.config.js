@@ -10,7 +10,7 @@ module.exports = (dato, root) => {
 function mapCollection(collection) {
   return collection.reduce((acc, item) => {
     const mappedData = [item.toMap(10)].map(removeMetaData)
-    acc.push(mappedData)
+    acc.push(...mappedData)
     return acc
   }, []);
 }
@@ -28,5 +28,7 @@ function removeMetaData (item) {
       }
     })
   }
+  // const obj = {}
+  // obj[item.itemType] = item
   return item
 }
