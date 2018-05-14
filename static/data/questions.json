@@ -1,300 +1,421 @@
 [
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "answers": [
-                {
-                  "outcome": [
-                    {
-                      "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
-                      "slug": "champagneglazen",
-                      "title": "Champageglazen"
-                    }
-                  ],
-                  "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
-                },
-                {
-                  "outcome": [
-                    {
-                      "feedback": "",
-                      "slug": "calypso",
-                      "title": "Calypso"
-                    },
-                    {
-                      "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
-                      "slug": "cs",
-                      "title": "Centraal Station"
-                    }
-                  ],
-                  "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
-                }
-              ],
-              "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
-            },
-            {
-              "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
-              "slug": "champagneglazen",
-              "title": "Champageglazen"
-            }
-          ],
-          "label": "... het allergaafste station ooit bouwen!"
-        },
-        {
-          "outcome": [
-            {
-              "feedback": "",
-              "slug": "calypso",
-              "title": "Calypso"
-            },
-            {
-              "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
-              "slug": "cs",
-              "title": "Centraal Station"
-            }
-          ],
-          "label": "... een functioneel station neerzetten dat in ieder geval binnen de begroting blijft."
-        }
-      ],
-      "question": "Een station is het visitekaartje van een moderne metropool. Daarom ga jij..."
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
-              "slug": "champagneglazen",
-              "title": "Champageglazen"
-            }
-          ],
-          "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
-        },
-        {
-          "outcome": [
-            {
-              "feedback": "",
-              "slug": "calypso",
-              "title": "Calypso"
-            },
-            {
-              "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
-              "slug": "cs",
-              "title": "Centraal Station"
-            }
-          ],
-          "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
-        }
-      ],
-      "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "feedback": "",
-              "slug": "struijs",
-              "title": "Struijs"
-            },
-            {
-              "answers": [
-                {
-                  "outcome": [
-                    {
-                      "feedback": null,
-                      "slug": "hotel-new-york",
-                      "title": "Hotel New York"
-                    }
-                  ],
-                  "label": "Nu mag de markt het overnemen. Het geld is op."
-                },
-                {
-                  "outcome": [
-                    {
-                      "feedback": null,
-                      "slug": "kop-van-zuid",
-                      "title": "Kop van Zuid"
-                    }
-                  ],
-                  "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
-                }
-              ],
-              "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
-            }
-          ],
-          "label": "Ik ontwerp een brug die wel binnen het budget past."
-        },
-        {
-          "outcome": [
-            {
-              "feedback": null,
-              "slug": "erasmusbrug",
-              "title": "Erasmusbrug"
-            },
-            {
-              "answers": [
-                {
-                  "outcome": [
-                    {
-                      "feedback": null,
-                      "slug": "hotel-new-york",
-                      "title": "Hotel New York"
-                    }
-                  ],
-                  "label": "Nu mag de markt het overnemen. Het geld is op."
-                },
-                {
-                  "outcome": [
-                    {
-                      "feedback": null,
-                      "slug": "kop-van-zuid",
-                      "title": "Kop van Zuid"
-                    }
-                  ],
-                  "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
-                }
-              ],
-              "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
-            }
-          ],
-          "label": "Ik maak een afspraak bij de minister en vraag om meer geld."
-        },
-        {
-          "outcome": [
-            {
-              "feedback": null,
-              "slug": "hotel-new-york",
-              "title": "Hotel New York"
-            }
-          ],
-          "label": "Ik blaas de plannen af. De bestaande brug moet maar volstaan."
-        }
-      ],
-      "question": "Er moet een brug van noord naar zuid komen. Dat is te duur voor de gemeente. Wat doe je? "
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "feedback": null,
-              "slug": "oude-blaak",
-              "title": "Oude Blaak"
-            }
-          ],
-          "label": "De Blaak heeft al een logisch én historisch middelpunt: de Laurenskerk. Dat gaat mijn ontwerp benadrukken."
-        },
-        {
-          "outcome": [
-            {
-              "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
-              "slug": "markthal",
-              "title": "Markthal"
-            }
-          ],
-          "label": "Mijn ontwerp wordt groot, groter, grootst en bundelt wonen, parkeren en kopen in één iconisch gebouw."
-        }
-      ],
-      "question": "Om de Blaak te verlevendigen, komt er een prijsvraag met als onderwerp ‘de stad als metabolisme’. Daarin strooit men kwistig met begrippen als ‘interactiemilieu’ en ‘fijnmazige functieverstrengeling’. Wat doe je?"
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
-              "slug": "markthal",
-              "title": "Markthal"
-            }
-          ],
-          "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
-        },
-        {
-          "outcome": [
-            {
-              "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat.",
-              "slug": "kale-parkeergarage",
-              "title": "Kale parkeergarage"
-            }
-          ],
-          "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
-        }
-      ],
-      "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "feedback": null,
-              "slug": "hotel-new-york",
-              "title": "Hotel New York"
-            }
-          ],
-          "label": "Nu mag de markt het overnemen. Het geld is op."
-        },
-        {
-          "outcome": [
-            {
-              "feedback": null,
-              "slug": "kop-van-zuid",
-              "title": "Kop van Zuid"
-            }
-          ],
-          "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
-        }
-      ],
-      "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [
-            {
-              "feedback": "",
-              "slug": "zalmhaventoren",
-              "title": "Zalmhaventoren"
-            }
-          ],
-          "label": "We zijn hier niet voor niets Manhattan aan de Maas. De hoogte in!"
-        },
-        {
-          "outcome": [],
-          "label": "Ik stort me op het opknappen van de bestaande (sociale) woningbouwvoorraad en ik begin op Zuid."
-        }
-      ],
-      "question": "Help, we zijn populair! Meer en meer mensen willen in Rotterdam wonen. Je móet bouwen. Wat doe je eerst?"
-    }
-  ],
-  [
-    {
-      "answers": [
-        {
-          "outcome": [],
-          "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
-        },
-        {
-          "outcome": [],
-          "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
-        }
-      ],
-      "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
-    }
-  ]
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+            "slug": "markthal",
+            "title": "Markthal"
+          }
+        ],
+        "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+      },
+      {
+        "outcome": [
+          {
+            "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat.",
+            "slug": "kale-parkeergarage",
+            "title": "Kale parkeergarage"
+          }
+        ],
+        "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+      }
+    ],
+    "followUp": true,
+    "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": null,
+            "slug": "hotel-new-york",
+            "title": "Hotel New York"
+          }
+        ],
+        "label": "Nu mag de markt het overnemen. Het geld is op."
+      },
+      {
+        "outcome": [
+          {
+            "feedback": null,
+            "slug": "kop-van-zuid",
+            "title": "Kop van Zuid"
+          }
+        ],
+        "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
+      }
+    ],
+    "followUp": true,
+    "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+            "slug": "champagneglazen",
+            "title": "Champageglazen"
+          }
+        ],
+        "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
+      },
+      {
+        "outcome": [
+          {
+            "feedback": "",
+            "slug": "calypso",
+            "title": "Calypso"
+          },
+          {
+            "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
+            "slug": "cs",
+            "title": "Centraal Station"
+          }
+        ],
+        "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
+      }
+    ],
+    "followUp": true,
+    "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [],
+        "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+      },
+      {
+        "outcome": [],
+        "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+      },
+      {
+        "outcome": [],
+        "label": "Tja, dat mag de wethouder oplossen."
+      }
+    ],
+    "followUp": true,
+    "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": "",
+            "slug": "zalmhaventoren",
+            "title": "Zalmhaventoren"
+          }
+        ],
+        "label": "We zijn hier niet voor niets Manhattan aan de Maas. De hoogte in!"
+      },
+      {
+        "outcome": [],
+        "label": "Ik stort me op het opknappen van de bestaande (sociale) woningbouwvoorraad en ik begin op Zuid."
+      }
+    ],
+    "followUp": null,
+    "question": "Help, we zijn populair! Meer en meer mensen willen in Rotterdam wonen. Je móet bouwen. Wat doe je eerst?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": "",
+            "slug": "struijs",
+            "title": "Struijs"
+          },
+          {
+            "answers": [
+              {
+                "outcome": [
+                  {
+                    "feedback": null,
+                    "slug": "hotel-new-york",
+                    "title": "Hotel New York"
+                  }
+                ],
+                "label": "Nu mag de markt het overnemen. Het geld is op."
+              },
+              {
+                "outcome": [
+                  {
+                    "feedback": null,
+                    "slug": "kop-van-zuid",
+                    "title": "Kop van Zuid"
+                  }
+                ],
+                "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
+              }
+            ],
+            "followUp": true,
+            "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+          }
+        ],
+        "label": "Ik ontwerp een brug die wel binnen het budget past."
+      },
+      {
+        "outcome": [
+          {
+            "feedback": null,
+            "slug": "erasmusbrug",
+            "title": "Erasmusbrug"
+          },
+          {
+            "answers": [
+              {
+                "outcome": [
+                  {
+                    "feedback": null,
+                    "slug": "hotel-new-york",
+                    "title": "Hotel New York"
+                  }
+                ],
+                "label": "Nu mag de markt het overnemen. Het geld is op."
+              },
+              {
+                "outcome": [
+                  {
+                    "feedback": null,
+                    "slug": "kop-van-zuid",
+                    "title": "Kop van Zuid"
+                  }
+                ],
+                "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
+              }
+            ],
+            "followUp": true,
+            "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+          }
+        ],
+        "label": "Ik maak een afspraak bij de minister en vraag om meer geld."
+      },
+      {
+        "outcome": [
+          {
+            "feedback": null,
+            "slug": "hotel-new-york",
+            "title": "Hotel New York"
+          }
+        ],
+        "label": "Ik blaas de plannen af. De bestaande brug moet maar volstaan."
+      }
+    ],
+    "followUp": null,
+    "question": "Er moet een brug van noord naar zuid komen. Dat is te duur voor de gemeente. Wat doe je? "
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": null,
+            "slug": "oude-blaak",
+            "title": "Oude Blaak"
+          }
+        ],
+        "label": "De Blaak heeft al een logisch én historisch middelpunt: de Laurenskerk. Dat gaat mijn ontwerp benadrukken."
+      },
+      {
+        "outcome": [
+          {
+            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+            "slug": "markthal",
+            "title": "Markthal"
+          }
+        ],
+        "label": "Mijn ontwerp wordt groot, groter, grootst en bundelt wonen, parkeren en kopen in één iconisch gebouw."
+      }
+    ],
+    "followUp": null,
+    "question": "Om de Blaak te verlevendigen, komt er een prijsvraag met als onderwerp ‘de stad als metabolisme’. Daarin strooit men kwistig met begrippen als ‘interactiemilieu’ en ‘fijnmazige functieverstrengeling’. Wat doe je?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [],
+        "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
+      },
+      {
+        "outcome": [],
+        "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
+      }
+    ],
+    "followUp": null,
+    "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "feedback": null,
+            "slug": "generieke-flatgebouwen",
+            "title": "Generieke flatgebouwen"
+          }
+        ],
+        "label": "Ik gooi alles plat en plemp het helemaal vol met woningen, want de nood is hoog."
+      },
+      {
+        "outcome": [],
+        "label": "Experimenteren maar! In de bestaande gebouwen zet ik vol in op innovatieve maakindustrie: werkgelegenheid voor alles."
+      }
+    ],
+    "followUp": null,
+    "question": "De haven verhuist richting de Noordzee. Wat doe je met al die ruimte in Merwe-Vierhavens?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [],
+        "label": "Joh, die functies vinden wel een nieuwe plek. Gewoon bouwen!"
+      },
+      {
+        "outcome": [],
+        "label": "We gaan geen voetbalverenigingen afpakken van mensen. Houden!"
+      },
+      {
+        "outcome": [],
+        "label": "We vragen een bekende architect om in een innovatief ontwerp beide problemen in één klap op te lossen. Iedereen gelukkig!"
+      }
+    ],
+    "followUp": null,
+    "question": "De luchtkwaliteit is slecht, milieuorganisaties slaan alarm. Ambtenaren stellen voor een bypass aan te leggen die het ringverkeer om de stad leidt. Probleem: hier staan volkstuincomplexen, voetbalverenigingen en scholen in de weg."
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "answers": [
+              {
+                "outcome": [],
+                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+              },
+              {
+                "outcome": [],
+                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+              },
+              {
+                "outcome": [],
+                "label": "Tja, dat mag de wethouder oplossen."
+              }
+            ],
+            "followUp": true,
+            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+          }
+        ],
+        "label": "Nee. We zijn een bouwbedrijf, geen liefdadigheidsinstelling. Na jaren crisis maken we eindelijk weer winst."
+      },
+      {
+        "outcome": [
+          {
+            "answers": [
+              {
+                "outcome": [],
+                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+              },
+              {
+                "outcome": [],
+                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+              },
+              {
+                "outcome": [],
+                "label": "Tja, dat mag de wethouder oplossen."
+              }
+            ],
+            "followUp": true,
+            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+          }
+        ],
+        "label": "Ja. We bouwen toch die woningen met lagere huur, ook al verdienen we er dan veel minder mee. We hebben per slot van rekening ook een maatschappelijke verantwoordelijkheid."
+      }
+    ],
+    "followUp": null,
+    "question": "Kansen op Katendrecht, die zie jij. Je koopt verloederde gebouwen op voor renovatie of herbouw. Ondertussen trekt de economie flink aan en kun je veel meer verdienen aan je gebouwen door de huurprijs omhoog te gooien. Dat betekent wel dat de oorspronkelijke bewoners die niet meer kunnen betalen. Vind je dat een probleem?"
+  },
+  {
+    "answers": [
+      {
+        "outcome": [
+          {
+            "answers": [
+              {
+                "outcome": [
+                  {
+                    "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+                    "slug": "champagneglazen",
+                    "title": "Champageglazen"
+                  }
+                ],
+                "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
+              },
+              {
+                "outcome": [
+                  {
+                    "feedback": "",
+                    "slug": "calypso",
+                    "title": "Calypso"
+                  },
+                  {
+                    "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
+                    "slug": "cs",
+                    "title": "Centraal Station"
+                  }
+                ],
+                "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
+              }
+            ],
+            "followUp": true,
+            "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
+          },
+          {
+            "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+            "slug": "champagneglazen",
+            "title": "Champageglazen"
+          }
+        ],
+        "label": "... het allergaafste station ooit bouwen!"
+      },
+      {
+        "outcome": [
+          {
+            "feedback": "",
+            "slug": "calypso",
+            "title": "Calypso"
+          },
+          {
+            "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
+            "slug": "cs",
+            "title": "Centraal Station"
+          }
+        ],
+        "label": "... een functioneel station neerzetten dat in ieder geval binnen de begroting blijft."
+      }
+    ],
+    "followUp": null,
+    "question": "Een station is het visitekaartje van een moderne metropool. Daarom ga jij..."
+  },
+  {
+    "answers": [
+      {
+        "outcome": [],
+        "label": "Ik ga voor een derde-oeververbinding en herhaal zo het Erasmusbrug-KopvanZuid-kunstje. Zeker weten dat ontwikkelaars en investeerders daarna aanhaken"
+      },
+      {
+        "outcome": [],
+        "label": "We zetten groots in en gaan voor een allesomvattende gebiedsontwikkeling rondom het hart van Zuid."
+      },
+      {
+        "outcome": [],
+        "label": null
+      }
+    ],
+    "followUp": null,
+    "question": "Op de Noordoever is het leven mooi, maar op Zuid is het nog vaak armoe troef. Wat is je eerste zet om dat via ruimtelijke ontwikkeling te veranderen?"
+  }
 ]

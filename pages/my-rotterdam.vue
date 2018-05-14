@@ -2,19 +2,9 @@
   <section class="container">
     <h1>Mijn Rotterdam</h1>
     <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
-    <button @click="$store.commit('nextQuestion')">Start Game</button>
+    <button @click="startGame()">Start Game</button>
     
-    <div v-if="gameEnded">
-      <h2>Congratulations! This is your Rotterdam:</h2>
-      <div>
-        <h3>Current scenario:</h3>
-        <div class="current-scenario" v-if="currentScenario">
-          <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
-        </div>
-      </div>
-      <button>Share</button>
-    </div>
-    <div v-else >
+     <div v-if="gameStarted">
       <div>
         <h2>Current scenario:</h2>
         <div class="current-scenario" v-if="currentScenario">
@@ -25,7 +15,7 @@
       <h2>Question:</h2>
       <div v-if="currentQuestion">
         <p class="current-question">{{ currentQuestion.question }}</p>
-        <button class="answers" v-for="(answer, index) in currentQuestion.answers" @click="handleAnswer(answer)" :key="index">{{ answer.answer }}</button>
+        <button class="answers" v-for="(answer, index) in currentQuestion.answers" @click="handleAnswer(answer)" :key="index">{{ answer.label }}</button>
       </div>
 
       <div class="feedback" v-if="answerFeedback">{{ answerFeedback }}</div>
@@ -33,6 +23,17 @@
       <p>Questions answered: {{ questionsCount }}</p>
 
       <button @click="$store.commit('endGame')">Ready</button>
+    </div>
+
+    <div v-else>
+      <h2>Congratulations! This is your Rotterdam:</h2>
+      <div>
+        <h3>Current scenario:</h3>
+        <div class="current-scenario" v-if="currentScenario">
+          <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
+        </div>
+      </div>
+      <button>Share</button>
     </div>
   </section>
 </template>
@@ -51,27 +52,31 @@ export default {
     questionsCount: state => state.questionsCount,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
-    gameEnded: state => state.gameEnded
+    gameStarted: state => state.gameStarted
   }),
   methods: {
+    startGame () {
+      this.$store.commit('startGame')
+      this.$store.commit('nextQuestion')
+    },
+
     handleAnswer({ outcome }) {
       const store = this.$store
-      
+  
       store.commit('increment')
 
-      if (outcome.locations) {
-        store.commit('updateCity', outcome.locations)
-      }
+      outcome.map(item => {
+        if (item.question) {
+          store.commit('followUpQuestion', item)
+        } else {
+          store.commit('nextQuestion')
+        }
 
-      if (outcome.feedback) {
-        this.answerFeedback = outcome.feedback
-      }
-
-      if (outcome.question) {
-        store.commit('addFollowUpQuestion', outcome.question)
-      } else {
-        store.commit('nextQuestion')
-      }
+        if (item.title) {
+          store.commit('updateCity', item.slug)
+          this.answerFeedback = item.feedback
+        }
+      })
     }
   }
 }
@@ -113,7 +118,7 @@ button:hover {
 
 .answers {
   padding: .5rem 1rem;
-  background-color: #ffdddd;
+  background-color: #fff;
   width: 100%;
 }
 
