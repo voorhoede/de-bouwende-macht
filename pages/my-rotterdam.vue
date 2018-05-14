@@ -4,52 +4,33 @@
     <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
     <button @click="startGame()">Start Game</button>
     
-     <div v-if="gameStarted">
-      <div>
-        <h2>Current scenario:</h2>
-        <div class="current-scenario" v-if="currentScenario">
-          <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
-        </div>
+    <div>
+      <h2>Current scenario:</h2>
+      <div class="current-scenario" v-if="currentScenario">
+        <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
       </div>
-
-      <h2>Question:</h2>
-      <div v-if="currentQuestion">
-        <p class="current-question">{{ currentQuestion.question }}</p>
-        <button class="answers" v-for="(answer, index) in currentQuestion.answers" @click="handleAnswer(answer)" :key="index">{{ answer.label }}</button>
-      </div>
-
-      <div class="feedback" v-if="answerFeedback">{{ answerFeedback }}</div>
-
-      <p>Questions answered: {{ questionsCount }}</p>
-
-      <button @click="$store.commit('endGame')">Ready</button>
     </div>
 
-    <div v-else>
-      <h2>Congratulations! This is your Rotterdam:</h2>
-      <div>
-        <h3>Current scenario:</h3>
-        <div class="current-scenario" v-if="currentScenario">
-          <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
-        </div>
-      </div>
-      <button>Share</button>
-    </div>
+    <transition name="slideIn">
+      <question-dialog v-if="showQuestionDialog" :currentQuestion="currentQuestion" :answerFeedback="answerFeedback" @onAnswer="handleAnswer" />
+    </transition>
   </section>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import QuestionDialog from '~/components/QuestionDialog.vue'
 
 export default {
+  components: { QuestionDialog },
   data () {
     return {
       answerFeedback: null,
+      showQuestionDialog: false
     }
   },
   computed: mapState({
     questions: state => state.questions,
-    questionsCount: state => state.questionsCount,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
     gameStarted: state => state.gameStarted
@@ -58,31 +39,39 @@ export default {
     startGame () {
       this.$store.commit('startGame')
       this.$store.commit('nextQuestion')
+
+      this.toggleDialog()
     },
 
-    handleAnswer({ outcome }) {
+    handleAnswer(answer) {
       const store = this.$store
   
       store.commit('increment')
 
-      outcome.map(item => {
-        if (item.question) {
-          store.commit('followUpQuestion', item)
-        } else {
-          store.commit('nextQuestion')
-        }
+      if (!answer.outcome.question) {
+        store.commit('nextQuestion')
+      }
 
+      answer.outcome.map(item => {
         if (item.title) {
           store.commit('updateCity', item.slug)
           this.answerFeedback = item.feedback
         }
+
+        if (item.question) {
+          store.commit('followUpQuestion', item)
+        } 
       })
+    },
+
+    toggleDialog () {
+      this.showQuestionDialog = !this.showQuestionDialog
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   text-align: center;
   max-width: 600px;
@@ -108,18 +97,8 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-.current-question {
-  margin-bottom: 2rem;
-}
-
 .current-scenario {
   margin-bottom: 2rem;
-}
-
-.answers {
-  padding: .5rem 1rem;
-  background-color: #fff;
-  width: 100%;
 }
 
 .feedback {
