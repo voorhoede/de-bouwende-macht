@@ -11,6 +11,8 @@
       </div>
     </div>
 
+    <ready-button v-if="questionsCount > 3" />
+
     <transition name="slideIn">
       <question-dialog v-if="showQuestionDialog" :currentQuestion="currentQuestion" :answerFeedback="answerFeedback" @onAnswer="handleAnswer" />
     </transition>
@@ -20,9 +22,10 @@
 <script>
 import { mapState } from 'vuex'
 import QuestionDialog from '~/components/QuestionDialog.vue'
+import ReadyButton from '~/components/ReadyButton.vue'
 
 export default {
-  components: { QuestionDialog },
+  components: { QuestionDialog, ReadyButton },
   data () {
     return {
       answerFeedback: null,
@@ -31,6 +34,7 @@ export default {
   },
   computed: mapState({
     questions: state => state.questions,
+    questionsCount: state => state.questionsCount,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
     gameStarted: state => state.gameStarted
