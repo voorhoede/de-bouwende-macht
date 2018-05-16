@@ -33,7 +33,7 @@
           <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
         </div>
       </div>
-      <button>Share</button>
+      <nuxt-link to="/share-my-rotterdam">Share my Rotterdam</nuxt-link>
     </div>
   </section>
 </template>
@@ -78,7 +78,11 @@ export default {
         }
       })
     }
-  }
+  },
+  transition(to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  },
 }
 </script>
 
