@@ -3,7 +3,8 @@ const dataDir = `static/data/`
 module.exports = (dato, root) => {
   root.directory(dataDir, dir => {
     const questions = dato.collectionsByType.questions
-    dir.createDataFile('questions.json', 'json', mapCollection(questions))
+    const mainQuestions = questions.filter(question => !question.followUp)
+    dir.createDataFile('questions.json', 'json', mapCollection(mainQuestions))
   })
 }
 
@@ -16,7 +17,7 @@ function mapCollection(collection) {
 }
 
 function removeMetaData (item) {
-  ['id', 'itemType', 'createdAt', 'updatedAt'].forEach(prop => {
+  ['id', 'createdAt', 'updatedAt'].forEach(prop => {
     delete item[prop]
   })
   if (typeof item === 'object') {
@@ -28,7 +29,5 @@ function removeMetaData (item) {
       }
     })
   }
-  // const obj = {}
-  // obj[item.itemType] = item
   return item
 }

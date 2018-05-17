@@ -1,152 +1,183 @@
 [
   {
-    "answers": [
+    "itemType": "question",
+    "position": 9,
+    "children": [
       {
-        "outcome": [
+        "itemType": "question",
+        "position": 0,
+        "children": [],
+        "answers": [
           {
-            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
-            "slug": "markthal",
-            "title": "Markthal"
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "champagneglazen",
+                "title": "Champagneglazen"
+              }
+            ],
+            "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": "De architect die had gerekend op het allergaafste station ooit, is niet blij. Je moet hem een andere opdracht geven.",
+                "slug": "calypso",
+                "title": "Calypso"
+              }
+            ],
+            "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
           }
         ],
-        "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
-      },
-      {
-        "outcome": [
-          {
-            "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat.",
-            "slug": "kale-parkeergarage",
-            "title": "Kale parkeergarage"
-          }
-        ],
-        "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+        "followUp": true,
+        "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
       }
     ],
-    "followUp": true,
-    "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
-  },
-  {
     "answers": [
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "result",
             "feedback": null,
-            "slug": "hotel-new-york",
-            "title": "Hotel New York"
-          }
-        ],
-        "label": "Nu mag de markt het overnemen. Het geld is op."
-      },
-      {
-        "outcome": [
-          {
-            "feedback": null,
-            "slug": "kop-van-zuid",
-            "title": "Kop van Zuid"
-          }
-        ],
-        "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
-      }
-    ],
-    "followUp": true,
-    "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
-  },
-  {
-    "answers": [
-      {
-        "outcome": [
-          {
-            "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
             "slug": "champagneglazen",
-            "title": "Champageglazen"
+            "title": "Champagneglazen"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "champagneglazen",
+                    "title": "Champagneglazen"
+                  }
+                ],
+                "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "De architect die had gerekend op het allergaafste station ooit, is niet blij. Je moet hem een andere opdracht geven.",
+                    "slug": "calypso",
+                    "title": "Calypso"
+                  }
+                ],
+                "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
+              }
+            ],
+            "followUp": true,
+            "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
           }
         ],
-        "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
+        "label": "... het allergaafste station ooit bouwen!"
       },
       {
+        "itemType": "answer",
         "outcome": [
           {
-            "feedback": "",
+            "itemType": "result",
+            "feedback": "De architect die had gerekend op het allergaafste station ooit, is niet blij. Je moet hem een andere opdracht geven.",
             "slug": "calypso",
             "title": "Calypso"
           },
           {
-            "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
+            "itemType": "result",
+            "feedback": "",
             "slug": "cs",
             "title": "Centraal Station"
           }
         ],
-        "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
+        "label": "... een functioneel station neerzetten dat in ieder geval binnen de begroting blijft."
       }
     ],
-    "followUp": true,
-    "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
+    "followUp": false,
+    "question": "Een station is het visitekaartje van een moderne metropool. Daarom ga jij..."
   },
   {
-    "answers": [
+    "itemType": "question",
+    "position": 7,
+    "children": [
       {
-        "outcome": [],
-        "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
-      },
-      {
-        "outcome": [],
-        "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
-      },
-      {
-        "outcome": [],
-        "label": "Tja, dat mag de wethouder oplossen."
-      }
-    ],
-    "followUp": true,
-    "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
-  },
-  {
-    "answers": [
-      {
-        "outcome": [
+        "itemType": "question",
+        "position": 0,
+        "children": [],
+        "answers": [
           {
-            "feedback": "",
-            "slug": "zalmhaventoren",
-            "title": "Zalmhaventoren"
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "kop-van-zuid-blijft-kaal",
+                "title": "Kop van Zuid blijft kaal"
+              }
+            ],
+            "label": "Nu mag de markt het overnemen. Het geld is op."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "hotel-new-york",
+                "title": "Hotel New York"
+              }
+            ],
+            "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
           }
         ],
-        "label": "We zijn hier niet voor niets Manhattan aan de Maas. De hoogte in!"
-      },
-      {
-        "outcome": [],
-        "label": "Ik stort me op het opknappen van de bestaande (sociale) woningbouwvoorraad en ik begin op Zuid."
+        "followUp": true,
+        "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
       }
     ],
-    "followUp": null,
-    "question": "Help, we zijn populair! Meer en meer mensen willen in Rotterdam wonen. Je móet bouwen. Wat doe je eerst?"
-  },
-  {
     "answers": [
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "result",
             "feedback": "",
             "slug": "struijs",
             "title": "Struijs"
           },
           {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
             "answers": [
               {
+                "itemType": "answer",
                 "outcome": [
                   {
+                    "itemType": "result",
                     "feedback": null,
-                    "slug": "hotel-new-york",
-                    "title": "Hotel New York"
+                    "slug": "kop-van-zuid-blijft-kaal",
+                    "title": "Kop van Zuid blijft kaal"
                   }
                 ],
                 "label": "Nu mag de markt het overnemen. Het geld is op."
               },
               {
+                "itemType": "answer",
                 "outcome": [
                   {
+                    "itemType": "result",
                     "feedback": null,
-                    "slug": "kop-van-zuid",
-                    "title": "Kop van Zuid"
+                    "slug": "hotel-new-york",
+                    "title": "Hotel New York"
                   }
                 ],
                 "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
@@ -159,30 +190,33 @@
         "label": "Ik ontwerp een brug die wel binnen het budget past."
       },
       {
+        "itemType": "answer",
         "outcome": [
           {
-            "feedback": null,
-            "slug": "erasmusbrug",
-            "title": "Erasmusbrug"
-          },
-          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
             "answers": [
               {
+                "itemType": "answer",
                 "outcome": [
                   {
+                    "itemType": "result",
                     "feedback": null,
-                    "slug": "hotel-new-york",
-                    "title": "Hotel New York"
+                    "slug": "kop-van-zuid-blijft-kaal",
+                    "title": "Kop van Zuid blijft kaal"
                   }
                 ],
                 "label": "Nu mag de markt het overnemen. Het geld is op."
               },
               {
+                "itemType": "answer",
                 "outcome": [
                   {
+                    "itemType": "result",
                     "feedback": null,
-                    "slug": "kop-van-zuid",
-                    "title": "Kop van Zuid"
+                    "slug": "hotel-new-york",
+                    "title": "Hotel New York"
                   }
                 ],
                 "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
@@ -190,13 +224,21 @@
             ],
             "followUp": true,
             "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+          },
+          {
+            "itemType": "result",
+            "feedback": "",
+            "slug": "erasmusbrug",
+            "title": "Erasmusbrug"
           }
         ],
         "label": "Ik maak een afspraak bij de minister en vraag om meer geld."
       },
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "result",
             "feedback": null,
             "slug": "hotel-new-york",
             "title": "Hotel New York"
@@ -205,54 +247,285 @@
         "label": "Ik blaas de plannen af. De bestaande brug moet maar volstaan."
       }
     ],
-    "followUp": null,
+    "followUp": false,
     "question": "Er moet een brug van noord naar zuid komen. Dat is te duur voor de gemeente. Wat doe je? "
   },
   {
+    "itemType": "question",
+    "position": 1,
+    "children": [
+      {
+        "itemType": "question",
+        "position": 0,
+        "children": [],
+        "answers": [
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+                "slug": "markthal",
+                "title": "Markthal"
+              }
+            ],
+            "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat. ",
+                "slug": "parkeergarage",
+                "title": "Parkeergarage"
+              }
+            ],
+            "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+          }
+        ],
+        "followUp": true,
+        "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+      }
+    ],
     "answers": [
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "result",
             "feedback": null,
-            "slug": "oude-blaak",
-            "title": "Oude Blaak"
+            "slug": "kerkplein",
+            "title": "Kerkplein"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+                    "slug": "markthal",
+                    "title": "Markthal"
+                  }
+                ],
+                "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat. ",
+                    "slug": "parkeergarage",
+                    "title": "Parkeergarage"
+                  }
+                ],
+                "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+              }
+            ],
+            "followUp": true,
+            "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
           }
         ],
         "label": "De Blaak heeft al een logisch én historisch middelpunt: de Laurenskerk. Dat gaat mijn ontwerp benadrukken."
       },
       {
+        "itemType": "answer",
         "outcome": [
           {
-            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+            "itemType": "result",
+            "feedback": null,
             "slug": "markthal",
             "title": "Markthal"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+                    "slug": "markthal",
+                    "title": "Markthal"
+                  }
+                ],
+                "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat. ",
+                    "slug": "parkeergarage",
+                    "title": "Parkeergarage"
+                  }
+                ],
+                "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+              }
+            ],
+            "followUp": true,
+            "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
           }
         ],
         "label": "Mijn ontwerp wordt groot, groter, grootst en bundelt wonen, parkeren en kopen in één iconisch gebouw."
       }
     ],
-    "followUp": null,
+    "followUp": false,
     "question": "Om de Blaak te verlevendigen, komt er een prijsvraag met als onderwerp ‘de stad als metabolisme’. Daarin strooit men kwistig met begrippen als ‘interactiemilieu’ en ‘fijnmazige functieverstrengeling’. Wat doe je?"
   },
   {
-    "answers": [
+    "itemType": "question",
+    "position": 6,
+    "children": [
       {
-        "outcome": [],
-        "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
-      },
-      {
-        "outcome": [],
-        "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
+        "itemType": "question",
+        "position": 0,
+        "children": [],
+        "answers": [
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. De vogels iets minder. Actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
+                "slug": "geen-park",
+                "title": "Geen park"
+              }
+            ],
+            "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": "Helaas, door de hoge huizenprijzen wordt de stad onbetaalbaar voor veel Rotterdammers.",
+                "slug": "park",
+                "title": "Park"
+              }
+            ],
+            "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
+          }
+        ],
+        "followUp": true,
+        "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
       }
     ],
-    "followUp": null,
-    "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
-  },
-  {
     "answers": [
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "result",
+            "feedback": "Eén toren is geen toren: de komende jaren verrijzen er achttien joekels in en nabij het centrum van Rotterdam.",
+            "slug": "zalmhaventoren",
+            "title": "Zalmhaventoren"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. De vogels iets minder. Actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
+                    "slug": "geen-park",
+                    "title": "Geen park"
+                  }
+                ],
+                "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Helaas, door de hoge huizenprijzen wordt de stad onbetaalbaar voor veel Rotterdammers.",
+                    "slug": "park",
+                    "title": "Park"
+                  }
+                ],
+                "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
+              }
+            ],
+            "followUp": true,
+            "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
+          }
+        ],
+        "label": "We zijn hier niet voor niets Manhattan aan de Maas. De hoogte in!"
+      },
+      {
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": "Zo, jij bent van de lange adem. Pas over twintig jaar zie je effect van deze inspanning.",
+            "slug": "geen-verandering",
+            "title": "Geen verandering"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. De vogels iets minder. Actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
+                    "slug": "geen-park",
+                    "title": "Geen park"
+                  }
+                ],
+                "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Helaas, door de hoge huizenprijzen wordt de stad onbetaalbaar voor veel Rotterdammers.",
+                    "slug": "park",
+                    "title": "Park"
+                  }
+                ],
+                "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
+              }
+            ],
+            "followUp": true,
+            "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
+          }
+        ],
+        "label": "Ik stort me op het opknappen van de bestaande (sociale) woningbouwvoorraad en ik begin op Zuid."
+      }
+    ],
+    "followUp": false,
+    "question": "Help, we zijn populair! Meer en meer mensen willen in Rotterdam wonen. Je móet bouwen. Wat doe je eerst?"
+  },
+  {
+    "itemType": "question",
+    "position": 5,
+    "children": [],
+    "answers": [
+      {
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
             "feedback": null,
             "slug": "generieke-flatgebouwen",
             "title": "Generieke flatgebouwen"
@@ -261,161 +534,1932 @@
         "label": "Ik gooi alles plat en plemp het helemaal vol met woningen, want de nood is hoog."
       },
       {
-        "outcome": [],
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "meer-mensen-op-straat",
+            "title": "Meer mensen op straat"
+          }
+        ],
         "label": "Experimenteren maar! In de bestaande gebouwen zet ik vol in op innovatieve maakindustrie: werkgelegenheid voor alles."
       }
     ],
-    "followUp": null,
+    "followUp": false,
     "question": "De haven verhuist richting de Noordzee. Wat doe je met al die ruimte in Merwe-Vierhavens?"
   },
   {
+    "itemType": "question",
+    "position": 0,
+    "children": [],
     "answers": [
       {
-        "outcome": [],
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": "Gefeliciteerd, de files op de ring zijn opgelost en de luchtkwaliteit is verbeterd. De gebruikers van de complexen zijn echter een protest begonnen en bezetten massaal de Coolsingel.",
+            "slug": "demonstratie-op-de-coolsingel",
+            "title": "Demonstratie op de Coolsingel"
+          }
+        ],
         "label": "Joh, die functies vinden wel een nieuwe plek. Gewoon bouwen!"
       },
       {
-        "outcome": [],
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": "Door de toenemende luchtvervuiling gaan Rotterdammers nu nog een jaartje eerder dood. Bewoners zijn wel heel gelukkig met hun wekelijkse gebruik van het voetbalveld.",
+            "slug": "vieze-lucht",
+            "title": "Vieze lucht"
+          }
+        ],
         "label": "We gaan geen voetbalverenigingen afpakken van mensen. Houden!"
       },
       {
-        "outcome": [],
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": "Gefeliciteerd: met deze vernieuwende architectuur scoor je goed bij de internationale pers als architectuurstad! Maar je kunt niet verder bouwen want het geld is op.",
+            "slug": "architectonisch-icoon",
+            "title": "Architectonisch icoon"
+          }
+        ],
         "label": "We vragen een bekende architect om in een innovatief ontwerp beide problemen in één klap op te lossen. Iedereen gelukkig!"
       }
     ],
-    "followUp": null,
+    "followUp": false,
     "question": "De luchtkwaliteit is slecht, milieuorganisaties slaan alarm. Ambtenaren stellen voor een bypass aan te leggen die het ringverkeer om de stad leidt. Probleem: hier staan volkstuincomplexen, voetbalverenigingen en scholen in de weg."
   },
   {
+    "itemType": "question",
+    "position": 3,
+    "children": [
+      {
+        "itemType": "question",
+        "position": 0,
+        "children": [],
+        "answers": [
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "wijkgebouw-verdwijnt",
+                "title": "Wijkgebouw verdwijnt"
+              }
+            ],
+            "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "starbucks",
+                "title": "Starbucks"
+              }
+            ],
+            "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "wijkgebouw-verdwijnt",
+                "title": "Wijkgebouw verdwijnt"
+              }
+            ],
+            "label": "Tja, dat mag de wethouder oplossen."
+          }
+        ],
+        "followUp": true,
+        "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+      }
+    ],
     "answers": [
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
             "answers": [
               {
-                "outcome": [],
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
                 "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
               },
               {
-                "outcome": [],
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "starbucks",
+                    "title": "Starbucks"
+                  }
+                ],
                 "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
               },
               {
-                "outcome": [],
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
                 "label": "Tja, dat mag de wethouder oplossen."
               }
             ],
             "followUp": true,
             "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+          },
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "bakfiets",
+            "title": "Bakfiets"
           }
         ],
         "label": "Nee. We zijn een bouwbedrijf, geen liefdadigheidsinstelling. Na jaren crisis maken we eindelijk weer winst."
       },
       {
+        "itemType": "answer",
         "outcome": [
           {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
             "answers": [
               {
-                "outcome": [],
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
                 "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
               },
               {
-                "outcome": [],
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "starbucks",
+                    "title": "Starbucks"
+                  }
+                ],
                 "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
               },
               {
-                "outcome": [],
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
                 "label": "Tja, dat mag de wethouder oplossen."
               }
             ],
             "followUp": true,
             "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+          },
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "sociale-woningbouw",
+            "title": "Sociale woningbouw"
           }
         ],
         "label": "Ja. We bouwen toch die woningen met lagere huur, ook al verdienen we er dan veel minder mee. We hebben per slot van rekening ook een maatschappelijke verantwoordelijkheid."
       }
     ],
-    "followUp": null,
+    "followUp": false,
     "question": "Kansen op Katendrecht, die zie jij. Je koopt verloederde gebouwen op voor renovatie of herbouw. Ondertussen trekt de economie flink aan en kun je veel meer verdienen aan je gebouwen door de huurprijs omhoog te gooien. Dat betekent wel dat de oorspronkelijke bewoners die niet meer kunnen betalen. Vind je dat een probleem?"
   },
   {
-    "answers": [
+    "itemType": "question",
+    "position": 1,
+    "children": [
       {
-        "outcome": [
+        "itemType": "question",
+        "position": 2,
+        "children": [
           {
-            "answers": [
+            "itemType": "question",
+            "position": 0,
+            "children": [
               {
-                "outcome": [
+                "itemType": "question",
+                "position": 0,
+                "children": [],
+                "answers": [
                   {
-                    "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
-                    "slug": "champagneglazen",
-                    "title": "Champageglazen"
-                  }
-                ],
-                "label": "Ik organiseer inspraakavonden om het protest onder de duim te houden."
-              },
-              {
-                "outcome": [
-                  {
-                    "feedback": "",
-                    "slug": "calypso",
-                    "title": "Calypso"
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                        "slug": "vertraging-duurzame-energie",
+                        "title": "Vertraging duurzame energie"
+                      }
+                    ],
+                    "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
                   },
                   {
-                    "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
-                    "slug": "cs",
-                    "title": "Centraal Station"
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                        "slug": "groningse-gasbaten",
+                        "title": "Groningse gasbaten"
+                      }
+                    ],
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
                   }
                 ],
-                "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
+                "followUp": true,
+                "question": "Tja, nu is het geld op! Wat nu?"
+              }
+            ],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                    "title": "Verbinding tussen Kralingen en Feijenoord"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "label": "Tussen Kralingen en Feijenoord"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "verbinding-tussen-charlois-en-vierhaven",
+                    "title": "Verbinding tussen Charlois en Vierhaven"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "label": "Tussen Charlois en Vierhaven"
               }
             ],
             "followUp": true,
-            "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
-          },
-          {
-            "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
-            "slug": "champagneglazen",
-            "title": "Champageglazen"
+            "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
           }
         ],
-        "label": "... het allergaafste station ooit bouwen!"
+        "answers": [
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "metrolijn",
+                "title": "Metrolijn"
+              },
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                        "title": "Verbinding tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Kralingen en Feijenoord"
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-charlois-en-vierhaven",
+                        "title": "Verbinding tussen Charlois en Vierhaven"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Charlois en Vierhaven"
+                  }
+                ],
+                "followUp": true,
+                "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+              }
+            ],
+            "label": "Nieuwe metrolijn"
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "derde-brug",
+                "title": "Derde brug"
+              },
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                        "title": "Verbinding tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Kralingen en Feijenoord"
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-charlois-en-vierhaven",
+                        "title": "Verbinding tussen Charlois en Vierhaven"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Charlois en Vierhaven"
+                  }
+                ],
+                "followUp": true,
+                "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+              }
+            ],
+            "label": "Een derde brug"
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "tunnel",
+                "title": "Tunnel"
+              },
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                        "slug": "vertraging-duurzame-energie",
+                        "title": "Vertraging duurzame energie"
+                      }
+                    ],
+                    "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                        "slug": "groningse-gasbaten",
+                        "title": "Groningse gasbaten"
+                      }
+                    ],
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                  }
+                ],
+                "followUp": true,
+                "question": "Tja, nu is het geld op! Wat nu?"
+              }
+            ],
+            "label": "Een tunnel"
+          }
+        ],
+        "followUp": true,
+        "question": "Je budget is beperkt. Je moet kiezen!"
       },
       {
-        "outcome": [
+        "itemType": "question",
+        "position": 1,
+        "children": [],
+        "answers": [
           {
-            "feedback": "",
-            "slug": "calypso",
-            "title": "Calypso"
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "metrolijn",
+                "title": "Metrolijn"
+              },
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                        "title": "Verbinding tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Kralingen en Feijenoord"
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-charlois-en-vierhaven",
+                        "title": "Verbinding tussen Charlois en Vierhaven"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Charlois en Vierhaven"
+                  }
+                ],
+                "followUp": true,
+                "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+              }
+            ],
+            "label": "Een nieuwe metrolijn"
           },
           {
-            "feedback": "De gemeenteraad gaat om, op voorwaarde dat het Rijk bijspringt. Je maakt een afspraak met de minister van Financiën. Die zet je maquette op de schouw en wijst je verzoek grijnzend af wegens te megalomaan: “Verzin maar wat anders.”",
-            "slug": "cs",
-            "title": "Centraal Station"
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "derde-brug",
+                "title": "Derde brug"
+              },
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                        "title": "Verbinding tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Kralingen en Feijenoord"
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-charlois-en-vierhaven",
+                        "title": "Verbinding tussen Charlois en Vierhaven"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Charlois en Vierhaven"
+                  }
+                ],
+                "followUp": true,
+                "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+              }
+            ],
+            "label": "Een derde brug"
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "tunnel",
+                "title": "Tunnel"
+              },
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                        "slug": "vertraging-duurzame-energie",
+                        "title": "Vertraging duurzame energie"
+                      }
+                    ],
+                    "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                        "slug": "groningse-gasbaten",
+                        "title": "Groningse gasbaten"
+                      }
+                    ],
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                  }
+                ],
+                "followUp": true,
+                "question": "Tja, nu is het geld op! Wat nu?"
+              }
+            ],
+            "label": "Een tunnel"
           }
         ],
-        "label": "... een functioneel station neerzetten dat in ieder geval binnen de begroting blijft."
+        "followUp": true,
+        "question": "Top! Maar je hebt nog steeds een probleem. Hoe komen mensen daar? Je moet kiezen:"
       }
     ],
-    "followUp": null,
-    "question": "Een station is het visitekaartje van een moderne metropool. Daarom ga jij..."
-  },
-  {
     "answers": [
       {
-        "outcome": [],
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "question",
+            "position": 2,
+            "children": [
+              {
+                "itemType": "question",
+                "position": 0,
+                "children": [
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "answers": [
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                        "title": "Verbinding tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Kralingen en Feijenoord"
+                  },
+                  {
+                    "itemType": "answer",
+                    "outcome": [
+                      {
+                        "itemType": "result",
+                        "feedback": null,
+                        "slug": "verbinding-tussen-charlois-en-vierhaven",
+                        "title": "Verbinding tussen Charlois en Vierhaven"
+                      },
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "label": "Tussen Charlois en Vierhaven"
+                  }
+                ],
+                "followUp": true,
+                "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+              }
+            ],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "metrolijn",
+                    "title": "Metrolijn"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                            "title": "Verbinding tussen Kralingen en Feijenoord"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-charlois-en-vierhaven",
+                            "title": "Verbinding tussen Charlois en Vierhaven"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Charlois en Vierhaven"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+                  }
+                ],
+                "label": "Nieuwe metrolijn"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "derde-brug",
+                    "title": "Derde brug"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                            "title": "Verbinding tussen Kralingen en Feijenoord"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-charlois-en-vierhaven",
+                            "title": "Verbinding tussen Charlois en Vierhaven"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Charlois en Vierhaven"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+                  }
+                ],
+                "label": "Een derde brug"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "tunnel",
+                    "title": "Tunnel"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "label": "Een tunnel"
+              }
+            ],
+            "followUp": true,
+            "question": "Je budget is beperkt. Je moet kiezen!"
+          }
+        ],
         "label": "Ik ga voor een derde-oeververbinding en herhaal zo het Erasmusbrug-KopvanZuid-kunstje. Zeker weten dat ontwikkelaars en investeerders daarna aanhaken"
       },
       {
-        "outcome": [],
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "question",
+            "position": 1,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "metrolijn",
+                    "title": "Metrolijn"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                            "title": "Verbinding tussen Kralingen en Feijenoord"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-charlois-en-vierhaven",
+                            "title": "Verbinding tussen Charlois en Vierhaven"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Charlois en Vierhaven"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+                  }
+                ],
+                "label": "Een nieuwe metrolijn"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "derde-brug",
+                    "title": "Derde brug"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [
+                      {
+                        "itemType": "question",
+                        "position": 0,
+                        "children": [],
+                        "answers": [
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                "slug": "vertraging-duurzame-energie",
+                                "title": "Vertraging duurzame energie"
+                              }
+                            ],
+                            "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                          },
+                          {
+                            "itemType": "answer",
+                            "outcome": [
+                              {
+                                "itemType": "result",
+                                "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                "slug": "groningse-gasbaten",
+                                "title": "Groningse gasbaten"
+                              }
+                            ],
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                          }
+                        ],
+                        "followUp": true,
+                        "question": "Tja, nu is het geld op! Wat nu?"
+                      }
+                    ],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-kralingen-en-feijenoord",
+                            "title": "Verbinding tussen Kralingen en Feijenoord"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Kralingen en Feijenoord"
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": null,
+                            "slug": "verbinding-tussen-charlois-en-vierhaven",
+                            "title": "Verbinding tussen Charlois en Vierhaven"
+                          },
+                          {
+                            "itemType": "question",
+                            "position": 0,
+                            "children": [],
+                            "answers": [
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                                    "slug": "vertraging-duurzame-energie",
+                                    "title": "Vertraging duurzame energie"
+                                  }
+                                ],
+                                "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                              },
+                              {
+                                "itemType": "answer",
+                                "outcome": [
+                                  {
+                                    "itemType": "result",
+                                    "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                                    "slug": "groningse-gasbaten",
+                                    "title": "Groningse gasbaten"
+                                  }
+                                ],
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                              }
+                            ],
+                            "followUp": true,
+                            "question": "Tja, nu is het geld op! Wat nu?"
+                          }
+                        ],
+                        "label": "Tussen Charlois en Vierhaven"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Volgende dilemma: waar moet die nieuwe verbinding komen te liggen?"
+                  }
+                ],
+                "label": "Een derde brug"
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "tunnel",
+                    "title": "Tunnel"
+                  },
+                  {
+                    "itemType": "question",
+                    "position": 0,
+                    "children": [],
+                    "answers": [
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Gelukt! Helaas loopt de innovatie in duurzame energie nu vertraging op.",
+                            "slug": "vertraging-duurzame-energie",
+                            "title": "Vertraging duurzame energie"
+                          }
+                        ],
+                        "label": "We verkopen Eneco. Met een miljard komen we een heel eind."
+                      },
+                      {
+                        "itemType": "answer",
+                        "outcome": [
+                          {
+                            "itemType": "result",
+                            "feedback": "Helaas! Er is een tegenvaller vanwege de Groningse gasbaten, dus Rotterdam kan voorlopig fluiten naar dat Rijksgeld.",
+                            "slug": "groningse-gasbaten",
+                            "title": "Groningse gasbaten"
+                          }
+                        ],
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                      }
+                    ],
+                    "followUp": true,
+                    "question": "Tja, nu is het geld op! Wat nu?"
+                  }
+                ],
+                "label": "Een tunnel"
+              }
+            ],
+            "followUp": true,
+            "question": "Top! Maar je hebt nog steeds een probleem. Hoe komen mensen daar? Je moet kiezen:"
+          }
+        ],
         "label": "We zetten groots in en gaan voor een allesomvattende gebiedsontwikkeling rondom het hart van Zuid."
-      },
-      {
-        "outcome": [],
-        "label": null
       }
     ],
-    "followUp": null,
+    "followUp": false,
     "question": "Op de Noordoever is het leven mooi, maar op Zuid is het nog vaak armoe troef. Wat is je eerste zet om dat via ruimtelijke ontwikkeling te veranderen?"
+  },
+  {
+    "itemType": "question",
+    "position": 2,
+    "children": [],
+    "answers": [
+      {
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "nieuw-voetbalstadion",
+            "title": "Nieuw voetbalstadion"
+          }
+        ],
+        "label": "Bouwen maar! Lang genoeg geëmmerd. Dat dit gebied ontwikkeld wordt, is belangrijker dan dat het binnen de begroting blijft."
+      },
+      {
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "kuip",
+            "title": "Kuip"
+          }
+        ],
+        "label": "Opnieuw de plannen in en schrappen met die hap. Het is belangrijk dat dit project betaalbaar blijft."
+      }
+    ],
+    "followUp": false,
+    "question": "Feyenoord City, het gaat ervan komen. Mét behoud van de oude Kuip en een fonkelnieuw stadion voor Feyenoord van internationale allure. Woningbouw, banen, een metrolijn: het kan niet op. Omdat het gesoebat erover zó lang geduurd heeft en we nu in een hoogconjunctuur zitten, is het nu fors duurder om dit alles te bouwen. Wat nu?"
   }
 ]

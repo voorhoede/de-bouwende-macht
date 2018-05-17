@@ -12,9 +12,15 @@
     </div>
 
     <ready-button v-if="questionsCount > 3" />
+    <p v-if="gameEnded">There are no more questions.</p>
 
     <transition name="slideIn">
-      <question-dialog v-if="showQuestionDialog" :currentQuestion="currentQuestion" :answerFeedback="answerFeedback" @onAnswer="handleAnswer" />
+      <question-dialog 
+        v-if="!gameEnded" 
+        :currentQuestion="currentQuestion" 
+        :answerFeedback="answerFeedback" 
+        @onAnswer="handleAnswer" 
+      />
     </transition>
   </section>
 </template>
@@ -29,7 +35,7 @@ export default {
   data () {
     return {
       answerFeedback: null,
-      showQuestionDialog: false
+      showQuestionDialog: this.gameStarted
     }
   },
   computed: mapState({
@@ -37,39 +43,45 @@ export default {
     questionsCount: state => state.questionsCount,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
-    gameStarted: state => state.gameStarted
+    gameStarted: state => state.gameStarted,
+    gameEnded: state => !state.questions.length
   }),
   methods: {
     startGame () {
+      this.$store.commit('resetState')
       this.$store.commit('startGame')
       this.$store.commit('nextQuestion')
-
       this.toggleDialog()
     },
 
     handleAnswer(answer) {
+      const outcomes = answer.outcome
       const store = this.$store
   
       store.commit('increment')
 
-      if (!answer.outcome.question) {
-        store.commit('nextQuestion')
+      const followUpQuestion = outcomes.filter(outcome => outcome.itemType === 'question')
+      const results = outcomes.filter(outcome => outcome.itemType === 'result')
+
+      if (results.length > 0) {
+        results.map(result => {
+          this.answerFeedback = result.feedback
+          store.commit('updateCity', result.slug)
+        })
       }
 
-      answer.outcome.map(item => {
-        if (item.title) {
-          store.commit('updateCity', item.slug)
-          this.answerFeedback = item.feedback
-        }
-
-        if (item.question) {
-          store.commit('followUpQuestion', item)
-        } 
-      })
+      if (followUpQuestion.length === 0) {
+        store.commit('nextQuestion')
+      } else {
+        store.commit('followUpQuestion', followUpQuestion[0])
+      }
     },
 
     toggleDialog () {
       this.showQuestionDialog = !this.showQuestionDialog
+    },
+    endGame () {
+      store.commit('endGame');
     }
   }
 }
