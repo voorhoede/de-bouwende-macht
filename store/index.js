@@ -10,11 +10,9 @@ function shuffle(arr) {
 }
 
 const createStore = () => {
-  const mainQuestions = questions.filter(q => !q.followUp)
-
   const initialState = {
     currentQuestion: {},
-    questions: shuffle(mainQuestions),
+    questions: shuffle(questions),
     importantQuestions: [],
     questionsCount: 0,
     currentScenario: [],
@@ -29,6 +27,7 @@ const createStore = () => {
       },
       
       startGame (state) {
+        console.log(state.questions.length)
         state.gameStarted = true
       },
 
@@ -42,14 +41,19 @@ const createStore = () => {
         }
         const nextQuestion = state.questions.shift()
         state.currentQuestion = nextQuestion
+        console.log('next', state.questions.length)
+
       },
 
       updateCity (state, payload) {
-        state.currentScenario.push(payload)
+        if (!state.currentScenario.includes(payload)) {
+          state.currentScenario.push(payload)
+        }
       },
 
       followUpQuestion (state, payload) {
         state.currentQuestion = payload
+        console.log('follow up', state.questions.length)
       },
 
       endGame (state) {
