@@ -27,7 +27,6 @@ const createStore = () => {
       },
       
       startGame (state) {
-        console.log(state.questions.length)
         state.gameStarted = true
       },
 

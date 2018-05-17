@@ -45,6 +45,7 @@ export default {
   }),
   methods: {
     startGame () {
+      this.$store.commit('resetState')
       this.$store.commit('startGame')
       this.$store.commit('nextQuestion')
       this.toggleDialog()
