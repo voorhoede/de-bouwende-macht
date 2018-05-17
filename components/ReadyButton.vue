@@ -1,3 +1,3 @@
 <template>
-  <nuxt-link to="/share-my-rotterdam">I'm done, this is my Rotterdam!</nuxt-link>
+  <nuxt-link to="/share-my-rotterdam">Dit is mijn Rotterdam!</nuxt-link>
 </template>

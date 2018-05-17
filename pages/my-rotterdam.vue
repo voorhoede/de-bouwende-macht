@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <ready-button v-if="questionsCount > 3" />
+    <ready-dialog v-if="questionsCount > 3" />
     <p v-if="gameEnded">There are no more questions.</p>
 
     <transition name="slideIn">
@@ -28,10 +28,10 @@
 <script>
 import { mapState } from 'vuex'
 import QuestionDialog from '~/components/QuestionDialog.vue'
-import ReadyButton from '~/components/ReadyButton.vue'
+import ReadyDialog from '~/components/ReadyDialog.vue'
 
 export default {
-  components: { QuestionDialog, ReadyButton },
+  components: { QuestionDialog, ReadyDialog },
   data () {
     return {
       answerFeedback: null,
