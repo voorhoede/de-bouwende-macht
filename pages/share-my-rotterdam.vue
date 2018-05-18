@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="container">
     <h1>
       Deel mijn Rotterdam
     </h1>

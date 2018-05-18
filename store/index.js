@@ -1,33 +1,44 @@
 import Vuex from 'vuex'
 import questions from '~/static/data/questions.json'
-
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
+import _ from 'lodash'
 
 const createStore = () => {
   const initialState = {
     currentQuestion: {},
-    questions: shuffle(questions),
-    importantQuestions: [],
+    questions: _.shuffle(questions),
     questionsCount: 0,
     currentScenario: [],
     gameStarted: false,
+    showQuestion: false,
+    showNotice: false
   }
 
   return new Vuex.Store({
-    state: initialState,
+    state: _.cloneDeep(initialState),
     mutations: {
-      resetState (state) {
-        state = initialState
+      resetGame (state) {
+        state.questions = _.cloneDeep(initialState)
       },
-      
       startGame (state) {
         state.gameStarted = true
+      },
+
+      showQuestion (state) {
+        if (state.questions.length) {
+          state.showQuestion = true
+        }
+      },
+
+      hideQuestion (state) {
+        state.showQuestion = false
+      },
+
+      showNotice (state) {
+        state.showNotice = true
+      },
+
+      hideNotice (state) {
+        state.showNotice = false
       },
 
       increment (state) {
@@ -40,8 +51,6 @@ const createStore = () => {
         }
         const nextQuestion = state.questions.shift()
         state.currentQuestion = nextQuestion
-        console.log('next', state.questions.length)
-
       },
 
       updateCity (state, payload) {
@@ -52,12 +61,11 @@ const createStore = () => {
 
       followUpQuestion (state, payload) {
         state.currentQuestion = payload
-        console.log('follow up', state.questions.length)
       },
 
       endGame (state) {
         state.gameStarted = false
-      }
+      } 
     }
   })
 }
