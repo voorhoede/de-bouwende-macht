@@ -1,12 +1,12 @@
 <template>
-  <div class="ready-dialog">
+  <div class="toast ready-notice">
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
     <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
-    <nuxt-link to="/share-my-rotterdam" >
+    <nuxt-link class="button button-primary" to="/share-my-rotterdam" >
       Dit is mijn Rotterdam!
     </nuxt-link>
     <p>Je kan natuurlijk ook nog verder bouwen!</p>
-    <button @click="onClickButton()">Ik bouw nog verder</button>
+    <button class="button-secondary" @click="onClickButton()">Ik bouw nog verder</button>
   </div>
 </template>
 
@@ -24,15 +24,6 @@ export default {
 
 <style scoped>
 
-.ready-dialog {
-  width: 100%;
-  height: 40vh;
-  padding: 2rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  box-shadow: 10px 10px 10px 10px #ccc;
-}
+@import '~/assets/core.css';
 
 </style>
