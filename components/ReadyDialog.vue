@@ -2,15 +2,22 @@
   <div class="ready-dialog">
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
     <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
-    <ready-button />
+    <nuxt-link to="/share-my-rotterdam">Dit is mijn Rotterdam!</nuxt-link>
     <p>Je kan natuurlijk ook nog verder bouwen!</p>
   </div>
 </template>
 
-<script>
-import ReadyButton from '~/components/ReadyButton.vue'
+<style scoped>
 
-export default {
-  components: { ReadyButton },
+.ready-dialog {
+  width: 100%;
+  height: 40vh;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 10px 10px 10px 10px #ccc;
 }
-</script>
+
+</style>

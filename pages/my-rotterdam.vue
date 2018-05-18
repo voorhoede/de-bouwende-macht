@@ -17,7 +17,9 @@
       </div>
     </div>
 
-    <ready-dialog v-if="questionsCount > 3" />
+    <transition name="slide-up">
+      <ready-dialog v-if="showReadyNotice" />
+    </transition>
 
     <transition name="slide-up">
       <question-notice
@@ -63,6 +65,7 @@ export default {
     currentScenario: state => state.currentScenario,
     showQuestion: state => state.showQuestion,
     showNotice: state => state.showNotice,
+    showReadyNotice: state => state.showReadyNotice,
     gameStarted: state => state.gameStarted,
     gameEnded: state => !state.questions.length
   }),
@@ -81,8 +84,6 @@ export default {
     handleAnswer(answer) {
       const outcomes = answer.outcome
       const store = this.$store
-  
-      store.commit('increment')
 
       const followUpQuestion = outcomes.filter(outcome => outcome.itemType === 'question')
       const results = outcomes.filter(outcome => outcome.itemType === 'result')
@@ -95,9 +96,15 @@ export default {
       }
 
       if (followUpQuestion.length === 0) {
+        store.commit('increment')
         store.commit('nextQuestion')
         store.commit('hideQuestion')
-        store.commit('showNotice')
+        if (this.questionsCount === 3) {
+          store.commit('hideNotice')
+          store.commit('showReadyNotice')
+        } else {
+          store.commit('showNotice')
+        }
       } else {
         store.commit('followUpQuestion', followUpQuestion[0])
       }
