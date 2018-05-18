@@ -6,8 +6,11 @@
   margin: 0;
 }
 
-button {
+button,
+.button {
+  display: inline-block;
   padding: var(--spacing-half) var(--spacing-normal);
+  border: none;
   font-size: var(--font-size-normal);
 }
 
@@ -20,7 +23,11 @@ button:hover {
 }
 
 h1, h2 {
-  margin: var(--spacing-normal) 0;
+  margin-bottom: var(--spacing-normal);
+}
+
+p {
+  margin-bottom: var(--spacing-normal);
 }
 
 html {
@@ -64,6 +71,7 @@ body {
   box-shadow: var(--box-shadow);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  text-align: center;
 }
 
 .button-primary {
@@ -81,7 +89,6 @@ body {
   padding: var(--spacing-normal);
   background-color: var(--green);
   color: var(--white);
-  border: none;
   width: 100%;
 }
 

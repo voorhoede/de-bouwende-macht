@@ -1,7 +1,7 @@
 <template>
   <div class="question-notice toast">
     <p>Er is een bouwvraag!</p>
-    <button @click="onClickButton()">Speel!</button>
+    <button class="button-primary" @click="onClickButton()">Speel!</button>
   </div>
 </template>
 
@@ -19,8 +19,9 @@ export default {
 
 <style scoped>
 
-.question-notice {
-  width: 100%;
+@import '~/assets/core.css';
+
+.ready-notice {
   height: 40vh;
 }
 

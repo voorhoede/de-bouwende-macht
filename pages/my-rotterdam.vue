@@ -4,10 +4,10 @@
     
     <div v-if="!gameStarted" class="intro">
       <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
-      <button @click="startGame()">Bouw jouw Rotterdam</button>
+      <button class="button-primary" @click="startGame()">Bouw jouw Rotterdam</button>
     </div>
 
-    <div>
+    <div v-if="gameStarted">
       <h2>Current scenario:</h2>
       <div class="current-scenario" v-if="currentScenario">
         <p
@@ -18,7 +18,7 @@
     </div>
 
     <transition name="slow-slide-up">
-      <ready-dialog
+      <ready-notice
         v-if="showReadyNotice"
         @onClick="play"
       />
@@ -26,7 +26,6 @@
 
     <transition name="slow-slide-up">
       <question-notice
-        class="toast"
         v-if="showNotice && !showQuestion &&!gameEnded"
         @onClick="play"
       />
@@ -53,10 +52,10 @@
 import { mapState } from 'vuex'
 import Question from '~/components/Question.vue'
 import QuestionNotice from '~/components/QuestionNotice.vue'
-import ReadyDialog from '~/components/ReadyDialog.vue'
+import ReadyNotice from '~/components/ReadyNotice.vue'
 
 export default {
-  components: { Question, QuestionNotice, ReadyDialog },
+  components: { Question, QuestionNotice, ReadyNotice },
   data () {
     return {
       answerFeedback: null
