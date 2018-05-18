@@ -24,6 +24,13 @@
       />
     </transition>
 
+    <nuxt-link
+      v-if="continuePlaying"
+      class="button button-primary"
+      to="/share-my-rotterdam" >
+      Dit is mijn Rotterdam!
+    </nuxt-link>
+
     <transition name="slow-slide-up">
       <question-notice
         v-if="showNotice && !showQuestion &&!gameEnded"
@@ -70,7 +77,8 @@ export default {
     showNotice: state => state.showNotice,
     showReadyNotice: state => state.showReadyNotice,
     gameStarted: state => state.gameStarted,
-    gameEnded: state => !state.questions.length
+    gameEnded: state => !state.questions.length,
+    continuePlaying: state => state.continuePlaying
   }),
   methods: {
     startGame () {
@@ -81,8 +89,10 @@ export default {
 
     play () {
       this.$store.commit('showQuestion')
+ 
       if (this.showReadyNotice) {
         this.$store.commit('hideReadyNotice')
+        this.$store.commit('showReadyButton')
       }
     },
 

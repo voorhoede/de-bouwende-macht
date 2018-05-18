@@ -11,7 +11,8 @@ const createStore = () => {
     gameStarted: false,
     showQuestion: false,
     showNotice: false,
-    showReadyNotice: false
+    showReadyNotice: false,
+    continuePlaying: false
   }
 
   return new Vuex.Store({
@@ -67,6 +68,10 @@ const createStore = () => {
 
       followUpQuestion (state, payload) {
         state.currentQuestion = payload
+      },
+
+      showReadyButton (state) {
+        state.continuePlaying = true
       },
 
       endGame (state) {
