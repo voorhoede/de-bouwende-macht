@@ -19,6 +19,7 @@
 
     <transition name="slide-up">
       <question-notice
+        class="toast"
         v-if="showNotice && !showQuestion &&!gameEnded"
         @onClick="play" 
       />
@@ -30,7 +31,7 @@
     </div>
 
     <transition name="slide-up">
-      <question-dialog 
+      <question 
         v-if="showQuestion" 
         :currentQuestion="currentQuestion" 
         :answerFeedback="answerFeedback" 
@@ -43,11 +44,11 @@
 
 <script>
 import { mapState } from 'vuex'
-import QuestionDialog from '~/components/QuestionDialog.vue'
+import Question from '~/components/Question.vue'
 import QuestionNotice from '~/components/QuestionNotice.vue'
 
 export default {
-  components: { QuestionDialog, QuestionNotice },
+  components: { Question, QuestionNotice },
   data () {
     return {
       answerFeedback: null
@@ -64,7 +65,6 @@ export default {
   }),
   methods: {
     startGame () {
-      this.$store.commit('resetState')
       this.$store.commit('startGame')
       this.$store.commit('showQuestion')
       this.$store.commit('nextQuestion')
@@ -74,33 +74,39 @@ export default {
       this.$store.commit('showQuestion')
     },
 
+    nextQuestion () {
+      const isMainQuestion = !this.currentQuestion.followUp
+
+      if (isMainQuestion) {
+        this.$store.commit('increment')
+      }
+
+      this.$store.commit('nextQuestion')
+    },
+
     handleAnswer(answer) {
       const outcomes = answer.outcome
-      const store = this.$store
-  
-      store.commit('increment')
-
       const followUpQuestion = outcomes.filter(outcome => outcome.itemType === 'question')
       const results = outcomes.filter(outcome => outcome.itemType === 'result')
 
       if (results.length > 0) {
         results.map(result => {
           this.answerFeedback = result.feedback
-          store.commit('updateCity', result.slug)
+          this.$store.commit('updateCity', result.slug)
         })
       }
 
       if (followUpQuestion.length === 0) {
-        store.commit('nextQuestion')
-        store.commit('hideQuestion')
-        store.commit('showNotice')
+        this.$store.commit('hideQuestion')
+        this.$store.commit('showNotice')
+        this.nextQuestion()
       } else {
-        store.commit('followUpQuestion', followUpQuestion[0])
+        this.$store.commit('followUpQuestion', followUpQuestion[0])
       }
     },
 
     endGame () {
-      store.commit('endGame');
+      this.$store.commit('endGame');
     }
   },
   transition(to, from) {
