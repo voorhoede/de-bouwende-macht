@@ -1,5 +1,5 @@
 <template>
-  <div class="question-notice">
+  <div class="question-notice toast">
     <p>Er is een bouwvraag!</p>
     <button @click="onClickButton()">Speel!</button>
   </div>
@@ -22,12 +22,6 @@ export default {
 .question-notice {
   width: 100%;
   height: 40vh;
-  padding: 2rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  box-shadow: 10px 10px 10px 10px #ccc;
 }
 
 </style>
