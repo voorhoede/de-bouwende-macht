@@ -1,45 +1,64 @@
 <template>
   <section class="container">
     <h1>Mijn Rotterdam</h1>
-    <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
-    <button @click="startGame()">Start Game</button>
     
+    <div v-if="!gameStarted" class="intro">
+      <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
+      <button @click="startGame()">Bouw jouw Rotterdam</button>
+    </div>
+
     <div>
       <h2>Current scenario:</h2>
       <div class="current-scenario" v-if="currentScenario">
-        <p v-for="(location, index) in currentScenario" :key="index">{{ location }}</p>
+        <p
+          v-for="(location, index) in currentScenario"
+          :key="index">{{ location }}
+        </p>
       </div>
     </div>
 
-    <p v-if="gameEnded">There are no more questions.</p>
+    <transition name="slide-up">
+      <question-notice
+        v-if="showNotice && !showQuestion &&!gameEnded"
+        @onClick="play" 
+      />
+    </transition>
 
-    <transition name="slideIn">
+    <div v-if="gameEnded">
+      <p>Dit is jouw Rotterdam!</p>
+      <nuxt-link to="/share-my-rotterdam">Delen</nuxt-link>  
+    </div>
+
+    <transition name="slide-up">
       <question-dialog 
-        v-if="!gameEnded" 
+        v-if="showQuestion" 
         :currentQuestion="currentQuestion" 
         :answerFeedback="answerFeedback" 
         @onAnswer="handleAnswer" 
       />
     </transition>
+
   </section>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import QuestionDialog from '~/components/QuestionDialog.vue'
+import QuestionNotice from '~/components/QuestionNotice.vue'
 
 export default {
-  components: { QuestionDialog },
+  components: { QuestionDialog, QuestionNotice },
   data () {
     return {
-      answerFeedback: null,
-      showQuestionDialog: this.gameStarted
+      answerFeedback: null
     }
   },
   computed: mapState({
     questions: state => state.questions,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
+    showQuestion: state => state.showQuestion,
+    showNotice: state => state.showNotice,
     gameStarted: state => state.gameStarted,
     gameEnded: state => !state.questions.length
   }),
@@ -47,8 +66,12 @@ export default {
     startGame () {
       this.$store.commit('resetState')
       this.$store.commit('startGame')
+      this.$store.commit('showQuestion')
       this.$store.commit('nextQuestion')
-      this.toggleDialog()
+    },
+
+    play () {
+      this.$store.commit('showQuestion')
     },
 
     handleAnswer(answer) {
@@ -69,42 +92,27 @@ export default {
 
       if (followUpQuestion.length === 0) {
         store.commit('nextQuestion')
+        store.commit('hideQuestion')
+        store.commit('showNotice')
       } else {
         store.commit('followUpQuestion', followUpQuestion[0])
       }
     },
 
-    toggleDialog () {
-      this.showQuestionDialog = !this.showQuestionDialog
-    },
     endGame () {
       store.commit('endGame');
     }
-  }
+  },
+  transition(to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  },
 }
 </script>
 
 <style scoped>
-.container {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
 
-h1, h2 {
-  margin: 1rem 0;
-}
-
-button {
-  background-color: #ccc;
-  padding: .5rem 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-button:hover {
-  cursor: pointer;
-}
+@import '~/assets/core.css';
 
 .intro {
   margin-bottom: 1rem;
@@ -119,4 +127,16 @@ button:hover {
   padding: 1rem;
   margin: 2rem 0;
 }
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all .3s ease;
+}
+.slide-up-leave-active {
+  transition: all .5s ease;
+}
+.slide-up-enter, .slide-up-leave-to {
+  transform: translatey(100%);
+}
+
 </style>
