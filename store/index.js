@@ -9,6 +9,8 @@ const createStore = () => {
     questionsCount: 0,
     currentScenario: [],
     gameStarted: false,
+    showQuestion: false,
+    showNotice: false
   }
 
   return new Vuex.Store({
@@ -19,6 +21,24 @@ const createStore = () => {
       },
       startGame (state) {
         state.gameStarted = true
+      },
+
+      showQuestion (state) {
+        if (state.questions.length) {
+          state.showQuestion = true
+        }
+      },
+
+      hideQuestion (state) {
+        state.showQuestion = false
+      },
+
+      showNotice (state) {
+        state.showNotice = true
+      },
+
+      hideNotice (state) {
+        state.showNotice = false
       },
 
       increment (state) {

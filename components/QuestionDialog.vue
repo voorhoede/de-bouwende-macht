@@ -29,6 +29,7 @@ export default {
 
 .question-dialog {
   width: 100%;
+  height: 40vh;
   padding: 2rem;
   position: absolute;
   bottom: 0;
