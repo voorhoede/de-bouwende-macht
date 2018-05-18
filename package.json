@@ -11,9 +11,11 @@
     "data": "dato dump",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "proxy": "ngrok http 3000"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
@@ -23,6 +25,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
+    "ngrok": "^3.0.1",
     "yamljs": "0.3.0"
   }
 }
