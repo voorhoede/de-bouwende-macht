@@ -1,0 +1,29 @@
+:root {
+  /* COLORS */
+  --grey: #dbdbdb;
+  --grey-light: #ececec;
+  --grey-dark: #696969;
+  --pink: #ff738e;
+  --green: #239b9e;
+  --green-secondary: #26b999;
+  --white: #fff;
+  --black: #000;
+ 
+  /* SPACING */
+  --spacing-half: .5rem;
+  --spacing-normal: 1rem;
+  --spacing-double: 2rem;
+
+  /* TYPOGRAPHY */
+  --font: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-bold: 'Proxima Nova Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --font-size-big: 2.25rem;
+  --font-size-normal: 1rem;
+
+  /* MIXED */
+  --border-radius-smooth: 3px;
+
+  /* BOX SHADOW */
+  --box-shadow: 0 2px 6px 0 var(--grey);
+}

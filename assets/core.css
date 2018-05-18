@@ -1,0 +1,52 @@
+@import './fonts.css';
+@import './variables.css';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  background-color: #ccc;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  margin: 1rem 0;
+}
+
+.a11y-sr-only {
+  overflow: hidden;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--font-size-normal);
+}
