@@ -1,28 +1,39 @@
+@import './fonts.css';
+@import './variables.css';
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
 }
 
 button {
-  background-color: #ccc;
-  padding: .5rem 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  padding: var(--spacing-half) var(--spacing-normal);
+  font-size: var(--font-size-normal);
+}
+
+button:not(:last-child) {
+  margin-bottom: var(--spacing-normal);
 }
 
 button:hover {
   cursor: pointer;
 }
 
-.container {
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  transition: all .3s cubic-bezier(.55,0,.1,1);
+h1, h2 {
+  margin: var(--spacing-normal) 0;
 }
 
-h1, h2 {
-  margin: 1rem 0;
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--font-size-normal);
 }
 
 .a11y-sr-only {
@@ -34,6 +45,51 @@ h1, h2 {
   height: 1px;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.container {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: var(--font-size-normal);
+  transition: all .3s cubic-bezier(.55,0,.1,1);
+}
+
+.toast {
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing-normal);
+  right: var(--spacing-normal);
+  padding: var(--spacing-double) var(--spacing-normal);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.button-primary {
+  background-color: var(--pink);
+  font-family: var(--font-bold);
+  color: var(--white);
+}
+
+.button-secondary {
+  background-color: var(--white);
+  color: var(--pink);
+}
+
+.answer-button {
+  padding: var(--spacing-normal);
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  width: 100%;
+}
+
+.button-primary,
+.button-secondary,
+.answer-button,
+.question {
+  box-shadow: var(--box-shadow);
 }
 
 .page-enter-active, .page-leave-active {

@@ -50,15 +50,12 @@ const createStore = () => {
         state.showReadyNotice = false
       },
 
-      increment (state) {
-       state.questionsCount++
-      },
-
       nextQuestion (state) {
         if (!state.questions.length) {
           return state.gameStarted = false
         }
         const nextQuestion = state.questions.shift()
+        state.questionsCount++
         state.currentQuestion = nextQuestion
       },
 
