@@ -9,3 +9,9 @@
     <nuxt-link to="/my-rotterdam">Speel het spel!</nuxt-link>
   </section>
 </template>
+
+<style scoped>
+
+@import '~/assets/core.css';
+
+</style>

@@ -8,3 +8,9 @@
     </nav>
   </section>
 </template>
+
+<style scoped>
+
+@import '~/assets/core.css';
+
+</style>
