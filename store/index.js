@@ -10,7 +10,9 @@ const createStore = () => {
     currentScenario: [],
     gameStarted: false,
     showQuestion: false,
-    showNotice: false
+    showNotice: false,
+    showReadyNotice: false,
+    continuePlaying: false
   }
 
   return new Vuex.Store({
@@ -41,8 +43,12 @@ const createStore = () => {
         state.showNotice = false
       },
 
-      increment (state) {
-       state.questionsCount++
+      showReadyNotice (state) {
+        state.showReadyNotice = true
+      },
+
+      hideReadyNotice (state) {
+        state.showReadyNotice = false
       },
 
       nextQuestion (state) {
@@ -50,6 +56,7 @@ const createStore = () => {
           return state.gameStarted = false
         }
         const nextQuestion = state.questions.shift()
+        state.questionsCount++
         state.currentQuestion = nextQuestion
       },
 
@@ -61,6 +68,10 @@ const createStore = () => {
 
       followUpQuestion (state, payload) {
         state.currentQuestion = payload
+      },
+
+      showReadyButton (state) {
+        state.continuePlaying = true
       },
 
       endGame (state) {
