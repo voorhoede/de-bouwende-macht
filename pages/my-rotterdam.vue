@@ -17,14 +17,14 @@
       </div>
     </div>
 
-    <transition name="slide-up">
+    <transition name="slow-slide-up">
       <ready-dialog
         v-if="showReadyNotice"
         @onClick="play"
       />
     </transition>
 
-    <transition name="slide-up">
+    <transition name="slow-slide-up">
       <question-notice
         v-if="showNotice && !showQuestion &&!gameEnded"
         @onClick="play"
@@ -147,13 +147,25 @@ export default {
 
 .slide-up-enter-active,
 .slide-up-leave-active {
-  transition: all .3s ease;
+  transition: all .4s ease;
 }
 .slide-up-leave-active {
-  transition: all .5s ease;
+  transition: all .6s ease;
 }
 .slide-up-enter, .slide-up-leave-to {
   transform: translatey(100%);
 }
+
+.slow-slide-up-enter-active,
+.slow-slide-up-leave-active {
+  transition: all .4s ease 1.5s;
+}
+.slow-slide-up-leave-active {
+  transition: all .6s ease;
+}
+.slow-slide-up-enter, .slide-up-leave-to {
+  transform: translatey(100%);
+}
+
 
 </style>
