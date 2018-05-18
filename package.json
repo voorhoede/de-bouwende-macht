@@ -14,6 +14,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
