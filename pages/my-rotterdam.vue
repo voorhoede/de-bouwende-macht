@@ -18,13 +18,16 @@
     </div>
 
     <transition name="slide-up">
-      <ready-dialog v-if="showReadyNotice" />
+      <ready-dialog
+        v-if="showReadyNotice"
+        @onClick="play"
+      />
     </transition>
 
     <transition name="slide-up">
       <question-notice
         v-if="showNotice && !showQuestion &&!gameEnded"
-        @onClick="play" 
+        @onClick="play"
       />
     </transition>
 
@@ -79,6 +82,9 @@ export default {
 
     play () {
       this.$store.commit('showQuestion')
+      if (this.showReadyNotice) {
+        this.$store.commit('hideReadyNotice')
+      }
     },
 
     handleAnswer(answer) {
@@ -111,7 +117,7 @@ export default {
     },
 
     endGame () {
-      store.commit('endGame');
+      this.$store.commit('endGame');
     }
   },
   transition(to, from) {

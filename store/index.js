@@ -46,6 +46,10 @@ const createStore = () => {
         state.showReadyNotice = true
       },
 
+      hideReadyNotice (state) {
+        state.showReadyNotice = false
+      },
+
       increment (state) {
        state.questionsCount++
       },
