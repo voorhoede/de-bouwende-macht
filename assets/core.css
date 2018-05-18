@@ -8,11 +8,11 @@
 
 button {
   padding: var(--spacing-half) var(--spacing-normal);
-  font-size: 1rem;
+  font-size: var(--font-size-normal);
 }
 
 button:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-normal);
 }
 
 button:hover {
@@ -20,7 +20,7 @@ button:hover {
 }
 
 h1, h2 {
-  margin: 1rem 0;
+  margin: var(--spacing-normal) 0;
 }
 
 html {
@@ -49,8 +49,8 @@ body {
 
 .container {
   text-align: center;
-  padding: 20px;
-  font-size: 16px;
+  padding: 1.5rem;
+  font-size: var(--font-size-normal);
   transition: all .3s cubic-bezier(.55,0,.1,1);
 }
 
