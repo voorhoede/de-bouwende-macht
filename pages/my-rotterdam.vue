@@ -1,10 +1,16 @@
 <template>
   <section class="container">
-    <h1>Mijn Rotterdam</h1>
+    <div class="map-wrapper">
+      <city-map class="city-map" />
+    </div>
+
+    <div v-if="!gameStarted" class="toast center">
+      <h1 class="intro-title">Mijn Rotterdam</h1>
     
-    <div v-if="!gameStarted" class="intro">
-      <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
-      <button class="button-primary" @click="startGame()">Bouw jouw Rotterdam</button>
+      <div class="intro">
+        <p class="intro-text" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
+        <button class="button-primary" @click="startGame()">Bouw jouw Rotterdam</button>
+      </div>
     </div>
 
     <div v-if="gameStarted">
@@ -21,6 +27,7 @@
       <ready-notice
         v-if="showReadyNotice"
         @onClick="play"
+        :buildings="citySlug"
       />
     </transition>
 
@@ -33,7 +40,15 @@
 
     <transition name="slow-slide-up">
       <question-notice
-        v-if="showNotice && !showQuestion &&!gameEnded"
+        v-if="showNotice && !showQuestion && !showFeedback && !gameEnded"
+        @onClick="play"
+      />
+    </transition>
+
+    <transition name="slide-up">
+      <feedback
+        :feedback="answerFeedback"
+        v-if="showFeedback && !showQuestion && !showNotice && !showReadyNotice"
         @onClick="play"
       />
     </transition>
@@ -51,7 +66,6 @@
         @onAnswer="handleAnswer" 
       />
     </transition>
-
   </section>
 </template>
 
@@ -60,12 +74,15 @@ import { mapState } from 'vuex'
 import Question from '~/components/Question.vue'
 import QuestionNotice from '~/components/QuestionNotice.vue'
 import ReadyNotice from '~/components/ReadyNotice.vue'
+import Feedback from '~/components/Feedback.vue'
+import CityMap from '~/components/Map.vue'
 
 export default {
-  components: { Question, QuestionNotice, ReadyNotice },
+  components: { Question, QuestionNotice, ReadyNotice, Feedback, CityMap },
   data () {
     return {
-      answerFeedback: null
+      answerFeedback: null,
+      citySlug: '',
     }
   },
   computed: mapState({
@@ -75,6 +92,7 @@ export default {
     currentScenario: state => state.currentScenario,
     showQuestion: state => state.showQuestion,
     showNotice: state => state.showNotice,
+    showFeedback: state => state.showFeedback,
     showReadyNotice: state => state.showReadyNotice,
     gameStarted: state => state.gameStarted,
     gameEnded: state => !state.questions.length,
@@ -83,40 +101,62 @@ export default {
   methods: {
     startGame () {
       this.$store.commit('startGame')
-      this.$store.commit('showQuestion')
-      this.$store.commit('nextQuestion')
+      this.$store.commit('showNotice')
     },
 
     play () {
+      this.$store.commit('hideFeedback')
+      this.$store.commit('hideNotice')
+      this.$store.commit('hideReadyNotice')
+      this.$store.commit('nextQuestion')
       this.$store.commit('showQuestion')
  
       if (this.showReadyNotice) {
         this.$store.commit('hideReadyNotice')
         this.$store.commit('showReadyButton')
       }
+
+      if (this.showFeedback) {
+        this.$store.commit('hideFeedback')
+        this.answerFeedback = null;
+      }
     },
 
     nextQuestion () {
-      const isMainQuestion = !this.currentQuestion.followUp
-      this.$store.commit('nextQuestion')
+      this.$store.commit('hideQuestion')
+      this.$store.commit('showNotice')
     },
 
     handleAnswer(answer) {
       const outcomes = answer.outcome
       const followUpQuestion = outcomes.filter(outcome => outcome.itemType === 'question')
       const results = outcomes.filter(outcome => outcome.itemType === 'result')
+      const consequences = outcomes.filter(outcome => outcome.itemType === 'consequence')
+
+      if (consequences.length) {
+        consequences.map(consequence => {
+          const newConsequence = consequence.delete[0]
+          this.removeBuildings(newConsequence.slug)
+        })
+      }
 
       if (results.length > 0) {
         results.map(result => {
-          this.answerFeedback = result.feedback
-          this.$store.commit('updateCity', result.slug)
+          if (result.feedback && result.feedback.length > 1) {
+            this.answerFeedback = result.feedback
+            this.$store.commit('hideQuestion')
+            this.$store.commit('hideNotice')
+            this.$store.commit('showFeedback')
+          }
+        
+          this.updateCity(result.slug)
         })
       }
 
       if (followUpQuestion.length === 0) {
         this.$store.commit('hideQuestion')
         this.nextQuestion()
-        
+      
         if (this.questionsCount === 3) {
           this.$store.commit('hideNotice')
           this.$store.commit('showReadyNotice')
@@ -124,10 +164,33 @@ export default {
           this.$store.commit('showNotice')
         }
       } else {
-        this.$store.commit('followUpQuestion', followUpQuestion[0])
+      this.$store.commit('followUpQuestion', followUpQuestion[0])
+    }
+    },
+    updateCity(slug) {
+      const id = slug.toUpperCase();
+      const el = document.getElementById(id)
+      if (el === null) {
+        console.log(slug)
+        return false
       }
+
+      el.classList.remove('hidden')
+      
+      this.$store.commit('updateCity', slug)
     },
 
+    removeBuildings(slug) {
+      const id = slug.toUpperCase()
+      const el = document.getElementById(id)
+
+      if (el === null) {
+        console.log(slug)
+        return false
+      }
+
+      el.classList.add('hidden')
+    },
     endGame () {
       this.$store.commit('endGame');
     }
@@ -143,8 +206,29 @@ export default {
 
 @import '~/assets/core.css';
 
-.intro {
-  margin-bottom: 1rem;
+.center {
+  left: 1rem;
+  right: 1rem;
+  bottom: 30%;
+}
+
+.city-map {
+  height: 100%;
+  width: auto;
+}
+
+.intro-title {
+  padding-bottom: 1.5rem;
+  font-size: var(--font-size-big);
+}
+
+.intro-text {
+  margin-bottom: 3rem;
+}
+
+.map-wrapper {
+  height: 100%;
+  overflow: hidden;
 }
 
 .current-scenario {
@@ -178,6 +262,4 @@ export default {
 .slow-slide-up-enter, .slide-up-leave-to {
   transform: translatey(100%);
 }
-
-
 </style>
