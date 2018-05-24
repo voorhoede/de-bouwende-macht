@@ -15,7 +15,7 @@
 
     <transition name="slow-slide-up">
       <ready-notice
-        v-if="showReadyNotice"
+        v-if="showReadyNotice && !gameEnded"
         @onClick="play"
       />
     </transition>
