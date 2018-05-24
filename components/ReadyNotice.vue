@@ -1,8 +1,9 @@
 <template>
   <div class="toast ready-notice">
+    <img class="bob-de-bouwer" src="~static/images/bob-bouwer.svg">
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
     <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
-    <nuxt-link class="button button-primary" to="/share-my-rotterdam" >
+    <nuxt-link class="button button-primary" to="/share-my-rotterdam">
       Dit is mijn Rotterdam!
     </nuxt-link>
     <p>Je kan natuurlijk ook nog verder bouwen!</p>
@@ -25,5 +26,11 @@ export default {
 <style scoped>
 
 @import '~/assets/core.css';
+
+.bob-de-bouwer {
+  height: 100px;
+  width: auto;
+  margin-bottom: var(--spacing-normal);
+}
 
 </style>

@@ -8,9 +8,12 @@ const createStore = () => {
     questions: _.shuffle(questions),
     questionsCount: 0,
     currentScenario: [],
+    feedback: null,
+    notice: null,
     gameStarted: false,
     showQuestion: false,
     showNotice: false,
+    showFeedback: false,
     showReadyNotice: false,
     continuePlaying: false
   }
@@ -49,6 +52,18 @@ const createStore = () => {
 
       hideReadyNotice (state) {
         state.showReadyNotice = false
+      },
+
+      showFeedback (state) {
+        state.showFeedback = true
+      },
+
+      hideFeedback (state) {
+        state.showFeedback = false
+      },
+
+      clearFeedback (state) {
+        state.feedback = null
       },
 
       nextQuestion (state) {

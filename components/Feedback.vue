@@ -1,7 +1,6 @@
 <template>
-  <div class="question-notice toast">
-    <img class="bob-de-bouwer" src="~static/images/bob-bouwer.svg">
-    <p>Er is een bouwvraag!</p>
+  <div class="feedback toast">
+    <p>{{ feedback }}</p>
     <button class="button-primary" @click="onClickButton()">Speel!</button>
   </div>
 </template>
@@ -9,10 +8,11 @@
 <script>
 
 export default {
+  props: ['feedback'],
   methods: {
     onClickButton () {
       this.$emit('onClick')
-      this.$store.commit('hideNotice')
+      this.$store.commit('clearFeedback')
     }
   }
 }
@@ -23,13 +23,8 @@ export default {
 
 @import '~/assets/core.css';
 
-.ready-notice {
+.feedback {
   height: 40vh;
 }
 
-.bob-de-bouwer {
-  height: 100px;
-  width: auto;
-  margin-bottom: var(--spacing-normal);
-}
 </style>
