@@ -1,5 +1,5 @@
 <template>
-  <div class="feedback toast">
+  <div class="feedback toast card">
     <img class="character" src="~static/images/ambtenaar.svg">
     <p>{{ feedback }}</p>
     <button class="button-primary" @click="onClickButton">Bouw verder</button>

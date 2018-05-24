@@ -1,5 +1,5 @@
 <template>
-  <div class="toast">
+  <div class="toast card">
     <div>
       <p class="current-question">{{ currentQuestion.question }}</p>
       

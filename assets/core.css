@@ -6,12 +6,24 @@
   margin: 0;
 }
 
+.link-primary,
+.link-primary:visited {
+  color: var(--pink-dark);
+  text-decoration: underline;
+}
+
+.link-primary:hover,
+.link-primary:focus {
+  color: var(--pink);
+}
+
 button,
 .button {
   display: inline-block;
   padding: var(--spacing-half) var(--spacing-normal);
   border: none;
   font-size: var(--font-size-normal);
+  text-decoration: none;
 }
 
 button:not(:last-child) {
@@ -40,11 +52,9 @@ html {
 
 body,
 p,
-button,
-a {
+button {
   font-family: var(--font);
   font-size: var(--font-size-normal);
-  text-decoration: none;
 }
 
 .a11y-sr-only {
@@ -59,10 +69,19 @@ a {
 }
 
 .container {
+  position: relative;
   text-align: center;
   font-size: var(--font-size-normal);
   transition: all .3s cubic-bezier(.55,0,.1,1);
-  height: 100%;
+  height: 100vh;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: var(--spacing-double);
+  margin-left: var(--spacing-double);
 }
 
 .toast {
@@ -70,6 +89,9 @@ a {
   bottom: 0;
   left: var(--spacing-normal);
   right: var(--spacing-normal);
+}
+
+.card {
   padding: var(--spacing-double) var(--spacing-normal);
   background-color: var(--white);
   box-shadow: var(--box-shadow);
