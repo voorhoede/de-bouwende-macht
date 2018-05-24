@@ -44,6 +44,7 @@ button,
 a {
   font-family: var(--font);
   font-size: var(--font-size-normal);
+  text-decoration: none;
 }
 
 .a11y-sr-only {
@@ -85,6 +86,7 @@ a {
 }
 
 .button-secondary {
+  font-family: var(--font-bold);
   background-color: var(--white);
   color: var(--pink);
   text-transform: uppercase;
@@ -102,6 +104,12 @@ a {
 .answer-button,
 .question {
   box-shadow: var(--box-shadow);
+}
+
+.bob-de-bouwer {
+  height: 100px;
+  width: auto;
+  margin-bottom: var(--spacing-normal);
 }
 
 .page-enter-active, .page-leave-active {

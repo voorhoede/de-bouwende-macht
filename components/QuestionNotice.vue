@@ -11,8 +11,8 @@
 export default {
   methods: {
     onClickButton () {
+      this.$store.commit('seenNotice', true)
       this.$emit('onClick')
-      this.$store.commit('hideNotice')
     }
   }
 }
@@ -23,13 +23,4 @@ export default {
 
 @import '~/assets/core.css';
 
-.ready-notice {
-  height: 40vh;
-}
-
-.bob-de-bouwer {
-  height: 100px;
-  width: auto;
-  margin-bottom: var(--spacing-normal);
-}
 </style>

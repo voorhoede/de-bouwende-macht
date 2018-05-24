@@ -1,7 +1,8 @@
 <template>
   <div class="feedback toast">
+    <img class="bob-de-bouwer" src="~static/images/bob-bouwer.svg">
     <p>{{ feedback }}</p>
-    <button class="button-primary" @click="onClickButton()">Speel!</button>
+    <button class="button-primary" @click="onClickButton">Speel!</button>
   </div>
 </template>
 
@@ -11,8 +12,8 @@ export default {
   props: ['feedback'],
   methods: {
     onClickButton () {
+      this.$store.commit('seenFeedback', true)
       this.$emit('onClick')
-      this.$store.commit('clearFeedback')
     }
   }
 }
@@ -22,9 +23,5 @@ export default {
 <style scoped>
 
 @import '~/assets/core.css';
-
-.feedback {
-  height: 40vh;
-}
 
 </style>

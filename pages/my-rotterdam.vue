@@ -4,7 +4,7 @@
       <city-map class="city-map" />
     </div>
 
-    <div v-if="!gameStarted" class="toast center">
+    <div v-if="!gameStarted && (questions.length === 9)" class="toast center">
       <h1 class="intro-title">Mijn Rotterdam</h1>
     
       <div class="intro">
@@ -13,42 +13,26 @@
       </div>
     </div>
 
-    <div v-if="gameStarted">
-      <h2>Current scenario:</h2>
-      <div class="current-scenario" v-if="currentScenario">
-        <p
-          v-for="(location, index) in currentScenario"
-          :key="index">{{ location }}
-        </p>
-      </div>
-    </div>
-
     <transition name="slow-slide-up">
       <ready-notice
         v-if="showReadyNotice"
         @onClick="play"
-        :buildings="citySlug"
       />
     </transition>
 
-    <nuxt-link
-      v-if="continuePlaying"
-      class="button button-primary"
-      to="/share-my-rotterdam" >
-      Dit is mijn Rotterdam!
-    </nuxt-link>
+    <share-button v-if="continuePlaying" />
 
     <transition name="slow-slide-up">
       <question-notice
-        v-if="showNotice && !showQuestion && !showFeedback && !gameEnded"
+        v-if="showNotice"
         @onClick="play"
       />
     </transition>
 
-    <transition name="slide-up">
+    <transition name="slow-slide-up">
       <feedback
-        :feedback="answerFeedback"
-        v-if="showFeedback && !showQuestion && !showNotice && !showReadyNotice"
+        :feedback="feedbackContent"
+        v-if="showFeedback"
         @onClick="play"
       />
     </transition>
@@ -62,7 +46,6 @@
       <question 
         v-if="showQuestion" 
         :currentQuestion="currentQuestion" 
-        :answerFeedback="answerFeedback" 
         @onAnswer="handleAnswer" 
       />
     </transition>
@@ -76,18 +59,22 @@ import QuestionNotice from '~/components/QuestionNotice.vue'
 import ReadyNotice from '~/components/ReadyNotice.vue'
 import Feedback from '~/components/Feedback.vue'
 import CityMap from '~/components/Map.vue'
+import ShareButton from '~/components/ShareButton.vue'
+import { setTimeout } from 'timers';
 
 export default {
-  components: { Question, QuestionNotice, ReadyNotice, Feedback, CityMap },
+  components: { Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton },
   data () {
     return {
-      answerFeedback: null,
-      citySlug: '',
+      hasNotice: false,
+      hasFeedback: false,
+      hasReadyNotice: false,
     }
   },
   computed: mapState({
     questions: state => state.questions,
     questionsCount: state => state.questionsCount,
+    totalQuestions: state => state.totalQuestions,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
     showQuestion: state => state.showQuestion,
@@ -95,104 +82,112 @@ export default {
     showFeedback: state => state.showFeedback,
     showReadyNotice: state => state.showReadyNotice,
     gameStarted: state => state.gameStarted,
-    gameEnded: state => !state.questions.length,
-    continuePlaying: state => state.continuePlaying
+    gameEnded: state => !state.gameStarted,
+    continuePlaying: state => state.continuePlaying,
+    seenNotice: state => state.seenNotice,
+    seenFeedback: state => state.seenFeedback,
+    seenReadyNotice: state => state.seenReadyNotice,
   }),
   methods: {
     startGame () {
       this.$store.commit('startGame')
+      this.$store.commit('nextQuestion')
       this.$store.commit('showNotice')
     },
 
     play () {
-      this.$store.commit('hideFeedback')
-      this.$store.commit('hideNotice')
-      this.$store.commit('hideReadyNotice')
-      this.$store.commit('nextQuestion')
-      this.$store.commit('showQuestion')
- 
-      if (this.showReadyNotice) {
-        this.$store.commit('hideReadyNotice')
-        this.$store.commit('showReadyButton')
-      }
+      this.hideAllElements()
 
-      if (this.showFeedback) {
-        this.$store.commit('hideFeedback')
-        this.answerFeedback = null;
+      if (this.gameEnded) {
+        return
+      }
+      
+      const shouldShowNotice = this.hasNotice && !this.seenNotice
+      const shouldShowReadyNotice = this.hasReadyNotice && !this.seenReadyNotice
+      const shouldShowFeedback = this.hasFeedback && !this.seenFeedback
+      
+      if (shouldShowFeedback) {
+        return this.$store.commit('showFeedback')
+      } else if (shouldShowReadyNotice) {
+        return this.$store.commit('showReadyNotice')
+      } else if (shouldShowNotice) {
+        return this.$store.commit('showNotice')
+      } else {
+        return this.$store.commit('showQuestion')
       }
     },
 
     nextQuestion () {
-      this.$store.commit('hideQuestion')
-      this.$store.commit('showNotice')
+      if (this.questionsCount === this.totalQuestions) {
+        return this.$store.commit('endGame')
+      }
+
+      this.$store.commit('nextQuestion')
+      this.$store.commit('seenNotice', false)
+      this.hasNotice = true
     },
 
     handleAnswer(answer) {
-      const outcomes = answer.outcome
-      const followUpQuestion = outcomes.filter(outcome => outcome.itemType === 'question')
-      const results = outcomes.filter(outcome => outcome.itemType === 'result')
-      const consequences = outcomes.filter(outcome => outcome.itemType === 'consequence')
+      const followUpQuestion = answer.outcome.filter(outcome => outcome.itemType === 'question')
+      const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
+      const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
+      const hasFollowUpQuestion = followUpQuestion.length > 0
 
-      if (consequences.length) {
-        consequences.map(consequence => {
-          const newConsequence = consequence.delete[0]
-          this.removeBuildings(newConsequence.slug)
-        })
+      if (answer.feedback && (answer.feedback.length > 1)) {
+        this.hasFeedback = true
+        this.$store.commit('seenFeedback', false)
+        this.feedbackContent = answer.feedback
       }
 
       if (results.length > 0) {
         results.map(result => {
-          if (result.feedback && result.feedback.length > 1) {
-            this.answerFeedback = result.feedback
-            this.$store.commit('hideQuestion')
-            this.$store.commit('hideNotice')
-            this.$store.commit('showFeedback')
-          }
-        
-          this.updateCity(result.slug)
+          this.updateCity(result.slug, 'addBuilding')
         })
       }
 
-      if (followUpQuestion.length === 0) {
-        this.$store.commit('hideQuestion')
-        this.nextQuestion()
-      
-        if (this.questionsCount === 3) {
-          this.$store.commit('hideNotice')
-          this.$store.commit('showReadyNotice')
-        } else {
-          this.$store.commit('showNotice')
-        }
+      if (consequences.length) {
+        consequences.map(consequence => {
+          const building = consequence.delete[0]
+          this.updateCity(building.slug, 'removeBuilding')
+        })
+      }
+
+      if ((this.questionsCount === 3 ) && !followUpQuestion.length) {
+        this.hasReadyNotice = true
+      }
+
+      if (hasFollowUpQuestion) {
+        this.$store.commit('followUpQuestion', followUpQuestion[0])
       } else {
-      this.$store.commit('followUpQuestion', followUpQuestion[0])
-    }
+        this.nextQuestion()
+      }
+     
+      this.play()
     },
-    updateCity(slug) {
+
+   updateCity(slug, type) {
       const id = slug.toUpperCase();
       const el = document.getElementById(id)
       if (el === null) {
-        console.log(slug)
         return false
       }
 
-      el.classList.remove('hidden')
-      
-      this.$store.commit('updateCity', slug)
-    },
-
-    removeBuildings(slug) {
-      const id = slug.toUpperCase()
-      const el = document.getElementById(id)
-
-      if (el === null) {
-        console.log(slug)
-        return false
+      if (type === 'addBuilding') {
+        el.classList.remove('hidden')
       }
 
-      el.classList.add('hidden')
+      if (type === 'removeBuilding') {
+        el.classList.add('hidden')
+      }
+        
+      this.$store.commit('updateCity', { type: type, slug: slug })
     },
-    endGame () {
-      this.$store.commit('endGame');
+
+    hideAllElements() {
+      this.$store.commit('hideNotice')
+      this.$store.commit('hideReadyNotice')
+      this.$store.commit('hideQuestion')
+      this.$store.commit('hideFeedback')
     }
   },
   transition(to, from) {
@@ -203,13 +198,17 @@ export default {
 </script>
 
 <style scoped>
-
 @import '~/assets/core.css';
 
 .center {
-  left: 1rem;
-  right: 1rem;
+  left: var(--spacing-normal);
+  right: var(--spacing-normal);
   bottom: 30%;
+}
+
+.share-button {
+  width: 40px;
+  height: 40px;
 }
 
 .city-map {
@@ -232,34 +231,40 @@ export default {
 }
 
 .current-scenario {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-double);
 }
 
 .feedback {
   background-color: #7fffd4;
-  padding: 1rem;
-  margin: 2rem 0;
+  padding: var(--spacing-normal);
+  margin: var(--spacing-double) 0;
 }
 
 .slide-up-enter-active,
 .slide-up-leave-active {
   transition: all .4s ease;
 }
+
 .slide-up-leave-active {
   transition: all .6s ease;
 }
-.slide-up-enter, .slide-up-leave-to {
+
+.slide-up-enter, 
+.slide-up-leave-to {
   transform: translatey(100%);
 }
 
 .slow-slide-up-enter-active,
 .slow-slide-up-leave-active {
-  transition: all .4s ease 1.5s;
+  transition: all .4s ease 1s;
 }
+
 .slow-slide-up-leave-active {
   transition: all .6s ease;
 }
-.slow-slide-up-enter, .slide-up-leave-to {
+
+.slow-slide-up-enter, 
+.slide-up-leave-to {
   transform: translatey(100%);
 }
 </style>
