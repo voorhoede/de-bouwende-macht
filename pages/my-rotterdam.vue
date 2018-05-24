@@ -4,12 +4,12 @@
       <city-map class="city-map" />
     </div>
 
-    <div v-if="!gameStarted" class="toast center">
-      <h1 class="intro-title">Mijn Rotterdam</h1>
+    <div v-if="!gameStarted" class="card center">
+      <h1 class="intro-title">Welkom in jouw Rotterdam!</h1>
     
       <div class="intro">
-        <p class="intro-text" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
-        <button class="button-primary" @click="startGame()">Bouw jouw Rotterdam</button>
+        <p class="intro-text">Hier bouw jij aan de stad van jouw keuze. Laten we beginnen!</p>
+        <button class="button-primary" @click="startGame()">Start met bouwen</button>
       </div>
     </div>
 
@@ -211,12 +211,6 @@ export default {
 
 <style scoped>
 @import '~/assets/core.css';
-
-.center {
-  left: var(--spacing-normal);
-  right: var(--spacing-normal);
-  bottom: 30%;
-}
 
 .share-button {
   width: 40px;
