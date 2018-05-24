@@ -12,6 +12,7 @@ const createStore = () => {
     feedback: null,
     notice: null,
     gameStarted: false,
+    gameEnded: false,
     showQuestion: false,
     showNotice: false,
     showFeedback: false,
@@ -25,9 +26,6 @@ const createStore = () => {
   return new Vuex.Store({
     state: _.cloneDeep(initialState),
     mutations: {
-      resetGame (state) {
-        state.questions = _.cloneDeep(initialState)
-      },
       startGame (state) {
         state.gameStarted = true
       },
@@ -90,6 +88,11 @@ const createStore = () => {
         state.currentQuestion = nextQuestion
       },
 
+      addMainQuestion (state, payload) {
+        state.questions.push(payload)
+        state.questions = _.shuffle(state.questions)
+      },
+
       updateCity (state, { type, slug }) {
         if (type === 'addBuilding') {
           if (!state.currentScenario.includes(slug)) {
@@ -111,7 +114,7 @@ const createStore = () => {
       },
 
       endGame (state) {
-        state.gameStarted = false
+        state.gameEnded = true
       } 
     }
   })
