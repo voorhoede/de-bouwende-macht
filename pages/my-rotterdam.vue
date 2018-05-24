@@ -1,39 +1,38 @@
 <template>
   <section class="container">
-    <h1>Mijn Rotterdam</h1>
-    
-    <div v-if="!gameStarted" class="intro">
-      <p class="intro" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
-      <button class="button-primary" @click="startGame()">Bouw jouw Rotterdam</button>
+    <div class="map-wrapper">
+      <city-map class="city-map" />
     </div>
 
-    <div v-if="gameStarted">
-      <h2>Current scenario:</h2>
-      <div class="current-scenario" v-if="currentScenario">
-        <p
-          v-for="(location, index) in currentScenario"
-          :key="index">{{ location }}
-        </p>
+    <div v-if="!gameStarted && (questions.length === 9)" class="toast center">
+      <h1 class="intro-title">Mijn Rotterdam</h1>
+    
+      <div class="intro">
+        <p class="intro-text" >Welkom in jouw Rotterdam! Hier bouw jij aan de stad van jouw keuze en het canvas is blanco. Laten we beginnen!</p>
+        <button class="button-primary" @click="startGame()">Bouw jouw Rotterdam</button>
       </div>
     </div>
 
     <transition name="slow-slide-up">
       <ready-notice
-        v-if="showReadyNotice"
+        v-if="showReadyNotice && !gameEnded"
         @onClick="play"
       />
     </transition>
 
-    <nuxt-link
-      v-if="continuePlaying"
-      class="button button-primary"
-      to="/share-my-rotterdam" >
-      Dit is mijn Rotterdam!
-    </nuxt-link>
+    <share-button v-if="continuePlaying" />
 
     <transition name="slow-slide-up">
       <question-notice
-        v-if="showNotice && !showQuestion &&!gameEnded"
+        v-if="!gameEnded && showNotice"
+        @onClick="play"
+      />
+    </transition>
+
+    <transition name="slow-slide-up">
+      <feedback
+        :feedback="feedbackContent"
+        v-if="showFeedback"
         @onClick="play"
       />
     </transition>
@@ -47,11 +46,9 @@
       <question 
         v-if="showQuestion" 
         :currentQuestion="currentQuestion" 
-        :answerFeedback="answerFeedback" 
         @onAnswer="handleAnswer" 
       />
     </transition>
-
   </section>
 </template>
 
@@ -60,76 +57,137 @@ import { mapState } from 'vuex'
 import Question from '~/components/Question.vue'
 import QuestionNotice from '~/components/QuestionNotice.vue'
 import ReadyNotice from '~/components/ReadyNotice.vue'
+import Feedback from '~/components/Feedback.vue'
+import CityMap from '~/components/Map.vue'
+import ShareButton from '~/components/ShareButton.vue'
+import { setTimeout } from 'timers';
 
 export default {
-  components: { Question, QuestionNotice, ReadyNotice },
+  components: { Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton },
   data () {
     return {
-      answerFeedback: null
+      hasNotice: false,
+      hasFeedback: false,
+      hasReadyNotice: false,
     }
   },
   computed: mapState({
     questions: state => state.questions,
     questionsCount: state => state.questionsCount,
+    totalQuestions: state => state.totalQuestions,
     currentQuestion: state => state.currentQuestion,
     currentScenario: state => state.currentScenario,
     showQuestion: state => state.showQuestion,
     showNotice: state => state.showNotice,
+    showFeedback: state => state.showFeedback,
     showReadyNotice: state => state.showReadyNotice,
     gameStarted: state => state.gameStarted,
-    gameEnded: state => !state.questions.length,
-    continuePlaying: state => state.continuePlaying
+    gameEnded: state => !state.gameStarted,
+    continuePlaying: state => state.continuePlaying,
+    seenNotice: state => state.seenNotice,
+    seenFeedback: state => state.seenFeedback,
+    seenReadyNotice: state => state.seenReadyNotice,
   }),
   methods: {
     startGame () {
       this.$store.commit('startGame')
-      this.$store.commit('showQuestion')
       this.$store.commit('nextQuestion')
+      this.$store.commit('showNotice')
     },
 
     play () {
-      this.$store.commit('showQuestion')
- 
-      if (this.showReadyNotice) {
-        this.$store.commit('hideReadyNotice')
-        this.$store.commit('showReadyButton')
+      this.hideAllElements()
+
+      if (this.gameEnded) {
+        return
+      }
+      
+      const shouldShowNotice = this.hasNotice && !this.seenNotice
+      const shouldShowReadyNotice = this.hasReadyNotice && !this.seenReadyNotice
+      const shouldShowFeedback = this.hasFeedback && !this.seenFeedback
+      
+      if (shouldShowFeedback) {
+        return this.$store.commit('showFeedback')
+      } else if (shouldShowReadyNotice) {
+        return this.$store.commit('showReadyNotice')
+      } else if (shouldShowNotice) {
+        return this.$store.commit('showNotice')
+      } else {
+        return this.$store.commit('showQuestion')
       }
     },
 
     nextQuestion () {
-      const isMainQuestion = !this.currentQuestion.followUp
+      if (this.questionsCount === this.totalQuestions) {
+        return this.$store.commit('endGame')
+      }
+
       this.$store.commit('nextQuestion')
+      this.$store.commit('seenNotice', false)
+      this.hasNotice = true
     },
 
     handleAnswer(answer) {
-      const outcomes = answer.outcome
-      const followUpQuestion = outcomes.filter(outcome => outcome.itemType === 'question')
-      const results = outcomes.filter(outcome => outcome.itemType === 'result')
+      const followUpQuestion = answer.outcome.filter(outcome => outcome.itemType === 'question')
+      const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
+      const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
+      const hasFollowUpQuestion = followUpQuestion.length > 0
+
+      if (answer.feedback && (answer.feedback.length > 1)) {
+        this.hasFeedback = true
+        this.$store.commit('seenFeedback', false)
+        this.feedbackContent = answer.feedback
+      }
 
       if (results.length > 0) {
         results.map(result => {
-          this.answerFeedback = result.feedback
-          this.$store.commit('updateCity', result.slug)
+          this.updateCity(result.slug, 'addBuilding')
         })
       }
 
-      if (followUpQuestion.length === 0) {
-        this.$store.commit('hideQuestion')
-        this.nextQuestion()
-        
-        if (this.questionsCount === 3) {
-          this.$store.commit('hideNotice')
-          this.$store.commit('showReadyNotice')
-        } else {
-          this.$store.commit('showNotice')
-        }
-      } else {
-        this.$store.commit('followUpQuestion', followUpQuestion[0])
+      if (consequences.length) {
+        consequences.map(consequence => {
+          const building = consequence.delete[0]
+          this.updateCity(building.slug, 'removeBuilding')
+        })
       }
+
+      if ((this.questionsCount === 3 ) && !followUpQuestion.length) {
+        this.hasReadyNotice = true
+      }
+
+      if (hasFollowUpQuestion) {
+        this.$store.commit('followUpQuestion', followUpQuestion[0])
+      } else {
+        this.nextQuestion()
+      }
+     
+      this.play()
     },
 
-    endGame () {
-      this.$store.commit('endGame');
+   updateCity(slug, type) {
+      const id = slug.toUpperCase();
+      const el = document.getElementById(id)
+      if (el === null) {
+        return false
+      }
+
+      if (type === 'addBuilding') {
+        el.classList.remove('hidden')
+      }
+
+      if (type === 'removeBuilding') {
+        el.classList.add('hidden')
+      }
+        
+      this.$store.commit('updateCity', { type: type, slug: slug })
+    },
+
+    hideAllElements() {
+      this.$store.commit('hideNotice')
+      this.$store.commit('hideReadyNotice')
+      this.$store.commit('hideQuestion')
+      this.$store.commit('hideFeedback')
     }
   },
   transition(to, from) {
@@ -140,11 +198,36 @@ export default {
 </script>
 
 <style scoped>
-
 @import '~/assets/core.css';
 
-.intro {
-  margin-bottom: 1rem;
+.center {
+  left: 1rem;
+  right: 1rem;
+  bottom: 30%;
+}
+
+.share-button {
+  width: 40px;
+  height: 40px;
+}
+
+.city-map {
+  height: 100%;
+  width: auto;
+}
+
+.intro-title {
+  padding-bottom: 1.5rem;
+  font-size: var(--font-size-big);
+}
+
+.intro-text {
+  margin-bottom: 3rem;
+}
+
+.map-wrapper {
+  height: 100%;
+  overflow: hidden;
 }
 
 .current-scenario {
@@ -161,23 +244,27 @@ export default {
 .slide-up-leave-active {
   transition: all .4s ease;
 }
+
 .slide-up-leave-active {
   transition: all .6s ease;
 }
-.slide-up-enter, .slide-up-leave-to {
+
+.slide-up-enter, 
+.slide-up-leave-to {
   transform: translatey(100%);
 }
 
 .slow-slide-up-enter-active,
 .slow-slide-up-leave-active {
-  transition: all .4s ease 1.5s;
+  transition: all .4s ease 1s;
 }
+
 .slow-slide-up-leave-active {
   transition: all .6s ease;
 }
-.slow-slide-up-enter, .slide-up-leave-to {
+
+.slow-slide-up-enter, 
+.slide-up-leave-to {
   transform: translatey(100%);
 }
-
-
 </style>

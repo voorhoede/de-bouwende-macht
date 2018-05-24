@@ -41,6 +41,7 @@ html {
 body {
   font-family: var(--font);
   font-size: var(--font-size-normal);
+  text-decoration: none;
 }
 
 .a11y-sr-only {
@@ -81,6 +82,7 @@ body {
 }
 
 .button-secondary {
+  font-family: var(--font-bold);
   background-color: var(--white);
   color: var(--pink);
 }

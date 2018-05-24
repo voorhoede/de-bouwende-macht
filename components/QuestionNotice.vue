@@ -10,6 +10,7 @@
 export default {
   methods: {
     onClickButton () {
+      this.$store.commit('seenNotice', true)
       this.$emit('onClick')
     }
   }
@@ -22,7 +23,7 @@ export default {
 @import '~/assets/core.css';
 
 .ready-notice {
-  height: 40vh;
+  /* height: 40vh; */
 }
 
 </style>

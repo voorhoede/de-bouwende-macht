@@ -6,13 +6,17 @@ const createStore = () => {
   const initialState = {
     currentQuestion: {},
     questions: _.shuffle(questions),
+    totalQuestions: questions.length,
     questionsCount: 0,
     currentScenario: [],
     gameStarted: false,
     showQuestion: false,
     showNotice: false,
     showReadyNotice: false,
-    continuePlaying: false
+    continuePlaying: false,
+    seenNotice: false,
+    seenFeedback: false,
+    seenReadyNotice: false,
   }
 
   return new Vuex.Store({
@@ -26,9 +30,7 @@ const createStore = () => {
       },
 
       showQuestion (state) {
-        if (state.questions.length) {
-          state.showQuestion = true
-        }
+        state.showQuestion = true
       },
 
       hideQuestion (state) {
@@ -43,6 +45,11 @@ const createStore = () => {
         state.showNotice = false
       },
 
+      seenNotice (state, payload) {
+        state.seenNotice = payload
+        state.showNotice = !payload
+      },
+
       showReadyNotice (state) {
         state.showReadyNotice = true
       },
@@ -51,18 +58,44 @@ const createStore = () => {
         state.showReadyNotice = false
       },
 
+      seenReadyNotice (state) {
+        state.seenReadyNotice = true
+        state.showReadyNotice = false
+      },
+
+      showFeedback (state) {
+        state.seenFeedback = false
+        state.showFeedback = true
+      },
+
+      hideFeedback (state) {
+        state.showFeedback = false
+      },
+
+      seenFeedback (state, payload) {
+        state.seenFeedback = payload
+        state.showFeedback = !payload
+      },
+
+      clearFeedback (state) {
+        state.feedback = null
+      },
+
       nextQuestion (state) {
-        if (!state.questions.length) {
-          return state.gameStarted = false
-        }
-        const nextQuestion = state.questions.shift()
         state.questionsCount++
+        const nextQuestion = state.questions.shift()
         state.currentQuestion = nextQuestion
       },
 
-      updateCity (state, payload) {
-        if (!state.currentScenario.includes(payload)) {
-          state.currentScenario.push(payload)
+      updateCity (state, { type, slug }) {
+        if (type === 'addBuilding') {
+          if (!state.currentScenario.includes(slug)) {
+            state.currentScenario.push(slug)
+          }
+        }
+
+        if (type === 'removeBuilding') {
+          state.currentScenario = state.currentScenario.filter(building => building !== slug)
         }
       },
 
