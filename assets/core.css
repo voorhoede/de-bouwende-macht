@@ -106,7 +106,7 @@ a {
   box-shadow: var(--box-shadow);
 }
 
-.bob-de-bouwer {
+.character {
   height: 100px;
   width: auto;
   margin-bottom: var(--spacing-normal);
