@@ -1,4 +1,4 @@
-<template>
+git<template>
   <nuxt-link
     class="share-button"
     to="/share-my-rotterdam" >
@@ -17,9 +17,8 @@ export default {
 @import '~/assets/core.css';
 
 .share-button {
-  position: absolute;
-  right: .5rem;
-  top: .5rem;
+  display: block;
+  margin-bottom: var(--spacing-half);
   background-color: white;
   border-radius: 50%;
 }
