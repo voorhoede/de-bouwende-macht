@@ -1,5 +1,6 @@
 <template>
   <div class="toast ready-notice">
+    <img class="bob-de-bouwer" src="~static/images/bob-bouwer.svg">
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
     <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
     <nuxt-link class="button share-button button-primary" to="/share-my-rotterdam">

@@ -24,10 +24,4 @@ export default {
 
 @import '~/assets/core.css';
 
-.bob-de-bouwer {
-  height: 100px;
-  width: auto;
-  margin-bottom: var(--spacing-normal);
-}
-
 </style>

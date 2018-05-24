@@ -24,7 +24,7 @@
 
     <transition name="slow-slide-up">
       <question-notice
-        v-if="!gameEnded && showNotice"
+        v-if="showNotice"
         @onClick="play"
       />
     </transition>
@@ -201,8 +201,8 @@ export default {
 @import '~/assets/core.css';
 
 .center {
-  left: 1rem;
-  right: 1rem;
+  left: var(--spacing-normal);
+  right: var(--spacing-normal);
   bottom: 30%;
 }
 
@@ -231,13 +231,13 @@ export default {
 }
 
 .current-scenario {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-double);
 }
 
 .feedback {
   background-color: #7fffd4;
-  padding: 1rem;
-  margin: 2rem 0;
+  padding: var(--spacing-normal);
+  margin: var(--spacing-double) 0;
 }
 
 .slide-up-enter-active,

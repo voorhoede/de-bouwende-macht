@@ -38,7 +38,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
+body,
+p,
+button,
+a {
   font-family: var(--font);
   font-size: var(--font-size-normal);
   text-decoration: none;
@@ -57,9 +60,9 @@ body {
 
 .container {
   text-align: center;
-  padding: 1.5rem;
   font-size: var(--font-size-normal);
   transition: all .3s cubic-bezier(.55,0,.1,1);
+  height: 100%;
 }
 
 .toast {
@@ -79,12 +82,14 @@ body {
   background-color: var(--pink);
   font-family: var(--font-bold);
   color: var(--white);
+  text-transform: uppercase;
 }
 
 .button-secondary {
   font-family: var(--font-bold);
   background-color: var(--white);
   color: var(--pink);
+  text-transform: uppercase;
 }
 
 .answer-button {
@@ -99,6 +104,12 @@ body {
 .answer-button,
 .question {
   box-shadow: var(--box-shadow);
+}
+
+.bob-de-bouwer {
+  height: 100px;
+  width: auto;
+  margin-bottom: var(--spacing-normal);
 }
 
 .page-enter-active, .page-leave-active {
