@@ -79,9 +79,19 @@ button {
 .center {
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   transform: translateY(-50%);
   margin-right: var(--spacing-double);
   margin-left: var(--spacing-double);
+}
+
+@media screen and (min-width: 832px) {
+  .center {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .toast {
