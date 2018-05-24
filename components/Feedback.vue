@@ -1,8 +1,8 @@
 <template>
   <div class="feedback toast">
-    <img class="bob-de-bouwer" src="~static/images/bob-bouwer.svg">
+    <img class="character" src="~static/images/ambtenaar.svg">
     <p>{{ feedback }}</p>
-    <button class="button-primary" @click="onClickButton">Speel!</button>
+    <button class="button-primary" @click="onClickButton">Bouw verder</button>
   </div>
 </template>
 
