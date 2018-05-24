@@ -17,6 +17,15 @@
   color: var(--pink);
 }
 
+.link-external {
+  color: var(--blue);
+}
+
+.link-external:hover,
+.link-external:focus {
+  color: var(--blue-dark);
+}
+
 button,
 .button {
   display: inline-block;
