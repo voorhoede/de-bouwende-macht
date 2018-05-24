@@ -3,7 +3,7 @@ const dataDir = `static/data/`
 module.exports = (dato, root) => {
   root.directory(dataDir, dir => {
     const questions = dato.collectionsByType.questions
-    const mainQuestions = questions.filter(question => !question.followUp)
+    const mainQuestions = questions.filter(question => !question.followUp && !question.dependent)
     dir.createDataFile('questions.json', 'json', mapCollection(mainQuestions))
   })
 }

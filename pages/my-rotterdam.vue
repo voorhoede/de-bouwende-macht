@@ -4,7 +4,7 @@
       <city-map class="city-map" />
     </div>
 
-    <div v-if="!gameStarted && (questions.length === 9)" class="toast center">
+    <div v-if="!gameStarted" class="toast center">
       <h1 class="intro-title">Mijn Rotterdam</h1>
     
       <div class="intro">
@@ -82,7 +82,7 @@ export default {
     showFeedback: state => state.showFeedback,
     showReadyNotice: state => state.showReadyNotice,
     gameStarted: state => state.gameStarted,
-    gameEnded: state => !state.gameStarted,
+    gameEnded: state => state.gameEnded,
     continuePlaying: state => state.continuePlaying,
     seenNotice: state => state.seenNotice,
     seenFeedback: state => state.seenFeedback,
@@ -92,7 +92,7 @@ export default {
     startGame () {
       this.$store.commit('startGame')
       this.$store.commit('nextQuestion')
-      this.$store.commit('showNotice')
+      this.$store.commit('showQuestion')
     },
 
     play () {
@@ -118,7 +118,7 @@ export default {
     },
 
     nextQuestion () {
-      if (this.questionsCount === this.totalQuestions) {
+      if (!this.questions.length) {
         return this.$store.commit('endGame')
       }
 
@@ -128,10 +128,11 @@ export default {
     },
 
     handleAnswer(answer) {
-      const followUpQuestion = answer.outcome.filter(outcome => outcome.itemType === 'question')
+      const followUpQuestions = answer.outcome.filter(outcome => outcome.itemType === 'question')
       const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
       const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
-      const hasFollowUpQuestion = followUpQuestion.length > 0
+      const hasFollowUpQuestions = followUpQuestions.length > 0
+
 
       if (answer.feedback && (answer.feedback.length > 1)) {
         this.hasFeedback = true
@@ -152,12 +153,20 @@ export default {
         })
       }
 
-      if ((this.questionsCount === 3 ) && !followUpQuestion.length) {
+      if ((this.questionsCount === 3 ) && !followUpQuestions.length) {
         this.hasReadyNotice = true
       }
 
-      if (hasFollowUpQuestion) {
-        this.$store.commit('followUpQuestion', followUpQuestion[0])
+      if (hasFollowUpQuestions) {
+        followUpQuestions.map(question => {
+          if (question.dependent) { 
+            this.$store.commit('addMainQuestion', question) 
+          }
+
+          if (question.followUp) { 
+            this.$store.commit('followUpQuestion', question) 
+          }
+        })
       } else {
         this.nextQuestion()
       }
