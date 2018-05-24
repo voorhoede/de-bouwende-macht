@@ -25,6 +25,7 @@
     <transition name="slow-slide-up">
       <question-notice
         v-if="showNotice"
+        :content="currentQuestion.toastertekst"
         @onClick="play"
       />
     </transition>
@@ -69,6 +70,7 @@ export default {
       hasNotice: false,
       hasFeedback: false,
       hasReadyNotice: false,
+      toasterText: '',
     }
   },
   computed: mapState({

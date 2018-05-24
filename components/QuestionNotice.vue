@@ -1,7 +1,7 @@
 <template>
   <div class="question-notice toast">
     <img class="character" src="~static/images/bob-bouwer.svg">
-    <p>Er is een bouwvraag!</p>
+    <p>{{ content }}</p>
     <button class="button-primary" @click="onClickButton()">Speel!</button>
   </div>
 </template>
@@ -9,6 +9,7 @@
 <script>
 
 export default {
+  props: ['content'],
   methods: {
     onClickButton () {
       this.$store.commit('seenNotice', true)
