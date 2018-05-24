@@ -1,17 +1,18 @@
 <template>
-  <div class="question-notice toast">
+  <div class="feedback toast">
     <img class="bob-de-bouwer" src="~static/images/bob-bouwer.svg">
-    <p>Er is een bouwvraag!</p>
-    <button class="button-primary" @click="onClickButton()">Speel!</button>
+    <p>{{ feedback }}</p>
+    <button class="button-primary" @click="onClickButton">Speel!</button>
   </div>
 </template>
 
 <script>
 
 export default {
+  props: ['feedback'],
   methods: {
     onClickButton () {
-      this.$store.commit('seenNotice', true)
+      this.$store.commit('seenFeedback', true)
       this.$emit('onClick')
     }
   }

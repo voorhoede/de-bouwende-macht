@@ -13,8 +13,8 @@
             "outcome": [
               {
                 "itemType": "result",
-                "feedback": null,
-                "slug": "champagneglazen",
+                "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+                "slug": "champagnestation",
                 "title": "Champagneglazen"
               }
             ],
@@ -28,6 +28,23 @@
                 "feedback": "De architect die had gerekend op het allergaafste station ooit, is niet blij. Je moet hem een andere opdracht geven.",
                 "slug": "calypso",
                 "title": "Calypso"
+              },
+              {
+                "itemType": "consequence",
+                "delete": [
+                  {
+                    "itemType": "result",
+                    "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+                    "slug": "champagnestation",
+                    "title": "Champagneglazen"
+                  }
+                ]
+              },
+              {
+                "itemType": "result",
+                "feedback": "",
+                "slug": "huidigstation",
+                "title": "Centraal Station"
               }
             ],
             "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
@@ -43,8 +60,8 @@
         "outcome": [
           {
             "itemType": "result",
-            "feedback": null,
-            "slug": "champagneglazen",
+            "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+            "slug": "champagnestation",
             "title": "Champagneglazen"
           },
           {
@@ -57,8 +74,8 @@
                 "outcome": [
                   {
                     "itemType": "result",
-                    "feedback": null,
-                    "slug": "champagneglazen",
+                    "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+                    "slug": "champagnestation",
                     "title": "Champagneglazen"
                   }
                 ],
@@ -72,6 +89,23 @@
                     "feedback": "De architect die had gerekend op het allergaafste station ooit, is niet blij. Je moet hem een andere opdracht geven.",
                     "slug": "calypso",
                     "title": "Calypso"
+                  },
+                  {
+                    "itemType": "consequence",
+                    "delete": [
+                      {
+                        "itemType": "result",
+                        "feedback": "Je kan praten als Brugman! Jouw station komt er toch.",
+                        "slug": "champagnestation",
+                        "title": "Champagneglazen"
+                      }
+                    ]
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": "",
+                    "slug": "huidigstation",
+                    "title": "Centraal Station"
                   }
                 ],
                 "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
@@ -95,7 +129,7 @@
           {
             "itemType": "result",
             "feedback": "",
-            "slug": "cs",
+            "slug": "huidigstation",
             "title": "Centraal Station"
           }
         ],
@@ -132,8 +166,26 @@
               {
                 "itemType": "result",
                 "feedback": null,
-                "slug": "hotel-new-york",
+                "slug": "newyork",
                 "title": "Hotel New York"
+              },
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "rechtbank",
+                "title": "Rechtbank"
+              },
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "luxor",
+                "title": "Luxor"
+              },
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "derotterdam",
+                "title": "De Rotterdam"
               }
             ],
             "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
@@ -150,8 +202,8 @@
           {
             "itemType": "result",
             "feedback": "",
-            "slug": "struijs",
-            "title": "Struijs"
+            "slug": "brugstruijs",
+            "title": "Brug van Struijs"
           },
           {
             "itemType": "question",
@@ -176,8 +228,26 @@
                   {
                     "itemType": "result",
                     "feedback": null,
-                    "slug": "hotel-new-york",
+                    "slug": "newyork",
                     "title": "Hotel New York"
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "rechtbank",
+                    "title": "Rechtbank"
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "luxor",
+                    "title": "Luxor"
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "derotterdam",
+                    "title": "De Rotterdam"
                   }
                 ],
                 "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
@@ -215,8 +285,26 @@
                   {
                     "itemType": "result",
                     "feedback": null,
-                    "slug": "hotel-new-york",
+                    "slug": "newyork",
                     "title": "Hotel New York"
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "rechtbank",
+                    "title": "Rechtbank"
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "luxor",
+                    "title": "Luxor"
+                  },
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "derotterdam",
+                    "title": "De Rotterdam"
                   }
                 ],
                 "label": "Ik bezuinig elders en gebruik dat geld om eerste zelf te gaan bouwen."
@@ -240,7 +328,7 @@
           {
             "itemType": "result",
             "feedback": null,
-            "slug": "hotel-new-york",
+            "slug": "newyork",
             "title": "Hotel New York"
           }
         ],
@@ -264,9 +352,9 @@
             "outcome": [
               {
                 "itemType": "result",
-                "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
-                "slug": "markthal",
-                "title": "Markthal"
+                "feedback": null,
+                "slug": "toeristen",
+                "title": "Meer toeristen"
               }
             ],
             "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
@@ -277,7 +365,7 @@
               {
                 "itemType": "result",
                 "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat. ",
-                "slug": "parkeergarage",
+                "slug": "kaleparkeer",
                 "title": "Parkeergarage"
               }
             ],
@@ -295,41 +383,14 @@
           {
             "itemType": "result",
             "feedback": null,
-            "slug": "kerkplein",
+            "slug": "2kerkterras",
             "title": "Kerkplein"
           },
           {
-            "itemType": "question",
-            "position": 0,
-            "children": [],
-            "answers": [
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
-                    "slug": "markthal",
-                    "title": "Markthal"
-                  }
-                ],
-                "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
-              },
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat. ",
-                    "slug": "parkeergarage",
-                    "title": "Parkeergarage"
-                  }
-                ],
-                "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
-              }
-            ],
-            "followUp": true,
-            "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+            "itemType": "result",
+            "feedback": null,
+            "slug": "marconitorens",
+            "title": "Generieke flatgebouwen"
           }
         ],
         "label": "De Blaak heeft al een logisch én historisch middelpunt: de Laurenskerk. Dat gaat mijn ontwerp benadrukken."
@@ -338,12 +399,6 @@
         "itemType": "answer",
         "outcome": [
           {
-            "itemType": "result",
-            "feedback": null,
-            "slug": "markthal",
-            "title": "Markthal"
-          },
-          {
             "itemType": "question",
             "position": 0,
             "children": [],
@@ -353,9 +408,9 @@
                 "outcome": [
                   {
                     "itemType": "result",
-                    "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
-                    "slug": "markthal",
-                    "title": "Markthal"
+                    "feedback": null,
+                    "slug": "toeristen",
+                    "title": "Meer toeristen"
                   }
                 ],
                 "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
@@ -366,7 +421,7 @@
                   {
                     "itemType": "result",
                     "feedback": "Oei, er breekt een crisis uit die jaren aanhoudt. De bouw valt stil. Je blijft zitten met een casco parkeergarage die omhoog komt omdat er geen gewicht op staat. ",
-                    "slug": "parkeergarage",
+                    "slug": "kaleparkeer",
                     "title": "Parkeergarage"
                   }
                 ],
@@ -375,6 +430,12 @@
             ],
             "followUp": true,
             "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+          },
+          {
+            "itemType": "result",
+            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+            "slug": "markthal",
+            "title": "Markthal"
           }
         ],
         "label": "Mijn ontwerp wordt groot, groter, grootst en bundelt wonen, parkeren en kopen in één iconisch gebouw."
@@ -398,8 +459,8 @@
               {
                 "itemType": "result",
                 "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. De vogels iets minder. Actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
-                "slug": "geen-park",
-                "title": "Geen park"
+                "slug": "geenparkmaarhuizen",
+                "title": "Geen park, maar huizen"
               }
             ],
             "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
@@ -428,7 +489,7 @@
           {
             "itemType": "result",
             "feedback": "Eén toren is geen toren: de komende jaren verrijzen er achttien joekels in en nabij het centrum van Rotterdam.",
-            "slug": "zalmhaventoren",
+            "slug": "zalmhaven",
             "title": "Zalmhaventoren"
           },
           {
@@ -442,8 +503,8 @@
                   {
                     "itemType": "result",
                     "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. De vogels iets minder. Actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
-                    "slug": "geen-park",
-                    "title": "Geen park"
+                    "slug": "geenparkmaarhuizen",
+                    "title": "Geen park, maar huizen"
                   }
                 ],
                 "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
@@ -487,8 +548,8 @@
                   {
                     "itemType": "result",
                     "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. De vogels iets minder. Actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
-                    "slug": "geen-park",
-                    "title": "Geen park"
+                    "slug": "geenparkmaarhuizen",
+                    "title": "Geen park, maar huizen"
                   }
                 ],
                 "label": "Voor groen ga je maar naar de provincie. Volbouwen!"
@@ -527,7 +588,7 @@
           {
             "itemType": "result",
             "feedback": null,
-            "slug": "generieke-flatgebouwen",
+            "slug": "marconitorens",
             "title": "Generieke flatgebouwen"
           }
         ],
@@ -560,7 +621,7 @@
           {
             "itemType": "result",
             "feedback": "Gefeliciteerd, de files op de ring zijn opgelost en de luchtkwaliteit is verbeterd. De gebruikers van de complexen zijn echter een protest begonnen en bezetten massaal de Coolsingel.",
-            "slug": "demonstratie-op-de-coolsingel",
+            "slug": "demonstratie",
             "title": "Demonstratie op de Coolsingel"
           }
         ],
@@ -572,7 +633,7 @@
           {
             "itemType": "result",
             "feedback": "Door de toenemende luchtvervuiling gaan Rotterdammers nu nog een jaartje eerder dood. Bewoners zijn wel heel gelukkig met hun wekelijkse gebruik van het voetbalveld.",
-            "slug": "vieze-lucht",
+            "slug": "viezelucht",
             "title": "Vieze lucht"
           }
         ],
@@ -584,7 +645,7 @@
           {
             "itemType": "result",
             "feedback": "Gefeliciteerd: met deze vernieuwende architectuur scoor je goed bij de internationale pers als architectuurstad! Maar je kunt niet verder bouwen want het geld is op.",
-            "slug": "architectonisch-icoon",
+            "slug": "architectonischicoon",
             "title": "Architectonisch icoon"
           }
         ],
@@ -593,175 +654,6 @@
     ],
     "followUp": false,
     "question": "De luchtkwaliteit is slecht, milieuorganisaties slaan alarm. Ambtenaren stellen voor een bypass aan te leggen die het ringverkeer om de stad leidt. Probleem: hier staan volkstuincomplexen, voetbalverenigingen en scholen in de weg."
-  },
-  {
-    "itemType": "question",
-    "position": 3,
-    "children": [
-      {
-        "itemType": "question",
-        "position": 0,
-        "children": [],
-        "answers": [
-          {
-            "itemType": "answer",
-            "outcome": [
-              {
-                "itemType": "result",
-                "feedback": null,
-                "slug": "wijkgebouw-verdwijnt",
-                "title": "Wijkgebouw verdwijnt"
-              }
-            ],
-            "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
-          },
-          {
-            "itemType": "answer",
-            "outcome": [
-              {
-                "itemType": "result",
-                "feedback": null,
-                "slug": "starbucks",
-                "title": "Starbucks"
-              }
-            ],
-            "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
-          },
-          {
-            "itemType": "answer",
-            "outcome": [
-              {
-                "itemType": "result",
-                "feedback": null,
-                "slug": "wijkgebouw-verdwijnt",
-                "title": "Wijkgebouw verdwijnt"
-              }
-            ],
-            "label": "Tja, dat mag de wethouder oplossen."
-          }
-        ],
-        "followUp": true,
-        "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
-      }
-    ],
-    "answers": [
-      {
-        "itemType": "answer",
-        "outcome": [
-          {
-            "itemType": "question",
-            "position": 0,
-            "children": [],
-            "answers": [
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": null,
-                    "slug": "wijkgebouw-verdwijnt",
-                    "title": "Wijkgebouw verdwijnt"
-                  }
-                ],
-                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
-              },
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": null,
-                    "slug": "starbucks",
-                    "title": "Starbucks"
-                  }
-                ],
-                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
-              },
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": null,
-                    "slug": "wijkgebouw-verdwijnt",
-                    "title": "Wijkgebouw verdwijnt"
-                  }
-                ],
-                "label": "Tja, dat mag de wethouder oplossen."
-              }
-            ],
-            "followUp": true,
-            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
-          },
-          {
-            "itemType": "result",
-            "feedback": null,
-            "slug": "bakfiets",
-            "title": "Bakfiets"
-          }
-        ],
-        "label": "Nee. We zijn een bouwbedrijf, geen liefdadigheidsinstelling. Na jaren crisis maken we eindelijk weer winst."
-      },
-      {
-        "itemType": "answer",
-        "outcome": [
-          {
-            "itemType": "question",
-            "position": 0,
-            "children": [],
-            "answers": [
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": null,
-                    "slug": "wijkgebouw-verdwijnt",
-                    "title": "Wijkgebouw verdwijnt"
-                  }
-                ],
-                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
-              },
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": null,
-                    "slug": "starbucks",
-                    "title": "Starbucks"
-                  }
-                ],
-                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
-              },
-              {
-                "itemType": "answer",
-                "outcome": [
-                  {
-                    "itemType": "result",
-                    "feedback": null,
-                    "slug": "wijkgebouw-verdwijnt",
-                    "title": "Wijkgebouw verdwijnt"
-                  }
-                ],
-                "label": "Tja, dat mag de wethouder oplossen."
-              }
-            ],
-            "followUp": true,
-            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
-          },
-          {
-            "itemType": "result",
-            "feedback": null,
-            "slug": "sociale-woningbouw",
-            "title": "Sociale woningbouw"
-          }
-        ],
-        "label": "Ja. We bouwen toch die woningen met lagere huur, ook al verdienen we er dan veel minder mee. We hebben per slot van rekening ook een maatschappelijke verantwoordelijkheid."
-      }
-    ],
-    "followUp": false,
-    "question": "Kansen op Katendrecht, die zie jij. Je koopt verloederde gebouwen op voor renovatie of herbouw. Ondertussen trekt de economie flink aan en kun je veel meer verdienen aan je gebouwen door de huurprijs omhoog te gooien. Dat betekent wel dat de oorspronkelijke bewoners die niet meer kunnen betalen. Vind je dat een probleem?"
   },
   {
     "itemType": "question",
@@ -912,8 +804,8 @@
               {
                 "itemType": "result",
                 "feedback": null,
-                "slug": "metrolijn",
-                "title": "Metrolijn"
+                "slug": "metro",
+                "title": "Een nieuwe metrolijn"
               },
               {
                 "itemType": "question",
@@ -1057,7 +949,7 @@
               {
                 "itemType": "result",
                 "feedback": null,
-                "slug": "derde-brug",
+                "slug": "derdebrug",
                 "title": "Derde brug"
               },
               {
@@ -1256,8 +1148,8 @@
               {
                 "itemType": "result",
                 "feedback": null,
-                "slug": "metrolijn",
-                "title": "Metrolijn"
+                "slug": "metro",
+                "title": "Een nieuwe metrolijn"
               },
               {
                 "itemType": "question",
@@ -1401,7 +1293,7 @@
               {
                 "itemType": "result",
                 "feedback": null,
-                "slug": "derde-brug",
+                "slug": "derdebrug",
                 "title": "Derde brug"
               },
               {
@@ -1739,8 +1631,8 @@
                   {
                     "itemType": "result",
                     "feedback": null,
-                    "slug": "metrolijn",
-                    "title": "Metrolijn"
+                    "slug": "metro",
+                    "title": "Een nieuwe metrolijn"
                   },
                   {
                     "itemType": "question",
@@ -1884,7 +1776,7 @@
                   {
                     "itemType": "result",
                     "feedback": null,
-                    "slug": "derde-brug",
+                    "slug": "derdebrug",
                     "title": "Derde brug"
                   },
                   {
@@ -2089,8 +1981,8 @@
                   {
                     "itemType": "result",
                     "feedback": null,
-                    "slug": "metrolijn",
-                    "title": "Metrolijn"
+                    "slug": "metro",
+                    "title": "Een nieuwe metrolijn"
                   },
                   {
                     "itemType": "question",
@@ -2234,7 +2126,7 @@
                   {
                     "itemType": "result",
                     "feedback": null,
-                    "slug": "derde-brug",
+                    "slug": "derdebrug",
                     "title": "Derde brug"
                   },
                   {
@@ -2439,8 +2331,8 @@
         "outcome": [
           {
             "itemType": "result",
-            "feedback": null,
-            "slug": "nieuw-voetbalstadion",
+            "feedback": "",
+            "slug": "nieuwstadion",
             "title": "Nieuw voetbalstadion"
           }
         ],
@@ -2452,7 +2344,7 @@
           {
             "itemType": "result",
             "feedback": null,
-            "slug": "kuip",
+            "slug": "dekuip",
             "title": "Kuip"
           }
         ],
@@ -2461,5 +2353,174 @@
     ],
     "followUp": false,
     "question": "Feyenoord City, het gaat ervan komen. Mét behoud van de oude Kuip en een fonkelnieuw stadion voor Feyenoord van internationale allure. Woningbouw, banen, een metrolijn: het kan niet op. Omdat het gesoebat erover zó lang geduurd heeft en we nu in een hoogconjunctuur zitten, is het nu fors duurder om dit alles te bouwen. Wat nu?"
+  },
+  {
+    "itemType": "question",
+    "position": 10,
+    "children": [
+      {
+        "itemType": "question",
+        "position": 0,
+        "children": [],
+        "answers": [
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "wijkgebouw-verdwijnt",
+                "title": "Wijkgebouw verdwijnt"
+              }
+            ],
+            "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "starbucks",
+                "title": "Starbucks"
+              }
+            ],
+            "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+          },
+          {
+            "itemType": "answer",
+            "outcome": [
+              {
+                "itemType": "result",
+                "feedback": null,
+                "slug": "wijkgebouw-verdwijnt",
+                "title": "Wijkgebouw verdwijnt"
+              }
+            ],
+            "label": "Tja, dat mag de wethouder oplossen."
+          }
+        ],
+        "followUp": true,
+        "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+      }
+    ],
+    "answers": [
+      {
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "kaatbakfiets",
+            "title": "Villa Katendrecht"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
+                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "starbucks",
+                    "title": "Starbucks"
+                  }
+                ],
+                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
+                "label": "Tja, dat mag de wethouder oplossen."
+              }
+            ],
+            "followUp": true,
+            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+          }
+        ],
+        "label": "Nee. We zijn een bouwbedrijf, geen liefdadigheidsinstelling. Na jaren crisis maken we eindelijk weer winst."
+      },
+      {
+        "itemType": "answer",
+        "outcome": [
+          {
+            "itemType": "result",
+            "feedback": null,
+            "slug": "sociaalkaat",
+            "title": "Sociale woningbouw op Katendrecht"
+          },
+          {
+            "itemType": "question",
+            "position": 0,
+            "children": [],
+            "answers": [
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
+                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "starbucks",
+                    "title": "Starbucks"
+                  }
+                ],
+                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+              },
+              {
+                "itemType": "answer",
+                "outcome": [
+                  {
+                    "itemType": "result",
+                    "feedback": null,
+                    "slug": "wijkgebouw-verdwijnt",
+                    "title": "Wijkgebouw verdwijnt"
+                  }
+                ],
+                "label": "Tja, dat mag de wethouder oplossen."
+              }
+            ],
+            "followUp": true,
+            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+          }
+        ],
+        "label": "Ja. We bouwen toch die woningen met lagere huur, ook al verdienen we er dan veel minder mee. We hebben per slot van rekening ook een maatschappelijke verantwoordelijkheid."
+      }
+    ],
+    "followUp": false,
+    "question": "Kansen op Katendrecht, die zie jij. Je koopt verloederde gebouwen op voor renovatie of herbouw. Ondertussen trekt de economie flink aan en kun je veel meer verdienen aan je gebouwen door de huurprijs omhoog te gooien. Dat betekent wel dat de oorspronkelijke bewoners die niet meer kunnen betalen. Vind je dat een probleem? "
   }
 ]
