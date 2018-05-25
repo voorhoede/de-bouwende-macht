@@ -93,7 +93,6 @@ export default {
     showNotice: state => state.showNotice,
     showFeedback: state => state.showFeedback,
     showReadyNotice: state => state.showReadyNotice,
-    showAbout: state => state.showAbout,
     gameStarted: state => state.gameStarted,
     gameEnded: state => state.gameEnded,
     continuePlaying: state => state.continuePlaying,
