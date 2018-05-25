@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="map-wrapper">
-      <city-map class="city-map" />
+      <city-map />
     </div>
 
     <div v-if="!gameStarted" class="card center">
@@ -20,7 +20,14 @@
       />
     </transition>
 
-    <share-button v-if="continuePlaying" />
+    <div class="buttons">
+      <share-button v-if="continuePlaying" />
+      <info-button @onClick="showAbout = !showAbout" />
+    </div>
+
+    <transition name="bounce">
+      <about v-if="showAbout" @onClick="showAbout = !showAbout" />
+    </transition>
 
     <transition name="slow-slide-up">
       <question-notice
@@ -55,22 +62,25 @@
 
 <script>
 import { mapState } from 'vuex'
+import About from '~/components/About.vue'
 import Question from '~/components/Question.vue'
 import QuestionNotice from '~/components/QuestionNotice.vue'
 import ReadyNotice from '~/components/ReadyNotice.vue'
 import Feedback from '~/components/Feedback.vue'
 import CityMap from '~/components/Map.vue'
+import InfoButton from '~/components/InfoButton.vue'
 import ShareButton from '~/components/ShareButton.vue'
 import { setTimeout } from 'timers';
 
 export default {
-  components: { Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton },
+  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton },
   data () {
     return {
       hasNotice: false,
       hasFeedback: false,
       hasReadyNotice: false,
       toasterText: '',
+      showAbout: false,
     }
   },
   computed: mapState({
@@ -83,6 +93,7 @@ export default {
     showNotice: state => state.showNotice,
     showFeedback: state => state.showFeedback,
     showReadyNotice: state => state.showReadyNotice,
+    showAbout: state => state.showAbout,
     gameStarted: state => state.gameStarted,
     gameEnded: state => state.gameEnded,
     continuePlaying: state => state.continuePlaying,
@@ -212,14 +223,10 @@ export default {
 <style scoped>
 @import '~/assets/core.css';
 
-.share-button {
-  width: 40px;
-  height: 40px;
-}
-
-.city-map {
-  height: 100%;
-  width: auto;
+.buttons {
+  position: absolute;
+  top: var(--spacing-half);
+  right: var(--spacing-half);
 }
 
 .intro-title {
@@ -227,50 +234,9 @@ export default {
   font-size: var(--font-size-big);
 }
 
-.intro-text {
-  margin-bottom: 3rem;
-}
-
 .map-wrapper {
   height: 100%;
   overflow: hidden;
 }
 
-.current-scenario {
-  margin-bottom: var(--spacing-double);
-}
-
-.feedback {
-  background-color: #7fffd4;
-  padding: var(--spacing-normal);
-  margin: var(--spacing-double) 0;
-}
-
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: all .4s ease;
-}
-
-.slide-up-leave-active {
-  transition: all .6s ease;
-}
-
-.slide-up-enter, 
-.slide-up-leave-to {
-  transform: translatey(100%);
-}
-
-.slow-slide-up-enter-active,
-.slow-slide-up-leave-active {
-  transition: all .4s ease 1s;
-}
-
-.slow-slide-up-leave-active {
-  transition: all .6s ease;
-}
-
-.slow-slide-up-enter, 
-.slide-up-leave-to {
-  transform: translatey(100%);
-}
 </style>

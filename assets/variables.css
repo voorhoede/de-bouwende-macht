@@ -4,11 +4,15 @@
   --grey-light: #ececec;
   --grey-dark: #696969;
   --pink: #ff738e;
+  --pink-secondary: #e5677f;
   --pink-dark: #da0029;
   --green: #239b9e;
   --green-secondary: #26b999;
+  --green-dark: #1c7b7e;
   --white: #fff;
   --black: #000;
+  --blue: #0820df;
+  --blue-dark: #050880;
  
   /* SPACING */
   --spacing-half: .5rem;
@@ -24,6 +28,7 @@
 
   /* MIXED */
   --border-radius-smooth: 3px;
+  --button-size: 40px;
 
   /* BOX SHADOW */
   --box-shadow: 0 2px 6px 0 var(--grey-dark);
