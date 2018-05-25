@@ -2807,7 +2807,7 @@
             <path fill="gray" d="M362.24 369.95l2.5-.74v4.08l-2.5.76v-4.1zM354.9 372.06l5-1.5v2.69l-5 1.52v-2.71z"/>
           </g>
         </g>
-        <g class="hidden fade-in" id="METRO_CV">
+        <g class="hidden fade-in" id="METROCV">
           <path d="M262.59 264.84c0 .31-1 .57-2.21.57s-2.21-.26-2.21-.57v-28.31c0 .32 1 .57 2.21.57s2.21-.25 2.21-.57z" fill="#bfbfbf"/>
           <path fill="#94afff" d="M260.38 241.13l-17.67-4.33v-21.67l17.67 4.33v21.67z"/>
           <path fill="url(#linear-gradient)" d="M260.38 220.11l-17.67-4.33v-1.09l17.67 4.33v1.09z"/>
@@ -2845,7 +2845,7 @@
             <path fill="#a6a6a6" d="M309.96 365.17l17.68-4.33v-1.09l-17.68 4.33v1.09z"/>
           </g>
         </g>
-        <g class="hidden fade-in" id="METRO_KF">
+        <g class="hidden fade-in" id="METROKF">
           <path d="M577.45 97.76c0 .31-1 .56-2.22.56s-2.21-.25-2.21-.56V69.45c0 .31 1 .56 2.21.56s2.22-.25 2.22-.56z" fill="#bfbfbf"/>
           <path fill="#94afff" d="M575.24 74.05l-17.68-4.33V48.05l17.68 4.32v21.68z"/>
           <path fill="url(#linear-gradient-3)" d="M575.24 53.03l-17.68-4.33v-1.09l17.68 4.33v1.09z"/>
