@@ -1,60 +1,121 @@
 import Vuex from 'vuex'
 import questions from '~/static/data/questions.json'
-
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
+import _ from 'lodash'
 
 const createStore = () => {
-  const mainQuestions = questions.filter(q => !q.followUp)
-
   const initialState = {
     currentQuestion: {},
-    questions: shuffle(mainQuestions),
-    importantQuestions: [],
+    questions: _.shuffle(questions),
+    totalQuestions: questions.length,
     questionsCount: 0,
     currentScenario: [],
+    feedback: null,
+    notice: null,
     gameStarted: false,
+    gameEnded: false,
+    showQuestion: false,
+    showNotice: false,
+    showFeedback: false,
+    showReadyNotice: false,
+    continuePlaying: false,
+    seenNotice: false,
+    seenFeedback: false,
+    seenReadyNotice: false,
   }
 
   return new Vuex.Store({
-    state: initialState,
+    state: _.cloneDeep(initialState),
     mutations: {
-      resetState (state) {
-        state = initialState
-      },
-      
       startGame (state) {
         state.gameStarted = true
       },
 
-      increment (state) {
-       state.questionsCount++
+      showQuestion (state) {
+        state.showQuestion = true
+      },
+
+      hideQuestion (state) {
+        state.showQuestion = false
+      },
+
+      showNotice (state) {
+        state.showNotice = true
+      },
+
+      hideNotice (state) {
+        state.showNotice = false
+      },
+
+      seenNotice (state, payload) {
+        state.seenNotice = payload
+        state.showNotice = !payload
+      },
+
+      showReadyNotice (state) {
+        state.showReadyNotice = true
+      },
+
+      hideReadyNotice (state) {
+        state.showReadyNotice = false
+      },
+
+      seenReadyNotice (state) {
+        state.seenReadyNotice = true
+        state.showReadyNotice = false
+      },
+
+      showFeedback (state) {
+        state.seenFeedback = false
+        state.showFeedback = true
+      },
+
+      hideFeedback (state) {
+        state.showFeedback = false
+      },
+
+      seenFeedback (state, payload) {
+        state.seenFeedback = payload
+        state.showFeedback = !payload
+      },
+
+      clearFeedback (state) {
+        state.feedback = null
       },
 
       nextQuestion (state) {
-        if (!state.questions.length) {
-          return state.gameStarted = false
-        }
+        state.questionsCount++
         const nextQuestion = state.questions.shift()
         state.currentQuestion = nextQuestion
       },
 
-      updateCity (state, payload) {
-        state.currentScenario.push(payload)
+      addMainQuestion (state, payload) {
+        state.questions.push(payload)
+        state.questions = _.shuffle(state.questions)
+      },
+
+      updateCity (state, { type, slug }) {
+        if (type === 'addBuilding') {
+          if (!state.currentScenario.includes(slug)) {
+            state.currentScenario.push(slug)
+          }
+        }
+
+        if (type === 'removeBuilding') {
+          state.currentScenario = state.currentScenario.filter(building => building !== slug)
+        }
       },
 
       followUpQuestion (state, payload) {
         state.currentQuestion = payload
       },
 
+      showReadyButton (state) {
+        state.continuePlaying = true
+      },
+
       endGame (state) {
-        state.gameStarted = false
-      }
+        state.gameEnded = true
+      } 
     }
   })
 }
