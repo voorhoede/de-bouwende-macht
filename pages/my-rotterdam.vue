@@ -83,24 +83,23 @@ export default {
       showAbout: false,
     }
   },
-  computed: mapState({
-    questions: state => state.questions,
-    questionsCount: state => state.questionsCount,
-    totalQuestions: state => state.totalQuestions,
-    currentQuestion: state => state.currentQuestion,
-    currentScenario: state => state.currentScenario,
-    showQuestion: state => state.showQuestion,
-    showNotice: state => state.showNotice,
-    showFeedback: state => state.showFeedback,
-    showReadyNotice: state => state.showReadyNotice,
-    showAbout: state => state.showAbout,
-    gameStarted: state => state.gameStarted,
-    gameEnded: state => state.gameEnded,
-    continuePlaying: state => state.continuePlaying,
-    seenNotice: state => state.seenNotice,
-    seenFeedback: state => state.seenFeedback,
-    seenReadyNotice: state => state.seenReadyNotice,
-  }),
+  computed: mapState([
+    'questions',
+    'questionsCount',
+    'totalQuestions',
+    'currentQuestion',
+    'currentScenario',
+    'showQuestion',
+    'showNotice',
+    'showFeedback',
+    'showReadyNotice',
+    'gameStarted',
+    'gameEnded',
+    'continuePlaying',
+    'seenNotice',
+    'seenFeedback',
+    'seenReadyNotice'
+  ]),
   methods: {
     startGame () {
       this.$store.commit('startGame')
@@ -138,6 +137,7 @@ export default {
 
       this.$store.commit('nextQuestion')
       this.$store.commit('seenNotice', false)
+    
       this.hasNotice = true
     },
 
