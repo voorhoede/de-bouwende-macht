@@ -5,7 +5,7 @@
     </div>
 
     <div v-if="!gameStarted" class="card center">
-      <h1 class="intro-title">Welkom in jouw Rotterdam!</h1>
+      <h1 class="page-title">Welkom in jouw Rotterdam!</h1>
     
       <div class="intro">
         <p class="intro-text">Hier bouw jij aan de stad van jouw keuze. Laten we beginnen!</p>
@@ -226,11 +226,6 @@ export default {
   position: absolute;
   top: var(--spacing-half);
   right: var(--spacing-half);
-}
-
-.intro-title {
-  padding-bottom: 1.5rem;
-  font-size: var(--font-size-big);
 }
 
 .map-wrapper {
