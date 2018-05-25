@@ -1,4 +1,4 @@
-git<template>
+<template>
   <nuxt-link
     class="share-button"
     to="/share-my-rotterdam" >
