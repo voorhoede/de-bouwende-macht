@@ -45,9 +45,9 @@
       />
     </transition>
 
-    <div v-if="gameEnded">
+    <div class="toast card" v-if="gameEnded">
       <p>Dit is jouw Rotterdam!</p>
-      <nuxt-link to="/share-my-rotterdam">Delen</nuxt-link>  
+      <nuxt-link class="button button-primary" to="/share-my-rotterdam">Delen</nuxt-link>
     </div>
 
     <transition name="slide-up">
