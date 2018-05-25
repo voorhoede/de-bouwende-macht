@@ -2,6 +2,7 @@
   <section class="container">
     <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
     <input id="buildings" type="hidden" :value="`${$route.params.slug}`">
+    
     <div class="postal-card">
       <city-map class="city-map" />
       <p class="postal-card-text">Cheers uit my Rotterdam!</p>
@@ -24,6 +25,7 @@
       >
         <img src="~static/images/whatsapp.svg" alt="">
       </a>
+      
       <a class="share-logo"
         :href="`https://twitter.com/intent/tweet?text=${this.text + this.cityUrl + cityBuildings}`" 
         target="_blank"
@@ -42,32 +44,34 @@ export default {
   components: { CityMap },
   data() {
     return {
-      cityUrl: 'https://7f0a47e4.ngrok.io/my-city/',
-      test: null,
-      text: 'Hi! Check out my Rotterdam!'
+      cityUrl: 'http://infallible-khorana-d0fd18.netlify.com/my-city/',
+      text: 'Hi! Check out my Rotterdam!',
+      slug: null,
     }
   },
 
   asyncData({ params }) {
     const buildings = params.slug
-    return { cityBuildings: buildings }
+
+    return { 
+      cityBuildings: buildings
+    }
   },
 
   mounted: () => {
     const slugs = document.getElementById('buildings')
-    const shareableURL = `https://7f0a47e4.ngrok.io/my-city/`
-    this.test = `${slugs.value}`
     const cityBuildings = slugs.value.split('-')
+    this.slug = `${slugs.value}`
 
     cityBuildings.map(building => {
       const id = building.toUpperCase()
       const el = document.getElementById(id)
+      
       el.classList.remove('hidden')
     })
   }
 }
 </script>
-
 
 <style scoped>
 @import '~/assets/core.css';
@@ -113,5 +117,4 @@ export default {
 .share-logo:not(:last-child) {
   margin-right: 1rem;
 }
-
 </style>

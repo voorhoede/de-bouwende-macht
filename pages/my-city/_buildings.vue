@@ -1,7 +1,8 @@
 <template>
   <section class="container">
-    <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
+    <h1 class="page-title">I've built my own Rotterdam, this is what it looks like:</h1>
     <input id="buildings" type="hidden" :value="`${$route.params.buildings}`">
+    
     <div class="postal-card">
       <city-map />
       <p class="postal-card-text">Cheers uit my Rotterdam!</p>
@@ -41,7 +42,7 @@ export default {
 @import '~/assets/core.css';
 
 .container {
-  padding: 2rem 0;
+  padding: var(--spacing-double) 0;
 }
 
 .page-title {
@@ -53,12 +54,12 @@ export default {
 }
 
 .postal-card {
-  padding: 1rem;
-  box-shadow: 2px 2px 10px #ccc;
-  transform: rotate(-5deg);
-  width: 80%;
   margin: 0 auto;
   margin-bottom: 4rem;
+  padding: var(--spacing-normal);
+  box-shadow:var(--box-shadow);
+  transform: rotate(-5deg);
+  width: 80%;
 }
 
 .postal-card-text {
@@ -66,16 +67,16 @@ export default {
   font-family: var(--font-bold);
 }
 
-.sharing-buttons {
-  border-bottom: 1px solid #000;
-  width: 250px;
+.sharing-buttons {  
+  padding-bottom: var(--spacing-double);
   margin: 0 auto;
   margin-top: 4rem;
-  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--black);
+  width: 250px;
 }
 
 .share-logo:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: var(--spacing-normal);
 }
 
 </style>
