@@ -27,48 +27,19 @@ export default {
 
 .share-button {
   padding: 0;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
+  width: var(--button-size);
+  height: var(--button-size);
   border-radius: 50%;
-  animation-name: bounceIn;
+  animation-name: bounce-in;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(.3);
-  }
-
-  50% {
-    opacity: .9;
-    transform: scale(1.1);
-  }
-
-  80% {
-    opacity: 1;
-    transform: scale(.89);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1) translate3d(0,0,0);
-  }
-}
-
-@keyframes glow {
-  50% {
-    transform: scale(1.3);
-  }
-}
-
 .share-icon {
   width: 40px;
   height: 40px;
-  animation-name: bounceIn;
+  animation-name: bounce-in;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

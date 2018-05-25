@@ -73,7 +73,6 @@ export default {
 }
 </script>
 
-
 <style scoped>
 @import '~/assets/core.css';
 
@@ -118,5 +117,4 @@ export default {
 .share-logo:not(:last-child) {
   margin-right: 1rem;
 }
-
 </style>
