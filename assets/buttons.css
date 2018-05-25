@@ -1,0 +1,82 @@
+.link-primary,
+.link-primary:visited {
+  color: var(--pink-dark);
+  text-decoration: underline;
+  transition: all 0.3s ease 0s
+}
+
+.link-primary:hover,
+.link-primary:focus {
+  color: var(--pink);
+}
+
+.link-external {
+  color: var(--blue);
+  transition: all 0.3s ease 0s
+}
+
+.link-external:hover,
+.link-external:focus {
+  color: var(--blue-dark);
+}
+
+button,
+.button {
+  display: inline-block;
+  padding: var(--spacing-half) var(--spacing-normal);
+  border: none;
+  font-size: var(--font-size-normal);
+  text-decoration: none;
+  transition: all 0.3s ease 0s
+}
+
+button:not(:last-child) {
+  margin-bottom: var(--spacing-normal);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--pink);
+  font-family: var(--font-bold);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--pink-secondary);
+}
+  
+.button-secondary {
+  font-family: var(--font-bold);
+  background-color: var(--white);
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  color: var(--pink-dark);
+}
+
+.answer-button {
+  padding: var(--spacing-normal);
+  background-color: var(--green);
+  color: var(--white);
+  width: 100%;
+}
+
+.answer-button:hover,
+.answer-button:focus {
+    background-color: var(--green-dark);
+}
+  
+.button-primary,
+.button-secondary,
+.answer-button,
+.question {
+  box-shadow: var(--box-shadow);
+}
