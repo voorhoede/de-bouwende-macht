@@ -1,8 +1,8 @@
 <template>
   <nuxt-link
     class="share-button"
-    to="/share-my-rotterdam" >
-    
+    to="/share-my-rotterdam"
+  >
     <img class="share-icon" src="~static/images/share-button.svg">
   </nuxt-link>
 </template>
@@ -18,14 +18,17 @@ export default {
 
 .share-button {
   display: block;
+  height: var(--button-size);
+  width: var(--button-size);
   margin-bottom: var(--spacing-half);
   background-color: white;
   border-radius: 50%;
+  box-shadow: var(--box-shadow);
 }
 
 .share-icon {
-  width: 40px;
-  height: 40px;
+  height: var(--button-size);
+  width: var(--button-size);
 }
 
 </style>

@@ -54,6 +54,11 @@
   font-size: 1.25rem;
 }
 
+.close-button:hover,
+.close-button:focus {
+  color: var(--pink-secondary);
+}
+
 </style>
 
 <script>

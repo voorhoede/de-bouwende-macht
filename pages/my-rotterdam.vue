@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="map-wrapper">
-      <city-map class="city-map" />
+      <city-map />
     </div>
 
     <div v-if="!gameStarted" class="card center">
@@ -223,20 +223,10 @@ export default {
 <style scoped>
 @import '~/assets/core.css';
 
-.share-button {
-  width: 40px;
-  height: 40px;
-}
-
 .buttons {
   position: absolute;
   top: var(--spacing-half);
   right: var(--spacing-half);
-}
-
-.city-map {
-  height: 100%;
-  width: auto;
 }
 
 .intro-title {
@@ -244,50 +234,9 @@ export default {
   font-size: var(--font-size-big);
 }
 
-.intro-text {
-  margin-bottom: 3rem;
-}
-
 .map-wrapper {
   height: 100%;
   overflow: hidden;
 }
 
-.current-scenario {
-  margin-bottom: var(--spacing-double);
-}
-
-.feedback {
-  background-color: #7fffd4;
-  padding: var(--spacing-normal);
-  margin: var(--spacing-double) 0;
-}
-
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: all .4s ease;
-}
-
-.slide-up-leave-active {
-  transition: all .6s ease;
-}
-
-.slide-up-enter, 
-.slide-up-leave-to {
-  transform: translatey(100%);
-}
-
-.slow-slide-up-enter-active,
-.slow-slide-up-leave-active {
-  transition: all .4s ease 1s;
-}
-
-.slow-slide-up-leave-active {
-  transition: all .6s ease;
-}
-
-.slow-slide-up-enter, 
-.slide-up-leave-to {
-  transform: translatey(100%);
-}
 </style>

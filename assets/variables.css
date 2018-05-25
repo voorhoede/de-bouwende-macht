@@ -28,6 +28,7 @@
 
   /* MIXED */
   --border-radius-smooth: 3px;
+  --button-size: 40px;
 
   /* BOX SHADOW */
   --box-shadow: 0 2px 6px 0 var(--grey-dark);

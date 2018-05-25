@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="city-map">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 764.75 545.87">
       <defs>
         <linearGradient id="linear-gradient" x1="242.71" y1="217.4" x2="260.38" y2="217.4" gradientUnits="userSpaceOnUse">
@@ -2889,6 +2889,11 @@
 </template>
 
 <style scoped>
+
+.city-map {
+  height: 100%;
+  width: auto;
+}
 
 .hidden {
   display: none;
