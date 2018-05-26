@@ -33,6 +33,6 @@
   --button-size: 40px;
 
   /* BOX SHADOW */
-  --box-shadow: 0 2px 6px 0 var(--grey-dark);
+  --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .3);
   --button-shadow: 2px 2px 3px #b3b3b3;
 }
