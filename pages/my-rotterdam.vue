@@ -1,5 +1,10 @@
 <template>
   <section class="container">
+    
+    <div class="logo">
+       <img src="~static/images/vers-beton-logo.png" >
+    </div>
+
     <div class="map-wrapper">
       <city-map />
     </div>
@@ -221,6 +226,24 @@ export default {
 
 <style scoped>
 @import '~/assets/core.css';
+
+.logo {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  height: auto;
+  width: 75px;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    width: 120px;
+  }
+}
 
 .buttons {
   position: absolute;
