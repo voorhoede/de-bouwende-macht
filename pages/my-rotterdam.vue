@@ -1,8 +1,7 @@
 <template>
   <section class="container">
-    <div class="map-wrapper">
-      <city-map />
-    </div>
+
+    <city-map />
 
     <div v-if="!gameStarted" class="card center">
       <h1 class="intro-title">Welkom in jouw Rotterdam!</h1>
@@ -231,11 +230,6 @@ export default {
 .intro-title {
   padding-bottom: 1.5rem;
   font-size: var(--font-size-big);
-}
-
-.map-wrapper {
-  height: 100%;
-  overflow: hidden;
 }
 
 </style>
