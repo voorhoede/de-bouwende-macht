@@ -1,12 +1,12 @@
 <template>
   <section class="container">
     <div class="map-wrapper">
-      <city-map />
+      <city-map ref="map" />
     </div>
 
     <div v-if="!gameStarted" class="card center">
       <h1 class="intro-title">Welkom in jouw Rotterdam!</h1>
-    
+
       <div class="intro">
         <p class="intro-text">Hier bouw jij aan de stad van jouw keuze. Laten we beginnen!</p>
         <button class="button-primary" @click="startGame()">Start met bouwen</button>
@@ -51,10 +51,10 @@
     </div>
 
     <transition name="slide-up">
-      <question 
-        v-if="showQuestion" 
-        :currentQuestion="currentQuestion" 
-        @onAnswer="handleAnswer" 
+      <question
+        v-if="showQuestion"
+        :currentQuestion="currentQuestion"
+        @onAnswer="handleAnswer"
       />
     </transition>
   </section>
@@ -104,7 +104,7 @@ export default {
     startGame () {
       this.$store.commit('startGame')
       this.$store.commit('nextQuestion')
-      
+
       this.play()
     },
 
@@ -114,11 +114,11 @@ export default {
       if (this.gameEnded) {
         return
       }
-      
+
       const shouldShowNotice = this.hasNotice && !this.seenNotice
       const shouldShowReadyNotice = this.hasReadyNotice && !this.seenReadyNotice
       const shouldShowFeedback = this.hasFeedback && !this.seenFeedback
-      
+
       if (shouldShowFeedback) {
         return this.$store.commit('showFeedback')
       } else if (shouldShowReadyNotice) {
@@ -172,24 +172,26 @@ export default {
 
       if (hasFollowUpQuestions) {
         followUpQuestions.map(question => {
-          if (question.dependent) { 
-            this.$store.commit('addMainQuestion', question) 
+          if (question.dependent) {
+            this.$store.commit('addMainQuestion', question)
           }
 
-          if (question.followUp) { 
-            this.$store.commit('followUpQuestion', question) 
+          if (question.followUp) {
+            this.$store.commit('followUpQuestion', question)
           }
         })
       } else {
         this.nextQuestion()
       }
-     
+
       this.play()
     },
 
    updateCity(slug, type) {
       const id = slug.toUpperCase();
       const el = document.getElementById(id)
+      const map = this.$refs.map.$el
+
       if (el === null) {
         return false
       }
@@ -201,8 +203,15 @@ export default {
       if (type === 'removeBuilding') {
         el.classList.add('hidden')
       }
-        
+
       this.$store.commit('updateCity', { type: type, slug: slug })
+
+      // Scroll to changed element:
+      const elBounds = el.getBoundingClientRect()
+      let transform = map.style.transform || map.style.webkitTransform || map.style.MozTransform || map.style.msTransform || map.style.oTransform
+
+      map.scrollTop += elBounds.top
+      map.scrollLeft += elBounds.left
     },
 
     hideAllElements() {
