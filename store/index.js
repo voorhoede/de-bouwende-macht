@@ -4,23 +4,21 @@ import _ from 'lodash'
 
 const createStore = () => {
   const initialState = {
-    currentQuestion: {},
     questions: _.shuffle(questions),
     totalQuestions: questions.length,
     questionsCount: 0,
+    currentQuestion: {},
     currentScenario: [],
-    feedback: null,
-    notice: null,
     gameStarted: false,
     gameEnded: false,
     showQuestion: false,
     showNotice: false,
     showFeedback: false,
     showReadyNotice: false,
-    continuePlaying: false,
     seenNotice: false,
     seenFeedback: false,
     seenReadyNotice: false,
+    continuePlaying: false,
   }
 
   return new Vuex.Store({
@@ -78,14 +76,11 @@ const createStore = () => {
         state.showFeedback = !payload
       },
 
-      clearFeedback (state) {
-        state.feedback = null
-      },
-
       nextQuestion (state) {
-        state.questionsCount++
         const nextQuestion = state.questions.shift()
+
         state.currentQuestion = nextQuestion
+        state.questionsCount++
       },
 
       addMainQuestion (state, payload) {
