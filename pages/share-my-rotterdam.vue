@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
-    <input type="hidden" :value="slug" id="buildings">
     
     <div class="postal-card">
       <city-map class="city-map" />
@@ -33,17 +32,20 @@
         <img src="~static/images/twitter.svg" alt="twitter-logo">
       </a>
     </div>
+
+    <email-form />
   </section>
 </template>
 
 <script>
 import CityMap from '~/components/Map.vue'
+import EmailForm from '~/components/EmailForm.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
 
 export default {
-  components: { CityMap },
-  data () {
+  components: { CityMap, EmailForm },
+  data() {
     return {
       url: '',
       text: 'Hi! Check out my Rotterdam!',
@@ -74,15 +76,12 @@ export default {
 @import '~/assets/core.css';
 
 .container {
-  padding: var(--spacing-double) 0;
+  height: auto;
+  padding: var(--spacing-double) var(--spacing-normal);
 }
 
-.page-title {
-  margin-bottom: 3rem;
-  text-align: center;
-  font-size: var(--font-size-normal);
-  font-family: var(--font);
-  font-weight: normal;
+.sub-title {
+  margin-bottom: var(--spacing-double);
 }
 
 .postal-card {
@@ -104,9 +103,9 @@ export default {
 }
 
 .sharing-buttons {
-  border-bottom: 1px solid var(--black);
+  border-bottom: 2px solid var(--green);
   width: 250px;
-  margin: 0 auto;
+  margin: 0 auto var(--spacing-double) auto;
   margin-top: 4rem;
   padding-bottom: var(--spacing-double);
 }

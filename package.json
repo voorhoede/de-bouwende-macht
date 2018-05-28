@@ -15,6 +15,7 @@
     "proxy": "ngrok http 3000"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "2.0.2",
     "lodash": "^4.17.10",
     "nuxt": "^1.0.0",
     "query-string": "^6.1.0"
