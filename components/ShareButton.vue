@@ -1,34 +1,29 @@
 <template>
-  <button class="share-button" @click="share">
-    <img class="share-icon" src="~static/images/share-button.svg">
-  </button>
+  <nuxt-link 
+    class="share-button"
+    :to="'share-my-rotterdam/?buildings=' + slug"
+  >
+    <img class="share-icon" src="~static/images/share-icon.svg">
+  </nuxt-link>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
 export default {
-  computed: mapState({
-    slugs: state => state.currentScenario
-  }),
-
-  methods: {
-    share () {
-      const slugs = this.slugs.join('-')
-
-      this.$router.push(`share-my-rotterdam/${slugs}`)
-    }
-  }
+  props: ['slug'],
 }
 </script>
 
 <style scoped>
+
 @import '~/assets/core.css';
 
 .share-button {
   padding: 0;
   width: var(--button-size);
   height: var(--button-size);
+  background-color: var(--pink);
   border-radius: 50%;
   animation-name: bounce-in;
   animation-duration: 1s;
@@ -37,8 +32,8 @@ export default {
 }
 
 .share-icon {
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: auto;
   animation-name: bounce-in;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -50,11 +45,17 @@ export default {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: var(--white);
   animation-name: glow;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 5;
-  background-color: #fff;
 }
+
+.share-button:hover,
+.share-button:focus {
+  background-color: var(--pink-secondary);
+}
+
 </style>
