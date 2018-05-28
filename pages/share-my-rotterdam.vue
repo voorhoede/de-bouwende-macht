@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       url: '',
-      text: 'Hi! Check out my Rotterdam!',
+      text: 'Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam! ',
       slug: '',
     }
   },
