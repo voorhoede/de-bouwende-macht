@@ -2903,10 +2903,10 @@ export default {
       return (process.client) ? document.body.clientWidth / document.body.clientHeight : (4 / 3)
     },
     mapWidth () {
-      return (this.aspectRatio < this.windowAspectRatio) ? '100vw' : `${Math.floor(100 * this.aspectRatio)}vh`
+      return (this.aspectRatio < this.windowAspectRatio) ? '104vw' : `${Math.floor(104 * this.aspectRatio)}vh`
     },
     mapHeight () {
-      return (this.aspectRatio > this.windowAspectRatio) ? '100vh' : `${Math.floor(100 / this.aspectRatio)}vw`
+      return (this.aspectRatio > this.windowAspectRatio) ? '104vh' : `${Math.floor(104 / this.aspectRatio)}vw`
     }
   }
 }
@@ -2922,9 +2922,10 @@ export default {
 }
 .city-map svg {
   display:block;
+  margin: -4vh -2vw 0;
 }
 .hidden {
-  display: none;
+  opacity: 0;
 }
 
 .fade-in {
