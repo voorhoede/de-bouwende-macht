@@ -1,10 +1,13 @@
 <template>
-  <section class="container">
+  <section class="container">    
+    <div class="logo">
+       <img src="~static/images/vers-beton-logo.png" >
+    </div>
 
     <city-map />
 
     <div v-if="!gameStarted" class="card center">
-      <h1 class="intro-title">Welkom in jouw Rotterdam!</h1>
+      <h1 class="page-title">Welkom in jouw Rotterdam!</h1>
     
       <div class="intro">
         <p class="intro-text">Hier bouw jij aan de stad van jouw keuze. Laten we beginnen!</p>
@@ -220,6 +223,24 @@ export default {
 
 <style scoped>
 @import '~/assets/core.css';
+
+.logo {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  height: auto;
+  width: 75px;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    width: 120px;
+  }
+}
 
 .buttons {
   position: absolute;
