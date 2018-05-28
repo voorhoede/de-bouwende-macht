@@ -64,7 +64,7 @@ export default {
   },
 
   mounted () {
-    const urlOrigin = location.origin + '?buildings='
+    const urlOrigin = location.origin + '/my-city/?buildings='
     const urlParams = queryString.parse(location.search)
     const slug = urlParams.buildings
     const cityBuildings = slug.split('-')

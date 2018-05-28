@@ -35,10 +35,4 @@ export default {
 
 @import '~/assets/core.css';
 
-.character {
-  height: 100px;
-  width: auto;
-  margin-bottom: var(--spacing-normal);
-}
-
 </style>
