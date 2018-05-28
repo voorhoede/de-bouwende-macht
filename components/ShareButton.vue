@@ -4,15 +4,16 @@
     :to="'share-my-rotterdam/?buildings=' + slug"
   >
     <img class="share-icon" src="~static/images/share-icon.svg">
+    {{ label }}
   </nuxt-link>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 
 export default {
-  props: ['slug'],
+  props: ['slug', 'label'],
 }
+
 </script>
 
 <style scoped>
@@ -20,6 +21,25 @@ export default {
 @import '~/assets/core.css';
 
 .share-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: var(--spacing-double);
+  padding: var(--spacing-half) var(--spacing-normal);
+  width: 250px;
+  text-decoration: none;
+}
+
+.share-button:hover,
+.share-button:focus {
+  background-color: var(--pink-secondary);
+}
+
+.share-button-rounded {
+  justify-content: center;
+  position: relative;
+  z-index: 1;
   padding: 0;
   width: var(--button-size);
   height: var(--button-size);
@@ -31,21 +51,15 @@ export default {
   animation-fill-mode: forwards;
 }
 
-.share-icon {
-  width: 22px;
-  height: auto;
-  animation-name: bounce-in;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-.share-button:before {
+.share-button-rounded:before {
   content: '';
-  width: 40px;
-  height: 40px;
+  width: var(--button-size);
+  height: var(--button-size);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   border-radius: 50%;
-  background-color: var(--white);
   animation-name: glow;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -53,9 +67,9 @@ export default {
   animation-iteration-count: 5;
 }
 
-.share-button:hover,
-.share-button:focus {
-  background-color: var(--pink-secondary);
+.share-icon {
+  width: auto;
+  height: 20px;
 }
 
 </style>
