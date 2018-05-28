@@ -11,7 +11,7 @@
     <div class="sharing-buttons">
       <a 
         class="share-logo"
-        :href="`https://www.facebook.com/sharer.php?u=${url + slug}`" 
+        :href="'https://www.facebook.com/sharer.php?u=' + url + slug" 
         target="_blank"
       >
         <img src="~static/images/facebook.svg" alt="facebook-logo">
@@ -19,7 +19,7 @@
 
       <a 
         class="share-logo" 
-        :href="`whatsapp://send?text=${url + slug}`" 
+        :href="'whatsapp://send?text=' + url + slug" 
         data-action="share/whatsapp/share" 
         target="_blank"
       >
