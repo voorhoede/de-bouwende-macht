@@ -1,6 +1,7 @@
 <template>
   <div class="city-map">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 764.75 545.87">
+    <svg :style="`width: ${mapWidth}; height: ${mapHeight}`"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 764.75 545.87">
       <defs>
         <linearGradient id="linear-gradient" x1="242.71" y1="217.4" x2="260.38" y2="217.4" gradientUnits="userSpaceOnUse">
           <stop offset="0" stop-color="#3c3c3b"/>
@@ -2888,13 +2889,40 @@
   </div>
 </template>
 
+<script>
+const width = 764.75
+const height = 545.87
+const aspectRatio = width / height // higher is longer
+
+export default {
+  data () {
+    return { aspectRatio }
+  },
+  computed: {
+    windowAspectRatio () {
+      return (process.client) ? document.body.clientWidth / document.body.clientHeight : (4 / 3)
+    },
+    mapWidth () {
+      return (this.aspectRatio < this.windowAspectRatio) ? '100vw' : `${Math.floor(100 * this.aspectRatio)}vh`
+    },
+    mapHeight () {
+      return (this.aspectRatio > this.windowAspectRatio) ? '100vh' : `${Math.floor(100 / this.aspectRatio)}vw`
+    }
+  }
+}
+</script>
+
 <style scoped>
 
 .city-map {
-  height: 100%;
-  width: auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  padding: 0;
 }
-
+.city-map svg {
+  display:block;
+}
 .hidden {
   display: none;
 }
