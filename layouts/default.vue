@@ -1,4 +1,4 @@
-v<template>
+<template>
   <div>
     <nuxt/>
   </div>
