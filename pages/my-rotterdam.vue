@@ -212,10 +212,12 @@ export default {
 
       if (type === 'addBuilding') {
         el.classList.remove('hidden')
+        el.classList.add('fade-in')
       }
 
       if (type === 'removeBuilding') {
         el.classList.add('hidden')
+        el.classList.remove('fade-in')
       }
         
       this.$store.commit('updateCity', { type: type, slug: slug })
