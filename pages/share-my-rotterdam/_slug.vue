@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
+    <h1 class="page-title">Well done!</h1>
+    <h2 class="sub-title">This is how your Rotterdam looks like:</h2>
     <input id="buildings" type="hidden" :value="`${$route.params.slug}`">
     
     <div class="postal-card">
@@ -33,15 +34,18 @@
         <img src="~static/images/twitter.svg" alt="">
       </a>
     </div>
+
+    <email-form />
   </section>
 </template>
 
 <script>
 import CityMap from '~/components/Map.vue'
+import EmailForm from '~/components/EmailForm.vue'
 import { mapState } from 'vuex'
 
 export default {
-  components: { CityMap },
+  components: { CityMap, EmailForm },
   data() {
     return {
       cityUrl: 'http://infallible-khorana-d0fd18.netlify.com/my-city/',
@@ -77,15 +81,12 @@ export default {
 @import '~/assets/core.css';
 
 .container {
-  padding: 2rem 0;
+  height: auto;
+  padding: var(--spacing-double) var(--spacing-normal);
 }
 
-.page-title {
-  margin-bottom: 3rem;
-  text-align: center;
-  font-size: var(--font-size-normal);
-  font-family: var(--font);
-  font-weight: normal;
+.sub-title {
+  margin-bottom: var(--spacing-double);
 }
 
 .postal-card {
@@ -107,9 +108,9 @@ export default {
 }
 
 .sharing-buttons {
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid var(--green);
   width: 250px;
-  margin: 0 auto;
+  margin: 0 auto var(--spacing-double) auto;
   margin-top: 4rem;
   padding-bottom: 2rem;
 }

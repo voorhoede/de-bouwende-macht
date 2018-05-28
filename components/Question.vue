@@ -4,7 +4,13 @@
       <p class="current-question">{{ currentQuestion.question }}</p>
       
       <div class="answers">
-        <button class="answer-button" v-for="(answer, index) in currentQuestion.answers" @click="onClickButton(answer)" :key="index">{{ answer.label }}</button>
+        <button
+          class="answer-button"
+          v-for="(answer, index) in currentQuestion.answers"
+          @click="onClickButton(answer, currentQuestion)" :key="index"
+        >
+          {{ answer.label }}
+        </button>
       </div>
     </div>
   </div>
@@ -15,7 +21,13 @@
 export default {
   props: ['currentQuestion', 'answerFeedback'],
   methods: {
-    onClickButton (answer) {
+    onClickButton (answer, currentQuestion) {
+      this.$ga.event({
+        eventCategory: 'question',
+        eventAction: 'answer',
+        eventLabel: currentQuestion.question,
+        eventValue: answer.label
+      })
       this.$emit('onAnswer', answer)
     }
   }
