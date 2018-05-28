@@ -1,13 +1,10 @@
 <template>
-  <section class="container">
-    
+  <section class="container">    
     <div class="logo">
        <img src="~static/images/vers-beton-logo.png" >
     </div>
 
-    <div class="map-wrapper">
-      <city-map />
-    </div>
+    <city-map />
 
     <div v-if="!gameStarted" class="card center">
       <h1 class="page-title">Welkom in jouw Rotterdam!</h1>
@@ -88,23 +85,23 @@ export default {
       showAbout: false,
     }
   },
-  computed: mapState({
-    questions: state => state.questions,
-    questionsCount: state => state.questionsCount,
-    totalQuestions: state => state.totalQuestions,
-    currentQuestion: state => state.currentQuestion,
-    currentScenario: state => state.currentScenario,
-    showQuestion: state => state.showQuestion,
-    showNotice: state => state.showNotice,
-    showFeedback: state => state.showFeedback,
-    showReadyNotice: state => state.showReadyNotice,
-    gameStarted: state => state.gameStarted,
-    gameEnded: state => state.gameEnded,
-    continuePlaying: state => state.continuePlaying,
-    seenNotice: state => state.seenNotice,
-    seenFeedback: state => state.seenFeedback,
-    seenReadyNotice: state => state.seenReadyNotice,
-  }),
+  computed: mapState([
+    'questions',
+    'questionsCount',
+    'totalQuestions',
+    'currentQuestion',
+    'currentScenario',
+    'showQuestion',
+    'showNotice',
+    'showFeedback',
+    'showReadyNotice',
+    'gameStarted',
+    'gameEnded',
+    'continuePlaying',
+    'seenNotice',
+    'seenFeedback',
+    'seenReadyNotice'
+  ]),
   methods: {
     startGame () {
       this.$store.commit('startGame')
@@ -142,6 +139,7 @@ export default {
 
       this.$store.commit('nextQuestion')
       this.$store.commit('seenNotice', false)
+    
       this.hasNotice = true
     },
 
@@ -251,9 +249,9 @@ export default {
   right: var(--spacing-half);
 }
 
-.map-wrapper {
-  height: 100%;
-  overflow: hidden;
+.intro-title {
+  padding-bottom: 1.5rem;
+  font-size: var(--font-size-big);
 }
 
 </style>

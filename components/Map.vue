@@ -2891,8 +2891,10 @@
 <style scoped>
 
 .city-map {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
 }
 
 .hidden {

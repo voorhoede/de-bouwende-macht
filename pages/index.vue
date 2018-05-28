@@ -14,7 +14,7 @@
       <h1>De Bouwende Macht</h1>
 
       <transition name="slide" mode="out-in">
-        <div class="intro" key="3" v-if="firstPart">
+        <div class="intro" v-if="firstPart">
           <div>
             <p>
               Vers Beton, het online tijdschrift voor de harddenkende Rotterdammer, heeft
@@ -28,7 +28,7 @@
           </div>
         </div>
 
-        <div class="intro" key="1" v-if="!firstPart">
+        <div class="intro" v-if="!firstPart">
           <div>
             <p>
               ...dat ben jij, de Rotterdamse burger!
