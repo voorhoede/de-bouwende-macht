@@ -16,6 +16,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
