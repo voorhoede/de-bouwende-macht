@@ -18,13 +18,19 @@
     <transition name="slow-slide-up">
       <ready-notice
         v-if="showReadyNotice"
+        :slug="currentScenario.join('-')"
         @onClick="play"
       />
     </transition>
 
     <div class="buttons">
-      <share-button v-if="continuePlaying" />
       <info-button @onClick="showAbout = !showAbout" />
+
+      <share-button
+        class="share-button-rounded"
+        v-if="continuePlaying" 
+        :slug="currentScenario.join('-')" 
+      />
     </div>
 
     <transition name="bounce">
@@ -41,15 +47,21 @@
 
     <transition name="slow-slide-up">
       <feedback
-        :feedback="feedbackContent"
         v-if="showFeedback"
+        :feedback="feedbackContent"
         @onClick="play"
       />
     </transition>
 
     <div class="toast card" v-if="gameEnded">
       <p>Dit is jouw Rotterdam!</p>
-      <nuxt-link class="button button-primary" to="/share-my-rotterdam">Delen</nuxt-link>
+      
+      <nuxt-link 
+        class="button button-primary" 
+        :to="'/share-my-rotterdam/?buildings=' + currentScenario.join('-')"
+      >
+        Delen
+      </nuxt-link>
     </div>
 
     <transition name="slide-up">
@@ -83,6 +95,7 @@ export default {
       hasReadyNotice: false,
       toasterText: '',
       showAbout: false,
+      slug: '',
     }
   },
   computed: mapState([
@@ -143,7 +156,7 @@ export default {
       this.hasNotice = true
     },
 
-    handleAnswer(answer) {
+    handleAnswer (answer) {
       const followUpQuestions = answer.outcome.filter(outcome => outcome.itemType === 'question')
       const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
       const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
@@ -190,7 +203,7 @@ export default {
       this.play()
     },
 
-   updateCity(slug, type) {
+   updateCity (slug, type) {
       const id = slug.toUpperCase();
       const el = document.getElementById(id)
       if (el === null) {
@@ -213,9 +226,9 @@ export default {
       this.$store.commit('hideReadyNotice')
       this.$store.commit('hideQuestion')
       this.$store.commit('hideFeedback')
-    }
+    },
   },
-  transition(to, from) {
+  transition (to, from) {
     if (!from) return 'slide-left'
     return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   },
