@@ -14,7 +14,7 @@
         :href="`https://www.facebook.com/sharer.php?u=${url + slug}`" 
         target="_blank"
       >
-        <img src="~static/images/facebook.svg" alt="">
+        <img src="~static/images/facebook.svg" alt="facebook-logo">
       </a>
 
       <a 
@@ -23,14 +23,14 @@
         data-action="share/whatsapp/share" 
         target="_blank"
       >
-        <img src="~static/images/whatsapp.svg" alt="">
+        <img src="~static/images/whatsapp.svg" alt="whatsapp-logo">
       </a>
       
       <a class="share-logo"
         :href="'https://twitter.com/intent/tweet?text=' + text + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/twitter.svg" alt="">
+        <img src="~static/images/twitter.svg" alt="twitter-logo">
       </a>
     </div>
   </section>
@@ -43,23 +43,22 @@ import queryString from 'query-string'
 
 export default {
   components: { CityMap },
-  data() {
+  data () {
     return {
-      url: 'http://infallible-khorana-d0fd18.netlify.com/my-city/?buildings=',
+      url: '',
       text: 'Hi! Check out my Rotterdam!',
-      slug: null,
+      slug: '',
     }
   },
 
-  mounted: () => {
-    const input = document.getElementById('buildings')
+  mounted () {
+    const urlOrigin = location.origin + '?buildings='
     const urlParams = queryString.parse(location.search)
     const slug = urlParams.buildings
     const cityBuildings = slug.split('-')
 
     this.slug = slug
-
-    input.value = slug
+    this.url = urlOrigin
 
     cityBuildings.map(building => {
       const id = building.toUpperCase()
@@ -75,7 +74,7 @@ export default {
 @import '~/assets/core.css';
 
 .container {
-  padding: 2rem 0;
+  padding: var(--spacing-double) 0;
 }
 
 .page-title {
@@ -87,8 +86,8 @@ export default {
 }
 
 .postal-card {
-  padding: 1rem;
-  box-shadow: 2px 2px 10px #ccc;
+  padding: var(--spacing-normal);
+  box-shadow: var(--box-shadow);
   transform: rotate(-5deg);
   margin: 0 auto;
   width: 80%;
@@ -105,14 +104,14 @@ export default {
 }
 
 .sharing-buttons {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--black);
   width: 250px;
   margin: 0 auto;
   margin-top: 4rem;
-  padding-bottom: 2rem;
+  padding-bottom: var(--spacing-double);
 }
 
 .share-logo:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: var(--spacing-normal);
 }
 </style>
