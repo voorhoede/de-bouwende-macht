@@ -3,7 +3,7 @@
         <div id="mc_embed_signup">
             <form action="https://versbeton.us6.list-manage.com/subscribe/post?u=9716cbcb5c33ca798ec305c59&amp;id=90d11b4629" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                    <h2 class="sub-title">Schrijf je in voor onze wekelijkse nieuwsbrief en blijf op de hoogte van het dossier De Bouwende Macht.</h2>
+                    <h2 class="sub-title">Dit spel is gebaseerd op het onderzoeksdossier De Bouwende Macht van Vers Beton. Wil je op de hoogte blijven? Schrijf je dan in voor onze wekelijkse nieuwsbrief en mis niets.</h2>
                     <div class="indicates-required"><small><span class="asterisk">*</span> verplicht veld</small></div>
                     <div class="field-group mc-field-group">
                         <label class="label" for="mce-EMAIL">Emailadres <span class="asterisk">*</span></label>
