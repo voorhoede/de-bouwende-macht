@@ -24,7 +24,8 @@
     <div class="buttons">
       <info-button @onClick="showAbout = !showAbout" />
 
-      <share-button 
+      <share-button
+        class="share-button-rounded"
         v-if="continuePlaying" 
         :slug="currentScenario.join('-')" 
       />
