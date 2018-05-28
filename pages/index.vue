@@ -23,7 +23,7 @@
           <p>
             Hieruit bleek dat er sinds kort een nieuwe speler aan tafel zit met invloed.
           </p>
-          <button class="link-primary" @click="firstPart = !firstPart">Wie dat is?</button>
+          <button class="button button-primary" @click="firstPart = !firstPart">Wie dat is?</button>
         </div>
 
         <div class="intro" key="1" v-if="!firstPart">

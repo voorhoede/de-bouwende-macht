@@ -77,12 +77,16 @@ p {
   right: var(--spacing-normal);
 }
 
+.card.toast {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .card {
   padding: var(--spacing-double) var(--spacing-normal);
   background-color: var(--white);
   box-shadow: var(--box-shadow);
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-radius: var(--border-radius-smooth);
   text-align: center;
 }
 
