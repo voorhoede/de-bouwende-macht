@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
-    <input id="buildings" type="hidden" :value="`${$route.params.slug}`">
+    <input type="hidden" :value="slug" id="buildings">
     
     <div class="postal-card">
       <city-map class="city-map" />
@@ -11,7 +11,7 @@
     <div class="sharing-buttons">
       <a 
         class="share-logo"
-        :href="`https://www.facebook.com/sharer.php?u=${this.cityUrl + cityBuildings}`" 
+        :href="`https://www.facebook.com/sharer.php?u=${url + slug}`" 
         target="_blank"
       >
         <img src="~static/images/facebook.svg" alt="">
@@ -19,7 +19,7 @@
 
       <a 
         class="share-logo" 
-        :href="`whatsapp://send?text=${this.cityUrl + cityBuildings}`" 
+        :href="`whatsapp://send?text=${url + slug}`" 
         data-action="share/whatsapp/share" 
         target="_blank"
       >
@@ -27,7 +27,7 @@
       </a>
       
       <a class="share-logo"
-        :href="`https://twitter.com/intent/tweet?text=${this.text + this.cityUrl + cityBuildings}`" 
+        :href="'https://twitter.com/intent/tweet?text=' + text + url + slug" 
         target="_blank"
       >
         <img src="~static/images/twitter.svg" alt="">
@@ -39,29 +39,27 @@
 <script>
 import CityMap from '~/components/Map.vue'
 import { mapState } from 'vuex'
+import queryString from 'query-string'
 
 export default {
   components: { CityMap },
   data() {
     return {
-      cityUrl: 'http://infallible-khorana-d0fd18.netlify.com/my-city/',
+      url: 'http://infallible-khorana-d0fd18.netlify.com/my-city/?buildings=',
       text: 'Hi! Check out my Rotterdam!',
       slug: null,
     }
   },
 
-  asyncData({ params }) {
-    const buildings = params.slug
-
-    return { 
-      cityBuildings: buildings
-    }
-  },
-
   mounted: () => {
-    const slugs = document.getElementById('buildings')
-    const cityBuildings = slugs.value.split('-')
-    this.slug = `${slugs.value}`
+    const input = document.getElementById('buildings')
+    const urlParams = queryString.parse(location.search)
+    const slug = urlParams.buildings
+    const cityBuildings = slug.split('-')
+
+    this.slug = slug
+
+    input.value = slug
 
     cityBuildings.map(building => {
       const id = building.toUpperCase()
@@ -69,7 +67,7 @@ export default {
       
       el.classList.remove('hidden')
     })
-  }
+  },
 }
 </script>
 

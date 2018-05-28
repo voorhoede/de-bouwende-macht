@@ -15,22 +15,43 @@
 <script>
 import CityMap from '~/components/Map.vue'
 import { mapState } from 'vuex'
+import queryString from 'query-string'
 
 export default {
   components: { CityMap },
 
-  asyncData({ params }) {
-    const buildings = params.buildings.split('-')
-    return { cityBuildings: buildings }
-  },
+//   asyncData({ params }) {
+//     const buildings = params.buildings.split('-')
+//     return { cityBuildings: buildings }
+//   },
 
-  mounted: () => {
-    const slugs = document.getElementById('buildings')
-    const cityBuildings = slugs.value.split('-')
+//   mounted: () => {
+//     const slugs = document.getElementById('buildings')
+//     const cityBuildings = slugs.value.split('-')
+
+//     cityBuildings.map(building => {
+//       const id = building.toUpperCase()
+//       const el = document.getElementById(id)
+//       el.classList.remove('hidden')
+//     })
+//   }
+// }
+
+mounted: () => {
+    const input = document.getElementById('buildings')
+    
+    const urlParams = queryString.parse(location.search)
+    const slug = urlParams.buildings
+    const cityBuildings = slug.split('-')
+
+    this.slug = slug
+
+    input.value = slug
 
     cityBuildings.map(building => {
       const id = building.toUpperCase()
       const el = document.getElementById(id)
+      
       el.classList.remove('hidden')
     })
   }

@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "query-string": "^6.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
