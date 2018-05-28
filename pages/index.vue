@@ -14,26 +14,30 @@
       <h1>De Bouwende Macht</h1>
 
       <transition name="slide" mode="out-in">
-        <div class="intro" key="3" v-if="firstPart">
-          <p>
-            Vers Beton, het online tijdschrift voor de harddenkende Rotterdammer, heeft
-            <a class="link-primary" href="https://versbeton.nl/harde-kern/de-bouwende-macht/">een onderzoek</a>
-            gedaan naar de machtige spelers van bouwend Rotterdam.
-          </p>
-          <p>
-            Hieruit bleek dat er sinds kort een nieuwe speler aan tafel zit met invloed.
-          </p>
-          <button class="button button-primary" @click="firstPart = !firstPart">Wie dat is?</button>
+        <div class="intro" v-if="firstPart">
+          <div>
+            <p>
+              Vers Beton, het online tijdschrift voor de harddenkende Rotterdammer, heeft
+              <a class="link-primary" href="https://versbeton.nl/harde-kern/de-bouwende-macht/">een onderzoek</a>
+              gedaan naar de machtige spelers van bouwend Rotterdam.
+            </p>
+            <p>
+              Hieruit bleek dat er sinds kort een nieuwe speler aan tafel zit met invloed...
+            </p>
+            <button class="button button-primary" @click="firstPart = !firstPart">Wie dat is?</button>
+          </div>
         </div>
 
-        <div class="intro" key="1" v-if="!firstPart">
-          <p>
-            ...dat ben jij, de Rotterdamse burger!
-          </p>
-          <p>
-            Burgers hebben steeds vaker invloed op hoe de stad eruit komt te zien. Maar wat wil de
-            Rotterdammer? Dat gaan we in deze game onderzoeken.
-          </p>
+        <div class="intro" v-if="!firstPart">
+          <div>
+            <p>
+              ...dat ben jij, de Rotterdamse burger!
+            </p>
+            <p>
+              Burgers hebben steeds vaker invloed op hoe de stad eruit komt te zien. Maar wat wil de
+              Rotterdammer? Dat gaan we in deze game onderzoeken.
+            </p>
+          </div>
           <nuxt-link to="/my-rotterdam" class="button button-primary">Speel het spel!</nuxt-link>
         </div>
 
@@ -57,6 +61,12 @@
   height: auto;
   width: 75px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    margin-top: var(--spacing-normal);
+  }
 }
 
 .logo img {
@@ -89,7 +99,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 240px;
 }
 
 </style>
