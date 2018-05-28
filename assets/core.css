@@ -91,6 +91,8 @@ p {
 }
 
 .full-screen {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;

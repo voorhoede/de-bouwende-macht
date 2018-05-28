@@ -36,8 +36,8 @@
       <p>
         Enkele situaties in dit spel zijn gebaseerd op échte anekdotes over recente bouwprojecten. 
         In dit artikel kun je hier meer over lezen en een FAQ over de game:
-        <a href="#">URL NOT AVAILABLE YET</a>
       </p>
+      <a class="button button-primary" href="#">URL NOT AVAILABLE YET</a>
     </div>
   </section>
 </template>
