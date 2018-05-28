@@ -29,6 +29,7 @@ export default {
   padding: var(--spacing-half) var(--spacing-normal);
   width: 250px;
   text-decoration: none;
+  box-shadow: var(--box-shadow);
 }
 
 .share-button:hover,
