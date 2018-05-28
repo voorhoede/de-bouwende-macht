@@ -1,8 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="page-title">Well done!</h1>
-    <h2 class="sub-title">This is how your Rotterdam looks like:</h2>
-    <input id="buildings" type="hidden" :value="`${$route.params.slug}`">
+    <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
     
     <div class="postal-card">
       <city-map class="city-map" />
@@ -12,26 +10,26 @@
     <div class="sharing-buttons">
       <a 
         class="share-logo"
-        :href="`https://www.facebook.com/sharer.php?u=${this.cityUrl + cityBuildings}`" 
+        :href="'https://www.facebook.com/sharer.php?u=' + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/facebook.svg" alt="">
+        <img src="~static/images/facebook.svg" alt="facebook-logo">
       </a>
 
       <a 
         class="share-logo" 
-        :href="`whatsapp://send?text=${this.cityUrl + cityBuildings}`" 
+        :href="'whatsapp://send?text=' + url + slug" 
         data-action="share/whatsapp/share" 
         target="_blank"
       >
-        <img src="~static/images/whatsapp.svg" alt="">
+        <img src="~static/images/whatsapp.svg" alt="whatsapp-logo">
       </a>
       
       <a class="share-logo"
-        :href="`https://twitter.com/intent/tweet?text=${this.text + this.cityUrl + cityBuildings}`" 
+        :href="'https://twitter.com/intent/tweet?text=' + text + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/twitter.svg" alt="">
+        <img src="~static/images/twitter.svg" alt="twitter-logo">
       </a>
     </div>
 
@@ -43,29 +41,26 @@
 import CityMap from '~/components/Map.vue'
 import EmailForm from '~/components/EmailForm.vue'
 import { mapState } from 'vuex'
+import queryString from 'query-string'
 
 export default {
   components: { CityMap, EmailForm },
   data() {
     return {
-      cityUrl: 'http://infallible-khorana-d0fd18.netlify.com/my-city/',
+      url: '',
       text: 'Hi! Check out my Rotterdam!',
-      slug: null,
+      slug: '',
     }
   },
 
-  asyncData({ params }) {
-    const buildings = params.slug
+  mounted () {
+    const urlOrigin = location.origin + '?buildings='
+    const urlParams = queryString.parse(location.search)
+    const slug = urlParams.buildings
+    const cityBuildings = slug.split('-')
 
-    return { 
-      cityBuildings: buildings
-    }
-  },
-
-  mounted: () => {
-    const slugs = document.getElementById('buildings')
-    const cityBuildings = slugs.value.split('-')
-    this.slug = `${slugs.value}`
+    this.slug = slug
+    this.url = urlOrigin
 
     cityBuildings.map(building => {
       const id = building.toUpperCase()
@@ -73,7 +68,7 @@ export default {
       
       el.classList.remove('hidden')
     })
-  }
+  },
 }
 </script>
 
@@ -90,8 +85,8 @@ export default {
 }
 
 .postal-card {
-  padding: 1rem;
-  box-shadow: 2px 2px 10px #ccc;
+  padding: var(--spacing-normal);
+  box-shadow: var(--box-shadow);
   transform: rotate(-5deg);
   margin: 0 auto;
   width: 80%;
@@ -112,10 +107,10 @@ export default {
   width: 250px;
   margin: 0 auto var(--spacing-double) auto;
   margin-top: 4rem;
-  padding-bottom: 2rem;
+  padding-bottom: var(--spacing-double);
 }
 
 .share-logo:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: var(--spacing-normal);
 }
 </style>
