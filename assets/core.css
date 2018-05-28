@@ -18,7 +18,8 @@ html {
 
 body,
 p,
-button {
+button,
+input {
   font-family: var(--font);
   font-size: var(--font-size-normal);
 }
@@ -48,6 +49,7 @@ p {
   font-size: var(--font-size-normal);
   transition: all .3s cubic-bezier(.55,0,.1,1);
   height: 100vh;
+  overflow: hidden;
 }
 
 .center {
@@ -95,6 +97,12 @@ p {
   background: white;
   z-index: 1;
   padding: 2rem;
+}
+
+.page-title {
+  margin-bottom: var(--spacing-normal);
+  font-size: var(--font-size-big);
+  font-weight: bold;
 }
 
 .character {
