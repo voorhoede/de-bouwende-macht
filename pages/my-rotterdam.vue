@@ -1,13 +1,10 @@
 <template>
-  <section class="container">
-    
+  <section class="container">    
     <div class="logo">
        <img src="~static/images/vers-beton-logo.png" >
     </div>
 
-    <div class="map-wrapper">
-      <city-map />
-    </div>
+    <city-map />
 
     <div v-if="!gameStarted" class="card center">
       <h1 class="page-title">Welkom in jouw Rotterdam!</h1>
@@ -251,9 +248,9 @@ export default {
   right: var(--spacing-half);
 }
 
-.map-wrapper {
-  height: 100%;
-  overflow: hidden;
+.intro-title {
+  padding-bottom: 1.5rem;
+  font-size: var(--font-size-big);
 }
 
 </style>
