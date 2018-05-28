@@ -49,7 +49,7 @@ button:hover {
 .button-primary:focus {
   background-color: var(--pink-secondary);
 }
-  
+
 .button-secondary {
   font-family: var(--font-bold);
   background-color: var(--white);
@@ -73,10 +73,16 @@ button:hover {
 .answer-button:focus {
     background-color: var(--green-dark);
 }
-  
+
 .button-primary,
 .button-secondary,
 .answer-button,
 .question {
   box-shadow: var(--box-shadow);
+}
+
+.minify-button {
+  background-image: url('~/assets/chevron-down.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
