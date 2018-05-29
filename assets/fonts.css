@@ -13,3 +13,10 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('https://fonts.googleapis.com/css?family=Dancing+Script');
+  font-weight: normal;
+  font-style: normal;
+}
