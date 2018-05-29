@@ -37,7 +37,8 @@
                     "slug": "champagnestation",
                     "title": "Champagneglazen"
                   }
-                ]
+                ],
+                "title": "Champagneglazen verdwijnen"
               },
               {
                 "itemType": "result",
@@ -48,8 +49,8 @@
             "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
           }
         ],
-        "toastertekst": null,
-        "dependent": null,
+        "toastertekst": "Ohjee!",
+        "dependent": false,
         "followUp": true,
         "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
       }
@@ -98,7 +99,8 @@
                         "slug": "champagnestation",
                         "title": "Champagneglazen"
                       }
-                    ]
+                    ],
+                    "title": "Champagneglazen verdwijnen"
                   },
                   {
                     "itemType": "result",
@@ -109,8 +111,8 @@
                 "label": "Ik bewerk de gemeenteraad. Als die instemt, maakt het niet uit wat de bewoners vinden."
               }
             ],
-            "toastertekst": null,
-            "dependent": null,
+            "toastertekst": "Ohjee!",
+            "dependent": false,
             "followUp": true,
             "question": "Jouw megalomane ontwerp zet de halve Provenierswijk in de schaduw. De bewoners zijn niet blij. Wat doe je?"
           }
@@ -132,7 +134,7 @@
             "title": "Centraal Station"
           }
         ],
-        "label": "... een functioneel station neerzetten dat in ieder geval binnen de begroting blijft."
+        "label": "… een functioneel station neerzetten dat keurig binnen begroting blijft. "
       }
     ],
     "toastertekst": "Er is een bouwvraag!",
@@ -190,9 +192,9 @@
           }
         ],
         "toastertekst": null,
-        "dependent": null,
+        "dependent": false,
         "followUp": true,
-        "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+        "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. De Kop van Zuid is echter nog leeg. Wat doe je?"
       }
     ],
     "answers": [
@@ -251,9 +253,9 @@
               }
             ],
             "toastertekst": null,
-            "dependent": null,
+            "dependent": false,
             "followUp": true,
-            "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+            "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. De Kop van Zuid is echter nog leeg. Wat doe je?"
           }
         ],
         "label": "Ik ontwerp een brug die wel binnen het budget past."
@@ -308,9 +310,9 @@
               }
             ],
             "toastertekst": null,
-            "dependent": null,
+            "dependent": false,
             "followUp": true,
-            "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. En nu?"
+            "question": "Gefeliciteerd! Er is een verbinding tussen noord en zuid. De Kop van Zuid is echter nog leeg. Wat doe je?"
           },
           {
             "itemType": "result",
@@ -330,10 +332,10 @@
             "title": "Hotel New York"
           }
         ],
-        "label": "Ik blaas de plannen af. De bestaande brug moet maar volstaan."
+        "label": "Ik blaas de plannen af."
       }
     ],
-    "toastertekst": "Er is een bouwvraag",
+    "toastertekst": "Er is een bouwvraag!",
     "dependent": false,
     "followUp": false,
     "question": "Er moet een brug van noord naar zuid komen. Dat is te duur voor de gemeente. Wat doe je? "
@@ -349,7 +351,7 @@
         "answers": [
           {
             "itemType": "answer",
-            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+            "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen er aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
             "outcome": [
               {
                 "itemType": "result",
@@ -357,7 +359,7 @@
                 "title": "Meer toeristen"
               }
             ],
-            "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+            "label": "Ik geef de grond in erfpacht aan de ontwikkelaar en hoop dat zich snel een investeerder meldt om de Markthal te bouwen."
           },
           {
             "itemType": "answer",
@@ -376,16 +378,17 @@
                     "slug": "markthal",
                     "title": "Markthal"
                   }
-                ]
+                ],
+                "title": "Markthal verdwijnt"
               }
             ],
-            "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+            "label": "De ontwikkelaar wil dit bouwen, dus hij betaalt. Ik help met de regelgeving."
           }
         ],
         "toastertekst": null,
-        "dependent": null,
+        "dependent": false,
         "followUp": true,
-        "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+        "question": "Provast wint met een ontwerp van MVRDV voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
       }
     ],
     "answers": [
@@ -404,7 +407,7 @@
             "title": "Marconitorens"
           }
         ],
-        "label": "De Blaak heeft al een logisch én historisch middelpunt: de Laurenskerk. Dat gaat mijn ontwerp benadrukken."
+        "label": "Ik kies voor het historische middelpunt van de Blaak: de Laurenskerk."
       },
       {
         "itemType": "answer",
@@ -417,7 +420,7 @@
             "answers": [
               {
                 "itemType": "answer",
-                "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
+                "feedback": "Rotterdamse roulette! Op de valreep meldt zich ABN Amro als investeerder. Na opening trekt de Markthal de aandacht van de internationale pers en komen er aanzienlijk meer toeristen naar Rotterdam. Goed gedaan!",
                 "outcome": [
                   {
                     "itemType": "result",
@@ -425,7 +428,7 @@
                     "title": "Meer toeristen"
                   }
                 ],
-                "label": "Voor de parkeergarage geef ik de grond in erfpacht aan de ontwikkelaar en streep het verlies aan inkomsten weg tegen een rijkssubsidie. Daarnaast hoop ik dat zich binnen drie jaar een investeerder meldt om de Markthal te bouwen."
+                "label": "Ik geef de grond in erfpacht aan de ontwikkelaar en hoop dat zich snel een investeerder meldt om de Markthal te bouwen."
               },
               {
                 "itemType": "answer",
@@ -444,16 +447,17 @@
                         "slug": "markthal",
                         "title": "Markthal"
                       }
-                    ]
+                    ],
+                    "title": "Markthal verdwijnt"
                   }
                 ],
-                "label": "De ontwikkelaar wil dit bouwen, dus de kosten zijn voor hem. Ik help met de regelgeving."
+                "label": "De ontwikkelaar wil dit bouwen, dus hij betaalt. Ik help met de regelgeving."
               }
             ],
             "toastertekst": null,
-            "dependent": null,
+            "dependent": false,
             "followUp": true,
-            "question": "Provast wint met een ontwerp voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
+            "question": "Provast wint met een ontwerp van MVRDV voor een overdekte levensmiddelenhal met een parkeergarage eronder. De eerste in Nederland, de grootste in zijn soort. Die realiseren kost heel erg veel geld. Wat doe je?"
           },
           {
             "itemType": "result",
@@ -461,13 +465,13 @@
             "title": "Markthal"
           }
         ],
-        "label": "Mijn ontwerp wordt groot, groter, grootst en bundelt wonen, parkeren en kopen in één iconisch gebouw."
+        "label": "Mijn ontwerp bundelt wonen, parkeren en kopen in één iconisch gebouw."
       }
     ],
-    "toastertekst": "Er is een probleem!",
+    "toastertekst": "Er is een probleem! De Blaak is een doodse plek in de stad. ",
     "dependent": false,
     "followUp": false,
-    "question": "Om de Blaak te verlevendigen, komt er een prijsvraag met als onderwerp ‘de stad als metabolisme’. Daarin strooit men kwistig met begrippen als ‘interactiemilieu’ en ‘fijnmazige functieverstrengeling’. Wat doe je?"
+    "question": "Om de Blaak te verlevendigen, wordt er een  prijsvraag uitgeschreven met termen als ‘interactiemilieu’ en ‘fijnmazige functieverstrengeling’. Wat wordt het winnende ontwerp?"
   },
   {
     "itemType": "question",
@@ -480,7 +484,7 @@
         "answers": [
           {
             "itemType": "answer",
-            "feedback": null,
+            "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. Maar actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
             "outcome": [
               {
                 "itemType": "result",
@@ -492,7 +496,7 @@
           },
           {
             "itemType": "answer",
-            "feedback": null,
+            "feedback": "Helaas, door de hoge huizenprijzen wordt de stad onbetaalbaar voor veel Rotterdammers.",
             "outcome": [
               {
                 "itemType": "result",
@@ -508,8 +512,8 @@
             "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
           }
         ],
-        "toastertekst": null,
-        "dependent": null,
+        "toastertekst": "Het probleem is niet opgelost!",
+        "dependent": false,
         "followUp": true,
         "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
       }
@@ -531,7 +535,7 @@
             "answers": [
               {
                 "itemType": "answer",
-                "feedback": null,
+                "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. Maar actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
                 "outcome": [
                   {
                     "itemType": "result",
@@ -543,7 +547,7 @@
               },
               {
                 "itemType": "answer",
-                "feedback": null,
+                "feedback": "Helaas, door de hoge huizenprijzen wordt de stad onbetaalbaar voor veel Rotterdammers.",
                 "outcome": [
                   {
                     "itemType": "result",
@@ -559,8 +563,8 @@
                 "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
               }
             ],
-            "toastertekst": null,
-            "dependent": null,
+            "toastertekst": "Het probleem is niet opgelost!",
+            "dependent": false,
             "followUp": true,
             "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
           }
@@ -569,7 +573,7 @@
       },
       {
         "itemType": "answer",
-        "feedback": "Zo, jij bent van de lange adem. Pas over twintig jaar zie je misschien effect van deze inspanning.",
+        "feedback": "Zo, jij bent van de lange adem. Pas over twintig jaar zie je misschien effect van deze inspanning. ",
         "outcome": [
           {
             "itemType": "result",
@@ -583,7 +587,7 @@
             "answers": [
               {
                 "itemType": "answer",
-                "feedback": null,
+                "feedback": "Er zijn meer mensen die in Rotterdam een huis kunnen vinden. Maar actievoerders ketenen zich vast aan de te kappen bomen. Dit levert slechte publiciteit op.",
                 "outcome": [
                   {
                     "itemType": "result",
@@ -595,7 +599,7 @@
               },
               {
                 "itemType": "answer",
-                "feedback": null,
+                "feedback": "Helaas, door de hoge huizenprijzen wordt de stad onbetaalbaar voor veel Rotterdammers.",
                 "outcome": [
                   {
                     "itemType": "result",
@@ -611,13 +615,13 @@
                 "label": "Bewoners willen graag meer groen in de stad, dus dat park moet blijven."
               }
             ],
-            "toastertekst": null,
-            "dependent": null,
+            "toastertekst": "Het probleem is niet opgelost!",
+            "dependent": false,
             "followUp": true,
             "question": "De woningnood houdt aan. In een park kun je maar liefst 10 procent van de bouwvraag in één keer kwijt. Wat doe je?"
           }
         ],
-        "label": "Ik stort me op het opknappen van de bestaande (sociale) woningbouwvoorraad en ik begin op Zuid."
+        "label": "Ik stort me op het opknappen van bestaande (sociale) woningen en begin op Zuid."
       }
     ],
     "toastertekst": "Er is een bouwvraag!",
@@ -647,7 +651,8 @@
                 "slug": "marconitorens",
                 "title": "Marconitorens"
               }
-            ]
+            ],
+            "title": "Marconitorens verdwijnen"
           }
         ],
         "label": "Ik gooi alles plat en plemp het helemaal vol met woningen, want de nood is hoog."
@@ -662,7 +667,7 @@
             "title": "Meer mensen op straat"
           }
         ],
-        "label": "Experimenteren maar! In de bestaande gebouwen zet ik vol in op innovatieve maakindustrie: werkgelegenheid voor alles."
+        "label": "Experimenteren! In de bestaande gebouwen zet ik vol in op innovatieve maakindustrie."
       }
     ],
     "toastertekst": "Er is een bouwvraag",
@@ -677,7 +682,7 @@
     "answers": [
       {
         "itemType": "answer",
-        "feedback": null,
+        "feedback": "Gefeliciteerd, de files op de ring zijn opgelost en de luchtkwaliteit is verbeterd. De gebruikers van de complexen zijn echter een protest begonnen en bezetten massaal de Coolsingel.",
         "outcome": [
           {
             "itemType": "result",
@@ -689,7 +694,7 @@
       },
       {
         "itemType": "answer",
-        "feedback": null,
+        "feedback": "Door de toenemende luchtvervuiling gaan Rotterdammers nu nog een jaartje eerder dood. ",
         "outcome": [
           {
             "itemType": "result",
@@ -701,18 +706,23 @@
       },
       {
         "itemType": "answer",
-        "feedback": null,
+        "feedback": "Gefeliciteerd: met deze vernieuwende architectuur scoor je goed bij de internationale pers als architectuurstad! Maar het geld is op, dus moet er elders bezuinigd worden. Boze burgers protesteren op de Coolsingel. ",
         "outcome": [
           {
             "itemType": "result",
             "slug": "architectonischicoon",
             "title": "Architectonisch icoon"
+          },
+          {
+            "itemType": "result",
+            "slug": "demonstratie",
+            "title": "Demonstratie op de Coolsingel"
           }
         ],
-        "label": "We vragen een bekende architect om in een innovatief ontwerp beide problemen in één klap op te lossen. Iedereen gelukkig!"
+        "label": "We vragen een bekende architect om een ontwerp dat beide problemen in één klap oplost."
       }
     ],
-    "toastertekst": "Er is een probleem!",
+    "toastertekst": "Uche, uche, we hebben een probleem!",
     "dependent": false,
     "followUp": false,
     "question": "De luchtkwaliteit is slecht, milieuorganisaties slaan alarm. Ambtenaren stellen voor een bypass aan te leggen die het ringverkeer om de stad leidt. Probleem: hier staan volkstuincomplexen, voetbalverenigingen en scholen in de weg."
@@ -756,11 +766,11 @@
                         "title": "Groningse gasbaten"
                       }
                     ],
-                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                   }
                 ],
                 "toastertekst": null,
-                "dependent": null,
+                "dependent": false,
                 "followUp": true,
                 "question": "Tja, nu is het geld op! Wat nu?"
               }
@@ -797,11 +807,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   },
@@ -849,11 +859,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -908,11 +918,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -949,11 +959,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       },
@@ -1001,11 +1011,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -1057,11 +1067,11 @@
                         "title": "Groningse gasbaten"
                       }
                     ],
-                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                   }
                 ],
                 "toastertekst": null,
-                "dependent": null,
+                "dependent": false,
                 "followUp": true,
                 "question": "Tja, nu is het geld op! Wat nu?"
               }
@@ -1104,11 +1114,11 @@
                         "title": "Groningse gasbaten"
                       }
                     ],
-                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                   }
                 ],
                 "toastertekst": null,
-                "dependent": null,
+                "dependent": false,
                 "followUp": true,
                 "question": "Tja, nu is het geld op! Wat nu?"
               }
@@ -1166,11 +1176,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -1207,11 +1217,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       },
@@ -1259,11 +1269,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -1319,11 +1329,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -1360,11 +1370,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       },
@@ -1412,11 +1422,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -1468,11 +1478,11 @@
                         "title": "Groningse gasbaten"
                       }
                     ],
-                    "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                    "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                   }
                 ],
                 "toastertekst": null,
-                "dependent": null,
+                "dependent": false,
                 "followUp": true,
                 "question": "Tja, nu is het geld op! Wat nu?"
               }
@@ -1526,11 +1536,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -1567,11 +1577,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       },
@@ -1619,11 +1629,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -1678,11 +1688,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -1719,11 +1729,11 @@
                                     "title": "Groningse gasbaten"
                                   }
                                 ],
-                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                               }
                             ],
                             "toastertekst": null,
-                            "dependent": null,
+                            "dependent": false,
                             "followUp": true,
                             "question": "Tja, nu is het geld op! Wat nu?"
                           },
@@ -1771,11 +1781,11 @@
                                     "title": "Groningse gasbaten"
                                   }
                                 ],
-                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                               }
                             ],
                             "toastertekst": null,
-                            "dependent": null,
+                            "dependent": false,
                             "followUp": true,
                             "question": "Tja, nu is het geld op! Wat nu?"
                           }
@@ -1827,11 +1837,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -1874,11 +1884,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -1892,7 +1902,7 @@
             "question": "Je budget is beperkt. Je moet kiezen!"
           }
         ],
-        "label": "Ik ga voor een derde-oeververbinding en herhaal zo het Erasmusbrug-KopvanZuid-kunstje. Zeker weten dat ontwikkelaars en investeerders daarna aanhaken"
+        "label": "Ik maak Zuid beter toegankelijk met nóg een oeververbinding. "
       },
       {
         "itemType": "answer",
@@ -1948,11 +1958,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -1989,11 +1999,11 @@
                                     "title": "Groningse gasbaten"
                                   }
                                 ],
-                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                               }
                             ],
                             "toastertekst": null,
-                            "dependent": null,
+                            "dependent": false,
                             "followUp": true,
                             "question": "Tja, nu is het geld op! Wat nu?"
                           },
@@ -2041,11 +2051,11 @@
                                     "title": "Groningse gasbaten"
                                   }
                                 ],
-                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                               }
                             ],
                             "toastertekst": null,
-                            "dependent": null,
+                            "dependent": false,
                             "followUp": true,
                             "question": "Tja, nu is het geld op! Wat nu?"
                           }
@@ -2101,11 +2111,11 @@
                                 "title": "Groningse gasbaten"
                               }
                             ],
-                            "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                            "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                           }
                         ],
                         "toastertekst": null,
-                        "dependent": null,
+                        "dependent": false,
                         "followUp": true,
                         "question": "Tja, nu is het geld op! Wat nu?"
                       }
@@ -2142,11 +2152,11 @@
                                     "title": "Groningse gasbaten"
                                   }
                                 ],
-                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                               }
                             ],
                             "toastertekst": null,
-                            "dependent": null,
+                            "dependent": false,
                             "followUp": true,
                             "question": "Tja, nu is het geld op! Wat nu?"
                           },
@@ -2194,11 +2204,11 @@
                                     "title": "Groningse gasbaten"
                                   }
                                 ],
-                                "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                                "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                               }
                             ],
                             "toastertekst": null,
-                            "dependent": null,
+                            "dependent": false,
                             "followUp": true,
                             "question": "Tja, nu is het geld op! Wat nu?"
                           }
@@ -2250,11 +2260,11 @@
                             "title": "Groningse gasbaten"
                           }
                         ],
-                        "label": "We bestellen een paar mooie schoenen bij Mascolori en brengen een bezoekje bij onze man in Den Haag. Was Rotterdam Zuid geen nationaal probleem?"
+                        "label": "We bestellen een paar mooie schoenen bij Mascolori en bezoeken onze man in Den Haag."
                       }
                     ],
                     "toastertekst": null,
-                    "dependent": null,
+                    "dependent": false,
                     "followUp": true,
                     "question": "Tja, nu is het geld op! Wat nu?"
                   }
@@ -2289,10 +2299,11 @@
                         "slug": "dekuip",
                         "title": "Kuip"
                       }
-                    ]
+                    ],
+                    "title": "De Kuip verdwijnt"
                   }
                 ],
-                "label": "Bouwen maar! Lang genoeg geëmmerd. Dat dit gebied ontwikkeld wordt, is belangrijker dan dat het binnen de begroting blijft."
+                "label": "Doorpakken nu! Het is belangrijk dat dit gebied ontwikkeld wordt."
               },
               {
                 "itemType": "answer",
@@ -2304,22 +2315,22 @@
                     "title": "Kuip"
                   }
                 ],
-                "label": "Opnieuw de plannen in en schrappen met die hap. Het is belangrijk dat dit project betaalbaar blijft."
+                "label": "Schrappen met die hap. Het is belangrijk dat dit project betaalbaar blijft."
               }
             ],
-            "toastertekst": "Er is een bouwvraag!",
+            "toastertekst": "Er is een probleem!",
             "dependent": true,
             "followUp": false,
             "question": "Feyenoord City, het gaat ervan komen. Mét behoud van de oude Kuip en een fonkelnieuw stadion voor Feyenoord van internationale allure. Woningbouw, banen, een metrolijn: het kan niet op. Omdat het gesoebat erover zó lang geduurd heeft en we nu in een hoogconjunctuur zitten, is het nu fors duurder om dit alles te bouwen. Wat nu?"
           }
         ],
-        "label": "We zetten groots in en gaan voor een allesomvattende gebiedsontwikkeling rondom het hart van Zuid."
+        "label": "We zetten in op een allesomvattende gebiedsontwikkeling op Zuid: Feyenoord City."
       }
     ],
     "toastertekst": "Er is een opgave!",
     "dependent": false,
     "followUp": false,
-    "question": "Op de Noordoever is het leven mooi, maar op Zuid is het nog vaak armoe troef. Wat is je eerste zet om dat via ruimtelijke ontwikkeling te veranderen?"
+    "question": "Op de Noordoever is het leven mooi, maar op Zuid is het nog vaak armoe troef. Hoe ga je dat veranderen?"
   },
   {
     "itemType": "question",
@@ -2333,19 +2344,8 @@
           {
             "itemType": "answer",
             "feedback": null,
-            "outcome": [
-              {
-                "itemType": "consequence",
-                "delete": [
-                  {
-                    "itemType": "result",
-                    "slug": "wijkbingo",
-                    "title": "Wijkgebouw verdwijnt"
-                  }
-                ]
-              }
-            ],
-            "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+            "outcome": [],
+            "label": "We bouwen een nieuw centrum en verhuren dat tegen de oude prijs aan het buurthuis."
           },
           {
             "itemType": "answer",
@@ -2357,7 +2357,7 @@
                 "title": "Starbucks"
               }
             ],
-            "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+            "label": "We bouwen een nieuw centrum. Alleen Starbucks kan de hoge huur betalen."
           },
           {
             "itemType": "answer",
@@ -2371,22 +2371,23 @@
                     "slug": "wijkbingo",
                     "title": "Wijkgebouw verdwijnt"
                   }
-                ]
+                ],
+                "title": "Wijkgebouw verdwijnt"
               }
             ],
             "label": "Tja, dat mag de wethouder oplossen."
           }
         ],
         "toastertekst": null,
-        "dependent": null,
+        "dependent": false,
         "followUp": true,
-        "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+        "question": "Nu we toch bezig zijn: in een vervallen gebouw zit een wijkcentrum en dat moet tegen de vlakte. Wat komt ervoor in de plaats? "
       }
     ],
     "answers": [
       {
         "itemType": "answer",
-        "feedback": null,
+        "feedback": "",
         "outcome": [
           {
             "itemType": "result",
@@ -2401,19 +2402,8 @@
               {
                 "itemType": "answer",
                 "feedback": null,
-                "outcome": [
-                  {
-                    "itemType": "consequence",
-                    "delete": [
-                      {
-                        "itemType": "result",
-                        "slug": "wijkbingo",
-                        "title": "Wijkgebouw verdwijnt"
-                      }
-                    ]
-                  }
-                ],
-                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+                "outcome": [],
+                "label": "We bouwen een nieuw centrum en verhuren dat tegen de oude prijs aan het buurthuis."
               },
               {
                 "itemType": "answer",
@@ -2425,7 +2415,7 @@
                     "title": "Starbucks"
                   }
                 ],
-                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+                "label": "We bouwen een nieuw centrum. Alleen Starbucks kan de hoge huur betalen."
               },
               {
                 "itemType": "answer",
@@ -2439,23 +2429,24 @@
                         "slug": "wijkbingo",
                         "title": "Wijkgebouw verdwijnt"
                       }
-                    ]
+                    ],
+                    "title": "Wijkgebouw verdwijnt"
                   }
                 ],
                 "label": "Tja, dat mag de wethouder oplossen."
               }
             ],
             "toastertekst": null,
-            "dependent": null,
+            "dependent": false,
             "followUp": true,
-            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+            "question": "Nu we toch bezig zijn: in een vervallen gebouw zit een wijkcentrum en dat moet tegen de vlakte. Wat komt ervoor in de plaats? "
           }
         ],
-        "label": "Nee. We zijn een bouwbedrijf, geen liefdadigheidsinstelling. Na jaren crisis maken we eindelijk weer winst."
+        "label": "Nee. We zijn een bouwbedrijf, geen liefdadigheidsinstelling."
       },
       {
         "itemType": "answer",
-        "feedback": null,
+        "feedback": "Je aandeelhouders morren! Je moet de prijzen omhoog gooien.",
         "outcome": [
           {
             "itemType": "result",
@@ -2470,19 +2461,8 @@
               {
                 "itemType": "answer",
                 "feedback": null,
-                "outcome": [
-                  {
-                    "itemType": "consequence",
-                    "delete": [
-                      {
-                        "itemType": "result",
-                        "slug": "wijkbingo",
-                        "title": "Wijkgebouw verdwijnt"
-                      }
-                    ]
-                  }
-                ],
-                "label": "Wat maakt het uit? Tegen de tijd dat we klaar zijn, wonen er geen oude bewoners meer die daar gebruik van maken."
+                "outcome": [],
+                "label": "We bouwen een nieuw centrum en verhuren dat tegen de oude prijs aan het buurthuis."
               },
               {
                 "itemType": "answer",
@@ -2494,7 +2474,7 @@
                     "title": "Starbucks"
                   }
                 ],
-                "label": "We bouwen een nieuw wijkcentrum, maar door de gestegen huurprijzen kan alleen Starbucks dat betalen."
+                "label": "We bouwen een nieuw centrum. Alleen Starbucks kan de hoge huur betalen."
               },
               {
                 "itemType": "answer",
@@ -2508,24 +2488,25 @@
                         "slug": "wijkbingo",
                         "title": "Wijkgebouw verdwijnt"
                       }
-                    ]
+                    ],
+                    "title": "Wijkgebouw verdwijnt"
                   }
                 ],
                 "label": "Tja, dat mag de wethouder oplossen."
               }
             ],
             "toastertekst": null,
-            "dependent": null,
+            "dependent": false,
             "followUp": true,
-            "question": "Nu we toch bezig zijn: dat wijkcentrum zit in een vervallen gebouw en moet tegen de vlakte. Wat komt ervoor in de plaats?"
+            "question": "Nu we toch bezig zijn: in een vervallen gebouw zit een wijkcentrum en dat moet tegen de vlakte. Wat komt ervoor in de plaats? "
           }
         ],
-        "label": "Ja. We bouwen toch die woningen met lagere huur, ook al verdienen we er dan veel minder mee. We hebben per slot van rekening ook een maatschappelijke verantwoordelijkheid."
+        "label": "Ja. We verhuren de woningen tegen lagere huur, ook al verdienen we daar minder mee. "
       }
     ],
     "toastertekst": "Er is een bouwvraag!",
     "dependent": false,
     "followUp": false,
-    "question": "Kansen op Katendrecht, die zie jij. Je koopt verloederde gebouwen op voor renovatie of herbouw. Ondertussen trekt de economie flink aan en kun je veel meer verdienen aan je gebouwen door de huurprijs omhoog te gooien. Dat betekent wel dat de oorspronkelijke bewoners die niet meer kunnen betalen. Vind je dat een probleem? "
+    "question": "Kansen op Katendrecht, die zie jij als projectontwikkelaar. Je koopt verloederde gebouwen op voor renovatie of herbouw. Ondertussen trekt de economie flink aan en kun je veel meer verdienen aan je gebouwen door de huurprijs omhoog te gooien. Dat betekent wel dat de oorspronkelijke bewoners die niet meer kunnen betalen. Vind je dat een probleem? "
   }
 ]
