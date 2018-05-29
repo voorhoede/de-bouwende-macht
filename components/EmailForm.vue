@@ -43,6 +43,7 @@
 
 .sub-title {
   margin-bottom: var(--spacing-double);
+  font-family: var(--font);
   font-size: var(--font-size-small);
   font-weight: normal;
 }
@@ -71,6 +72,7 @@
 .label {
   display: block;
   margin-bottom: var(--spacing-half);
+  font-family: var(--font);
 }
 
 .asterisk {
@@ -81,6 +83,7 @@
   margin-bottom: var(--spacing-normal);  
   color: var(--grey-dark);
   text-align: left;
+  font-family: var(--font);
 }
 
 .button {
