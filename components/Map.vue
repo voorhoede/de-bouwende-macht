@@ -9577,6 +9577,7 @@
 </template>
 
 <style scoped>
+@import '~/assets/core.css';
 
 .city-map {
   height: auto;
@@ -9592,4 +9593,5 @@
 .fade {
   transition: opacity 2s ease-in-out;
 }
+
 </style>
