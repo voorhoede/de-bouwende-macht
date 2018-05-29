@@ -722,7 +722,7 @@
         "label": "We vragen een bekende architect om een ontwerp dat beide problemen in één klap oplost."
       }
     ],
-    "toastertekst": "Uche, uche, we hebben een probleem!",
+    "toastertekst": "Uche, uche, er is een probleem!",
     "dependent": false,
     "followUp": false,
     "question": "De luchtkwaliteit is slecht, milieuorganisaties slaan alarm. Ambtenaren stellen voor een bypass aan te leggen die het ringverkeer om de stad leidt. Probleem: hier staan volkstuincomplexen, voetbalverenigingen en scholen in de weg."
