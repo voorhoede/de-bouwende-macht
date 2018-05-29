@@ -88,6 +88,8 @@ p {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius-smooth);
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .full-screen {
