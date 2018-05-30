@@ -1,6 +1,6 @@
 <template>
   <div class="question-notice toast card">
-    <img class="character" src="~static/images/bob-bouwer.svg">
+    <img class="character" src="~static/images/bob-bouwer.svg" width="100" height="100">
     <p>{{ content }}</p>
     <button class="button-primary" @click="onClickButton()">Speel!</button>
   </div>
