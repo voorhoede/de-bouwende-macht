@@ -3,15 +3,17 @@
     class="share-button"
     :to="'/share/?buildings=' + slug"
   >
-    <img class="share-icon" src="~/static/images/share-icon.svg">
+    <share-icon class="share-icon" />
     {{ label }}
   </nuxt-link>
 </template>
 
 <script>
+import ShareIcon from '~/static/images/share-icon.svg'
 
 export default {
   props: ['slug', 'label'],
+  components: { ShareIcon }
 }
 
 </script>
@@ -36,6 +38,10 @@ export default {
 .share-button:focus {
   background-color: var(--pink-secondary);
   color: var(--white);
+}
+
+.share-button:hover .share-icon {
+  fill: var(--white);
 }
 
 .share-button-rounded {
@@ -76,6 +82,7 @@ export default {
 .share-icon {
   width: auto;
   height: 20px;
+  fill: var(--pink);
 }
 
 </style>

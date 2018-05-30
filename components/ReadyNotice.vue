@@ -1,6 +1,6 @@
 <template>
   <div class="toast card ready-notice">
-    <img class="character" src="~static/images/bob-bouwer.svg">
+    <bob-bouwer class="character" />
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
     <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
     <share-button
@@ -15,9 +15,10 @@
 
 <script>
 import ShareButton from '~/components/ShareButton.vue'
+import BobBouwer from '~/static/images/bob-bouwer.svg'
 
 export default {
-  components: { ShareButton },
+  components: { ShareButton, BobBouwer },
   props: ['slug'],
   methods: {
     onClickButton () {
