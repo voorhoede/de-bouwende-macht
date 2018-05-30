@@ -1,34 +1,51 @@
 <template>
-  <button class="share-button" @click="share">
-    <img class="share-icon" src="~static/images/share-button.svg">
-  </button>
+  <nuxt-link 
+    class="share-button"
+    :to="'/share-my-rotterdam/?buildings=' + slug"
+  >
+    <img class="share-icon" src="~/static/images/share-icon.svg">
+    {{ label }}
+  </nuxt-link>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 
 export default {
-  computed: mapState({
-    slugs: state => state.currentScenario
-  }),
-
-  methods: {
-    share () {
-      const slugs = this.slugs.join('-')
-
-      this.$router.push(`share-my-rotterdam/${slugs}`)
-    }
-  }
+  props: ['slug', 'label'],
 }
+
 </script>
 
 <style scoped>
+
 @import '~/assets/core.css';
 
 .share-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: var(--spacing-double);
+  padding: var(--spacing-half) var(--spacing-normal);
+  width: 250px;
+  text-decoration: none;
+  box-shadow: var(--box-shadow);
+}
+
+.share-button:hover,
+.share-button:focus {
+  background-color: var(--pink-secondary);
+  color: var(--white);
+}
+
+.share-button-rounded {
+  justify-content: center;
+  position: relative;
+  z-index: 1;
   padding: 0;
   width: var(--button-size);
   height: var(--button-size);
+  background-color: var(--pink);
   border-radius: 50%;
   animation-name: bounce-in;
   animation-duration: 1s;
@@ -36,25 +53,29 @@ export default {
   animation-fill-mode: forwards;
 }
 
-.share-icon {
-  width: 40px;
-  height: 40px;
-  animation-name: bounce-in;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-.share-button:before {
+.share-button-rounded:before {
   content: '';
-  width: 40px;
-  height: 40px;
+  width: var(--button-size);
+  height: var(--button-size);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   border-radius: 50%;
   animation-name: glow;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 5;
-  background-color: #fff;
 }
+
+.share-button-rounded .share-icon {
+  fill: var(--white);
+}
+
+.share-icon {
+  width: auto;
+  height: 20px;
+}
+
 </style>

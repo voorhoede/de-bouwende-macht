@@ -18,7 +18,8 @@ html {
 
 body,
 p,
-button {
+button,
+input {
   font-family: var(--font);
   font-size: var(--font-size-normal);
 }
@@ -48,6 +49,7 @@ p {
   font-size: var(--font-size-normal);
   transition: all .3s cubic-bezier(.55,0,.1,1);
   height: 100vh;
+  overflow: hidden;
 }
 
 .center {
@@ -75,16 +77,24 @@ p {
   right: var(--spacing-normal);
 }
 
+.card.toast {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .card {
-  padding: var(--spacing-double) var(--spacing-normal);
+  padding: var(--spacing-double) 1.5rem;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-radius: var(--border-radius-smooth);
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .full-screen {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -95,6 +105,12 @@ p {
   background: white;
   z-index: 1;
   padding: 2rem;
+}
+
+.page-title {
+  margin-bottom: var(--spacing-double);
+  font-family: var(--font-bold);
+  font-size: var(--font-size-big);
 }
 
 .character {

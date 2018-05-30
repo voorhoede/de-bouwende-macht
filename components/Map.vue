@@ -30,55 +30,49 @@ export default {
   },
   components: { MapGraphic }
 }
-</script>
+      
+ </script>
 
-<style>
+<style scoped>
+@import '~/assets/core.css';
+
+.city-map {
+  height: auto;
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
 .city-map {
   height: 100vh;
   width: 100vw;
   overflow: scroll;
   padding: 0;
 }
+
 .city-map__content {
   display: block;
   margin: -4vh -2vw 0;
 }
+
 .city-map .hidden {
   opacity: 0;
 }
+
 .city-map .fade-in {
   -webkit-animation: bounce-in 1s;
   animation: bounce-in 1s;
 }
 
-@-webkit-keyframes bounce-in {
-  0% {
-    -webkit-transform: scale(0);
-  }
-
-  50% {
-    -webkit-transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-  }
+.slide {
+  animation: slideIn 1.2s;
 }
 
-@keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  50% {
-    opacity: 50%;
-    transform: scale(1.2);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: scale(1);
-  }
+.fade {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
+
 </style>
