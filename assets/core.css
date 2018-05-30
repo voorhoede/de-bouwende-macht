@@ -118,3 +118,7 @@ p {
   width: auto;
   margin-bottom: var(--spacing-normal);
 }
+
+.content {
+  font-family: var(--font);
+}

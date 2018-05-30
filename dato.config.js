@@ -4,8 +4,18 @@ module.exports = (dato, root) => {
   root.directory(dataDir, dir => {
     const questions = dato.collectionsByType.questions
     const mainQuestions = questions.filter(question => !question.followUp && !question.dependent)
+
     dir.createDataFile('questions.json', 'json', mapCollection(mainQuestions))
+    dir.createDataFile('about.json', 'json', pageToJson(dato.about))
+    dir.createDataFile('onboarding.json', 'json', pageToJson(dato.collectionsByType.onboarding))
+    dir.createDataFile('share.json', 'json', pageToJson(dato.collectionsByType.share))
   })
+}
+
+function pageToJson (page) {
+  return [page.toMap()]
+    .map(removeMetaData)
+    .pop()
 }
 
 function mapCollection(collection) {
