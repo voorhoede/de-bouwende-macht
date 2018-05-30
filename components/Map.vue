@@ -9591,7 +9591,7 @@
 }
 
 .slide {
-  animation: slideIn 1s;
+  animation: slideIn 1.2s;
 }
 
 @keyframes slideIn {
