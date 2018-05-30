@@ -50,10 +50,8 @@ export default {
 .minify-button {
   position: absolute;
   top: 0;
-  width: 4rem;
-  height: 2rem;
-  margin-left: -2rem;
   transition: transform .5s;
+  margin-left: -2rem;
 }
 .minified {
   transform: translateY(calc(100% - 2rem));
