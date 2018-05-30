@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="43px" height="44px" viewBox="0 0 43 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>facebook</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-Copy-12" transform="translate(-139.000000, -329.000000)" fill-rule="nonzero">
-            <g id="facebook" transform="translate(139.178721, 329.429321)">
-                <circle id="Oval" fill="#3B5998" cx="21.3470265" cy="21.3470265" r="21.3470265"></circle>
-                <path d="M26.7136549,22.1826726 L22.9045398,22.1826726 L22.9045398,36.1375044 L17.1334071,36.1375044 L17.1334071,22.1826726 L14.3886372,22.1826726 L14.3886372,17.2783894 L17.1334071,17.2783894 L17.1334071,14.1047611 C17.1334071,11.8352743 18.2114513,8.28149558 22.9559115,8.28149558 L27.2307965,8.29938053 L27.2307965,13.059823 L24.1290885,13.059823 C23.6203186,13.059823 22.9049204,13.3140177 22.9049204,14.3966283 L22.9049204,17.2829558 L27.2178584,17.2829558 L26.7136549,22.1826726 Z" id="Shape" fill="#FFFFFF"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="43" height="44" viewBox="0 0 43 44" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="Artboard-Copy-12" transform="translate(-139 -329)" fill-rule="nonzero"><g id="facebook" transform="translate(139.178721 329.429321)"><circle id="Oval" fill="#3B5998" cx="21.3470265" cy="21.3470265" r="21.3470265"/><path d="M26.7136549 22.1826726h-3.8091151v13.9548318h-5.7711327V22.1826726h-2.7447699v-4.9042832h2.7447699v-3.1736283c0-2.2694868 1.0780442-5.82326552 5.8225044-5.82326552l4.274885.01788495V13.059823h-3.101708c-.5087699 0-1.2241681.2541947-1.2241681 1.3368053v2.8863275h4.312938l-.5042035 4.8997168z" id="Shape" fill="#FFF"/></g></g></g></svg>
