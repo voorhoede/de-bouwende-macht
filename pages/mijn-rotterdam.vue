@@ -58,6 +58,7 @@ export default {
   transform: rotate(-4deg);
   width: 80%;
   max-width: 700px;
+  background-color: var(--white);
 }
 
 .postal-card-text {
