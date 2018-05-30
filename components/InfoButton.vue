@@ -28,6 +28,7 @@ export default {
   background-color: var(--pink);
   border-radius: 50%;
   color: white;
+  font-family: var(--font-bold);
   font-size: 1.75rem;
   text-decoration: none;
   line-height: 1rem;
