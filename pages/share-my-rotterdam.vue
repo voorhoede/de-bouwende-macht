@@ -1,21 +1,14 @@
 <template>
   <section class="container">
     <h1 class="page-title">
-      Gefeliciteerd!
-      <small class="tagline">Zo ziet jouw Rotterdam eruit</small>
+      {{ page.title }}
+      <small class="tagline">{{ page.subtitle }}</small>
     </h1>
     
     <div class="postal-card">
       <city-map class="city-map" />
       <p class="postal-card-text">Groeten uit mijn Rotterdam</p>
     </div>
-
-    <p>
-      Ik heb het spel 'De Bouwende Macht' gespeeld.
-    </p>
-    <p>
-      En vergeet niet: delen is macht!
-    </p> 
 
     <div class="sharing-buttons">
       <a 
@@ -42,6 +35,8 @@
         <img src="~static/images/twitter.svg" alt="twitter-logo">
       </a>
     </div>
+    
+    <div class="content" v-html="page.content"></div>
 
     <email-form />
   </section>
@@ -52,6 +47,7 @@ import CityMap from '~/components/Map.vue'
 import EmailForm from '~/components/EmailForm.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
+import page from '~/static/data/share.json'
 
 export default {
   components: { CityMap, EmailForm },
@@ -60,6 +56,7 @@ export default {
       url: '',
       text: 'Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam! ',
       slug: '',
+      page,
     }
   },
 
