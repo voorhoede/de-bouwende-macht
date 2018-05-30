@@ -95,7 +95,6 @@ export default {
       hasReadyNotice: false,
       toasterText: '',
       showAbout: false,
-      slug: '',
     }
   },
   computed: mapState([
@@ -162,7 +161,6 @@ export default {
       const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
       const hasFollowUpQuestions = followUpQuestions.length > 0
 
-
       if (answer.feedback && (answer.feedback.length > 1)) {
         this.hasFeedback = true
         this.$store.commit('seenFeedback', false)
@@ -182,7 +180,7 @@ export default {
         })
       }
 
-      if ((this.questionsCount === 3 ) && !followUpQuestions.length) {
+      if ((this.questionsCount === 4 ) && !followUpQuestions.length) {
         this.hasReadyNotice = true
       }
 

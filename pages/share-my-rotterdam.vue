@@ -1,11 +1,21 @@
 <template>
   <section class="container">
-    <h1 class="page-title">Well done! This is how your Rotterdam looks like:</h1>
+    <h1 class="page-title">
+      Gefeliciteerd!
+      <small class="tagline">Zo ziet jouw Rotterdam eruit</small>
+    </h1>
     
     <div class="postal-card">
       <city-map class="city-map" />
-      <p class="postal-card-text">Cheers uit my Rotterdam!</p>
+      <p class="postal-card-text">Groeten uit mijn Rotterdam</p>
     </div>
+
+    <p>
+      Ik heb het spel 'De Bouwende Macht' gespeeld.
+    </p>
+    <p>
+      En vergeet niet: delen is macht!
+    </p> 
 
     <div class="sharing-buttons">
       <a 
@@ -48,7 +58,7 @@ export default {
   data() {
     return {
       url: '',
-      text: 'Hi! Check out my Rotterdam!',
+      text: 'Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam! ',
       slug: '',
     }
   },
@@ -80,15 +90,19 @@ export default {
   padding: var(--spacing-double) var(--spacing-normal);
 }
 
-.sub-title {
-  margin-bottom: var(--spacing-double);
+.page-title {
+  margin-bottom: 3rem;
+}
+
+.tagline {
+  display: block;
 }
 
 .postal-card {
   padding: var(--spacing-normal);
   box-shadow: var(--box-shadow);
   transform: rotate(-5deg);
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   width: 80%;
   max-width: 600px;
 }
@@ -105,8 +119,7 @@ export default {
 .sharing-buttons {
   border-bottom: 2px solid var(--green);
   width: 250px;
-  margin: 0 auto var(--spacing-double) auto;
-  margin-top: 4rem;
+  margin: var(--spacing-double) auto;
   padding-bottom: var(--spacing-double);
 }
 

@@ -1,13 +1,13 @@
 <template>
   <section class="container">
-    <h1 class="page-title">I've built my own Rotterdam, this is what it looks like:</h1>
+    <h1 class="page-title">Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam</h1>
     
     <div class="postal-card">
       <city-map />
-      <p class="postal-card-text">Cheers uit my Rotterdam!</p>
+      <p class="postal-card-text">Groeten uit mijn Rotterdam!</p>
     </div>
 
-    <nuxt-link class="button button-primary" to="/my-rotterdam">Build your own Rotterdam</nuxt-link>
+    <nuxt-link class="button button-primary" to="/my-rotterdam">Bouw jouw Rotterdam</nuxt-link>
   </section>
 </template>
 
