@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <transition name="slow-slide-up">
+    <transition name="slide-up">
       <ready-notice
         v-if="showReadyNotice"
         :slug="currentScenario.join('-')"
@@ -37,7 +37,7 @@
       <about v-if="showAbout" @onClick="showAbout = !showAbout" />
     </transition>
 
-    <transition name="slow-slide-up">
+    <transition name="slide-up">
       <question-notice
         v-if="showNotice"
         :content="currentQuestion.toastertekst"
@@ -45,7 +45,7 @@
       />
     </transition>
 
-    <transition name="slow-slide-up">
+    <transition name="slide-up">
       <feedback
         v-if="showFeedback"
         :feedback="feedbackContent"
@@ -64,7 +64,7 @@
       </nuxt-link>
     </div>
 
-    <transition name="slow-slide-up">
+    <transition name="slide-up">
       <question 
         v-if="showQuestion" 
         :currentQuestion="currentQuestion" 
@@ -156,6 +156,7 @@ export default {
     },
 
     handleAnswer (answer) {
+      this.$store.commit('hideQuestion')
       const followUpQuestions = answer.outcome.filter(outcome => outcome.itemType === 'question')
       const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
       const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
@@ -211,7 +212,12 @@ export default {
 
       if (type === 'addBuilding') {
         el.classList.remove('hidden')
-        el.classList.add('fade')
+
+        if (id === 'VIEZELUCHT') {
+          el.classList.add('slide')
+        } else {
+          el.classList.add('fade')
+        }
       }
 
       if (type === 'removeBuilding') {
