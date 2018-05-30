@@ -64,7 +64,7 @@ export default {
   },
 
   mounted () {
-    const urlOrigin = location.origin + '/my-city/?buildings='
+    const urlOrigin = location.origin + '/mijn-rotterdam/?buildings='
     const urlParams = queryString.parse(location.search)
     const slug = urlParams.buildings
     const cityBuildings = slug.split('-')
@@ -101,7 +101,7 @@ export default {
 .postal-card {
   padding: var(--spacing-normal);
   box-shadow: var(--box-shadow);
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
   margin: 0 auto 4rem auto;
   width: 80%;
   max-width: 600px;

@@ -3,7 +3,7 @@
     <h1 class="page-title">Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam</h1>
     
     <div class="postal-card">
-      <city-map />
+      <city-map class="city-map"/>
       <p class="postal-card-text">Groeten uit mijn Rotterdam!</p>
     </div>
 
@@ -55,8 +55,9 @@ export default {
   margin-bottom: 4rem;
   padding: var(--spacing-normal);
   box-shadow:var(--box-shadow);
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
   width: 80%;
+  max-width: 700px;
 }
 
 .postal-card-text {
