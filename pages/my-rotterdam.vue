@@ -70,7 +70,6 @@ import Feedback from '~/components/Feedback.vue'
 import CityMap from '~/components/Map.vue'
 import InfoButton from '~/components/InfoButton.vue'
 import ShareButton from '~/components/ShareButton.vue'
-import { setTimeout } from 'timers';
 
 export default {
   components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton },
@@ -208,10 +207,28 @@ export default {
 
       // Scroll to changed element:
       const elBounds = el.getBoundingClientRect()
-      let transform = map.style.transform || map.style.webkitTransform || map.style.MozTransform || map.style.msTransform || map.style.oTransform
+      const mapContent = map.children[0]
+      // const tryTop = (elBounds.top < 0) ? elBounds.top + elBounds.height/2 : elBounds.top - elBounds.height/2
+      // const tryLeft = (elBounds.left < 0) ? elBounds.left + elBounds.width/2 : elBounds.left - elBounds.width/2
+      const viewWidth = document.body.clientWidth
+      const viewHeight = document.body.clientHeight
+      const tryTop = elBounds.top - viewHeight/2 + elBounds.height/2
+      const tryLeft = elBounds.left - viewWidth/2 + elBounds.width/2
 
-      map.scrollTop += elBounds.top
-      map.scrollLeft += elBounds.left
+      if ('transition' in mapContent.style && 'transform' in mapContent.style) {
+        mapContent.style.transition = 'transform 1s'
+        mapContent.style.transform = `translate(${-1* tryLeft}px, ${-1* tryTop}px)`
+        mapContent.addEventListener('transitionend', () => {
+          mapContent.style.transform = ''
+          mapContent.style.transition = ''
+          map.scrollTop += tryTop
+          map.scrollLeft += tryLeft
+        })
+      } else {
+        // jump to element
+        map.scrollTop += tryTop
+        map.scrollLeft += tryLeft
+      }
     },
 
     hideAllElements() {
