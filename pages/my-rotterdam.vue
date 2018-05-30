@@ -64,7 +64,7 @@
       </nuxt-link>
     </div>
 
-    <transition name="slide-up">
+    <transition name="slow-slide-up">
       <question 
         v-if="showQuestion" 
         :currentQuestion="currentQuestion" 
@@ -204,18 +204,19 @@ export default {
    updateCity (slug, type) {
       const id = slug.toUpperCase();
       const el = document.getElementById(id)
-      if (el === null) {
+      
+      if (!el) {
         return false
       }
 
       if (type === 'addBuilding') {
         el.classList.remove('hidden')
-        el.classList.add('fade-in')
+        el.classList.add('fade')
       }
 
       if (type === 'removeBuilding') {
         el.classList.add('hidden')
-        el.classList.remove('fade-in')
+        el.classList.remove('fade')
       }
         
       this.$store.commit('updateCity', { type: type, slug: slug })

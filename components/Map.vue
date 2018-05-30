@@ -9590,21 +9590,8 @@
   opacity: 0;
 }
 
-.fade-in {
-  -webkit-animation: bounceIn 1s;
-  animation: bounceIn 1s;
-}
-
-@keyframes bounceIn {
-  0% { 
-    transform: scale(0);
-  }
-  50% { 
-    transform: scale(1.1); 
-  }
-  100% {
-    transform: scale(1); 
-  }
+.fade {
+  transition: opacity 2s ease-in-out;
 }
 
 </style>
