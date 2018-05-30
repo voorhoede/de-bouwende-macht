@@ -4,12 +4,12 @@
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
     <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
     <share-button
-      class="button-primary"
+      class="button-secondary"
       :slug="slug"
       :label="'Dit is mijn Rotterdam!'"
     />
     <p>Je kan natuurlijk ook nog verder bouwen!</p>
-    <button class="button-secondary" @click="onClickButton()">Ik bouw nog verder</button>
+    <button class="button-primary" @click="onClickButton()">Ik bouw nog verder</button>
   </div>
 </template>
 

@@ -113,7 +113,9 @@ export default {
 
 .postal-card-text {
   margin-bottom: 0;
-  font-family: var(--font-bold);
+  font-family: 'Dancing Script';
+  font-size: var(--font-size-big);
+  color: var(--pink);
 }
 
 .sharing-buttons {

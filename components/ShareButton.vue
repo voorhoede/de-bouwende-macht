@@ -1,9 +1,9 @@
 <template>
   <nuxt-link 
     class="share-button"
-    :to="'share-my-rotterdam/?buildings=' + slug"
+    :to="'/share-my-rotterdam/?buildings=' + slug"
   >
-    <img class="share-icon" src="~static/images/share-icon.svg">
+    <img class="share-icon" src="~/static/images/share-icon.svg">
     {{ label }}
   </nuxt-link>
 </template>
@@ -35,6 +35,7 @@ export default {
 .share-button:hover,
 .share-button:focus {
   background-color: var(--pink-secondary);
+  color: var(--white);
 }
 
 .share-button-rounded {
@@ -66,6 +67,10 @@ export default {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 5;
+}
+
+.share-button-rounded .share-icon {
+  fill: var(--white);
 }
 
 .share-icon {

@@ -72,7 +72,8 @@ button:focus {
 
 .button-secondary:hover,
 .button-secondary:focus {
-  color: var(--pink-dark);
+  background-color: var(--pink-light);
+  color: var(--white);
 }
 
 .answer-button {
