@@ -22,12 +22,14 @@ export default {
   props: ['currentQuestion', 'answerFeedback'],
   methods: {
     onClickButton (answer, currentQuestion) {
-      this.$ga.event({
-        eventCategory: 'question',
-        eventAction: 'answer',
-        eventLabel: currentQuestion.question,
-        eventValue: answer.label
-      })
+      if (navigator.doNotTrack !== '1') {
+        this.$ga.event({
+          eventCategory: 'question',
+          eventAction: 'answer',
+          eventLabel: currentQuestion.question,
+          eventValue: answer.label
+        })
+      }
       this.$emit('onAnswer', answer)
     }
   }
