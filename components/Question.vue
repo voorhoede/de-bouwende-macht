@@ -5,6 +5,7 @@
       
       <div class="answers">
         <button
+          :ref="'answer'"
           class="answer-button"
           v-for="(answer, index) in currentQuestion.answers"
           @click="onClickButton(answer, currentQuestion)" :key="index"
@@ -30,6 +31,9 @@ export default {
           eventValue: answer.label
         })
       }
+      this.$nextTick( () => {
+        this.$refs.answer[0].focus()
+      })
       this.$emit('onAnswer', answer)
     }
   }
