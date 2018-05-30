@@ -7,7 +7,7 @@
       <p class="postal-card-text">Groeten uit mijn Rotterdam!</p>
     </div>
 
-    <nuxt-link class="button button-primary" to="/mijn-rotterdam">Bouw jouw Rotterdam</nuxt-link>
+    <nuxt-link class="button button-primary" to="/">Bouw jouw Rotterdam</nuxt-link>
   </section>
 </template>
 
