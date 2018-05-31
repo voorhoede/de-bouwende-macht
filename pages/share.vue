@@ -1,8 +1,8 @@
 <template>
   <section class="container">
     <h1 class="page-title">
-      Gefeliciteerd!
-      <small class="tagline">Zo ziet jouw Rotterdam eruit</small>
+      {{ page.title }}
+      <small class="tagline">{{ page.subtitle }}</small>
     </h1>
     
     <div class="postal-card">
@@ -10,20 +10,13 @@
       <p class="postal-card-text">Groeten uit mijn Rotterdam</p>
     </div>
 
-    <p>
-      Ik heb het spel 'De Bouwende Macht' gespeeld.
-    </p>
-    <p>
-      En vergeet niet: delen is macht!
-    </p> 
-
     <div class="sharing-buttons">
       <a 
         class="share-logo"
         :href="'https://www.facebook.com/sharer.php?u=' + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/facebook.svg" alt="facebook-logo">
+        <facebook-logo />
       </a>
 
       <a 
@@ -32,16 +25,18 @@
         data-action="share/whatsapp/share" 
         target="_blank"
       >
-        <img src="~static/images/whatsapp.svg" alt="whatsapp-logo">
+        <whatsapp-logo />
       </a>
       
       <a class="share-logo"
         :href="'https://twitter.com/intent/tweet?text=' + text + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/twitter.svg" alt="twitter-logo">
+        <twitter-logo />
       </a>
     </div>
+    
+    <div class="content" v-html="page.content"></div>
 
     <email-form />
   </section>
@@ -52,19 +47,24 @@ import CityMap from '~/components/Map.vue'
 import EmailForm from '~/components/EmailForm.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
+import page from '~/static/data/share.json'
+import FacebookLogo from '~/static/images/facebook.svg'
+import TwitterLogo from '~/static/images/twitter.svg'
+import WhatsappLogo from '~/static/images/whatsapp.svg'
 
 export default {
-  components: { CityMap, EmailForm },
+  components: { CityMap, EmailForm, TwitterLogo, FacebookLogo, WhatsappLogo },
   data() {
     return {
       url: '',
       text: 'Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam! ',
       slug: '',
+      page,
     }
   },
 
   mounted () {
-    const urlOrigin = location.origin + '/my-city/?buildings='
+    const urlOrigin = location.origin + '/mijn-rotterdam/?buildings='
     const urlParams = queryString.parse(location.search)
     const slug = urlParams.buildings
     const cityBuildings = slug.split('-')
@@ -101,10 +101,11 @@ export default {
 .postal-card {
   padding: var(--spacing-normal);
   box-shadow: var(--box-shadow);
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
   margin: 0 auto 4rem auto;
   width: 80%;
   max-width: 600px;
+  background-color: var(--white);
 }
 
 .city-map {

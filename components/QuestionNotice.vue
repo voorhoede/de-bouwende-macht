@@ -1,14 +1,16 @@
 <template>
   <div class="question-notice toast card">
-    <img class="character" src="~static/images/bob-bouwer.svg" width="100" height="100">
+    <bob-bouwer class="character" />
     <p>{{ content }}</p>
     <button class="button-primary" @click="onClickButton()">Speel!</button>
   </div>
 </template>
 
 <script>
+import BobBouwer from '~/static/images/bob-bouwer.svg'
 
 export default {
+  components: { BobBouwer },
   props: ['content'],
   methods: {
     onClickButton () {
