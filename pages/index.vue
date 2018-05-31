@@ -172,6 +172,7 @@ export default {
       }
 
       if (results.length > 0) {
+
         results.map(result => {
           let building = result.slug
 
@@ -218,6 +219,7 @@ export default {
    updateCity (slug, type) {
       const id = slug.toUpperCase();
       const el = document.getElementById(id)
+      const map = this.$refs.map.$el
       
       if (!el) {
         return false
@@ -249,7 +251,7 @@ export default {
       const viewHeight = document.body.clientHeight
       const tryTop = elBounds.top - viewHeight/2 + elBounds.height/2
       const tryLeft = elBounds.left - viewWidth/2 + elBounds.width/2
-      
+
       if ('transition' in mapContent.style && 'transform' in mapContent.style) {
         mapContent.style.transition = 'transform 1s'
         mapContent.style.transform = `translate(${-1* tryLeft}px, ${-1* tryTop}px)`

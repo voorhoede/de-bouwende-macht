@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MapGraphic from '~/assets/map.svg'
+import MapGraphic from '~/static/images/city-map.svg'
 
 const width = 764.75
 const height = 545.87
@@ -33,15 +33,8 @@ export default {
       
  </script>
 
-<style scoped>
+<style>
 @import '~/assets/core.css';
-
-.city-map {
-  height: auto;
-  width: 100%;
-  max-width: 990px;
-  margin: 0 auto;
-}
 
 .city-map {
   height: 100vh;
