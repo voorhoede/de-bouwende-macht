@@ -1,7 +1,7 @@
 <template>
   <nuxt-link 
     class="share-button"
-    :to="'/share-my-rotterdam/?buildings=' + slug"
+    :to="'/share/?buildings=' + slug"
   >
     <img class="share-icon" src="~/static/images/share-icon.svg">
     {{ label }}
