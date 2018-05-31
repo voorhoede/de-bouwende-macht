@@ -96,6 +96,7 @@ export default {
       hasReadyNotice: false,
       toasterText: '',
       showAbout: false,
+      lastChoice: '',
       page,
     }
   },
@@ -172,7 +173,17 @@ export default {
 
       if (results.length > 0) {
         results.map(result => {
-          this.updateCity(result.slug, 'addBuilding')
+          let building = result.slug
+
+          if (building === 'metro' || building === 'tunnel' || building === 'brug') {
+            return this.lastChoice = result.slug
+          }
+
+          if (building === '_kf' || building === '_cv') {
+            building = this.lastChoice + result.slug
+          }
+
+          this.updateCity(building, 'addBuilding')
         })
       }
 
