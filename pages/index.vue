@@ -1,8 +1,8 @@
 <template>
   <section class="container">    
-    <div class="logo">
-       <img src="~static/images/vers-beton-logo.png" >
-    </div>
+    <a href="https://versbeton.nl/" class="logo" target="_blank">
+      <img src="~static/images/vers-beton-logo.png" >
+    </a>
 
     <city-map />
 
