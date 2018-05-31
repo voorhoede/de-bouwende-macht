@@ -5,9 +5,11 @@
 </template>
 
 <style>
+@import '~/assets/core.css';
+
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Proxima Nova", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -20,8 +22,4 @@ body {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
 </style>
