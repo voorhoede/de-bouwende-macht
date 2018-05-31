@@ -105,6 +105,7 @@ export default {
   margin: 0 auto 4rem auto;
   width: 80%;
   max-width: 600px;
+  background-color: var(--white);
 }
 
 .city-map {
