@@ -16,7 +16,7 @@
         :href="'https://www.facebook.com/sharer.php?u=' + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/facebook.svg" alt="facebook-logo">
+        <facebook-logo />
       </a>
 
       <a 
@@ -25,14 +25,14 @@
         data-action="share/whatsapp/share" 
         target="_blank"
       >
-        <img src="~static/images/whatsapp.svg" alt="whatsapp-logo">
+        <whatsapp-logo />
       </a>
       
       <a class="share-logo"
         :href="'https://twitter.com/intent/tweet?text=' + text + url + slug" 
         target="_blank"
       >
-        <img src="~static/images/twitter.svg" alt="twitter-logo">
+        <twitter-logo />
       </a>
     </div>
     
@@ -48,9 +48,12 @@ import EmailForm from '~/components/EmailForm.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
 import page from '~/static/data/share.json'
+import FacebookLogo from '~/static/images/facebook.svg'
+import TwitterLogo from '~/static/images/twitter.svg'
+import WhatsappLogo from '~/static/images/whatsapp.svg'
 
 export default {
-  components: { CityMap, EmailForm },
+  components: { CityMap, EmailForm, TwitterLogo, FacebookLogo, WhatsappLogo },
   data() {
     return {
       url: '',

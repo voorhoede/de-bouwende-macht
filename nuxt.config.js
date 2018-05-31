@@ -24,7 +24,17 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+
     extend (config, { isDev, isClient }) {
+      const urlLoader = config.module.rules.find(rule => rule.loader === 'url-loader');
+      urlLoader.test = /\.(png|jpe?g|gif)$/;
+        
+      // Add svg loader (see above)
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: 'vue-svg-loader',
+      });
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
