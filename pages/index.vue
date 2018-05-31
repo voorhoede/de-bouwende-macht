@@ -160,15 +160,22 @@ export default {
 
     handleAnswer (answer) {
       this.$store.commit('hideQuestion')
-      const followUpQuestions = answer.outcome.filter(outcome => outcome.itemType === 'question')
-      const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
-      const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
+
+      
+      const { outcome, geld, pers, burgers, feedback } = answer
+
+      const scoremeter = []
+      this.updateScoremeter({geld, pers, burgers})
+      
+      const followUpQuestions = outcome.filter(outcome => outcome.itemType === 'question')
+      const results = outcome.filter(outcome => outcome.itemType === 'result')
+      const consequences = outcome.filter(outcome => outcome.itemType === 'consequence')
       const hasFollowUpQuestions = followUpQuestions.length > 0
 
-      if (answer.feedback && (answer.feedback.length > 1)) {
+      if (feedback && (feedback.length > 1)) {
         this.hasFeedback = true
         this.$store.commit('seenFeedback', false)
-        this.feedbackContent = answer.feedback
+        this.feedbackContent = feedback
       }
 
       if (results.length > 0) {
@@ -239,6 +246,10 @@ export default {
       }
         
       this.$store.commit('updateCity', { type: type, slug: slug })
+    },
+
+    updateScoremeter (scoremeter) {
+      this.$store.commit('updateScoremeter', scoremeter)
     },
 
     hideAllElements() {
