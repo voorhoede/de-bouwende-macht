@@ -30,7 +30,7 @@ export default {
   },
   components: { MapGraphic }
 }
-      
+
  </script>
 
 <style>
@@ -45,7 +45,6 @@ export default {
 
 .city-map__content {
   display: block;
-  margin: -4vh -2vw 0;
 }
 
 .city-map .hidden {
