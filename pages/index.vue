@@ -4,6 +4,14 @@
       <img src="~static/images/vers-beton-logo.png" >
     </a>
 
+    <div class="badges">
+      <pers-positief class="badge pers positive"  v-if="scoremeter.geld >= 0" />
+      <pers-negatief class="badge pers negative"  v-if="scoremeter.geld < 0" />
+      <burgers-happy class="badge burgers" v-if="scoremeter.burgers >= 0" />
+      <burgers-bozen class="badge burgers" v-if="scoremeter.burgers < 0" />
+      <geld class="badge geld" :class="scoremeter.geld >= 0 ? 'positive' : 'negative'" />
+    </div>
+
     <city-map />
 
     <div v-if="!gameStarted" class="card center">
@@ -84,11 +92,15 @@ import Feedback from '~/components/Feedback.vue'
 import CityMap from '~/components/Map.vue'
 import InfoButton from '~/components/InfoButton.vue'
 import ShareButton from '~/components/ShareButton.vue'
-import { setTimeout } from 'timers';
 import page from '~/static/data/onboarding.json'
+import PersNegatief from '~/static/images/pers-negatief.svg'
+import PersPositief from '~/static/images/pers-positief.svg'
+import BurgersHappy from '~/static/images/burgers-happy.svg'
+import BurgersBozen from '~/static/images/burgers-bozen.svg'
+import Geld from '~/static/images/geld.svg'
 
 export default {
-  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton },
+  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton, PersNegatief, PersPositief, BurgersHappy, BurgersBozen, Geld },
   data () {
     return {
       hasNotice: false,
@@ -97,6 +109,7 @@ export default {
       toasterText: '',
       showAbout: false,
       lastChoice: '',
+      showBadges: false,
       page,
     }
   },
@@ -115,7 +128,8 @@ export default {
     'continuePlaying',
     'seenNotice',
     'seenFeedback',
-    'seenReadyNotice'
+    'seenReadyNotice',
+    'scoremeter',
   ]),
   methods: {
     startGame () {
@@ -158,17 +172,30 @@ export default {
       this.hasNotice = true
     },
 
+    hideBadge () {
+      this.showBadges = false
+      clearTimeout()
+    },
+
     handleAnswer (answer) {
       this.$store.commit('hideQuestion')
-      const followUpQuestions = answer.outcome.filter(outcome => outcome.itemType === 'question')
-      const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
-      const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
+      this.showBadges = true
+
+      const { outcome, geld, pers, burgers, feedback } = answer
+
+      this.updateScoremeter({geld, pers, burgers})
+      setTimeout(() => this.hideBadge(), 1000)
+
+      
+      const followUpQuestions = outcome.filter(outcome => outcome.itemType === 'question')
+      const results = outcome.filter(outcome => outcome.itemType === 'result')
+      const consequences = outcome.filter(outcome => outcome.itemType === 'consequence')
       const hasFollowUpQuestions = followUpQuestions.length > 0
 
-      if (answer.feedback && (answer.feedback.length > 1)) {
+      if (feedback && (feedback.length > 1)) {
         this.hasFeedback = true
         this.$store.commit('seenFeedback', false)
-        this.feedbackContent = answer.feedback
+        this.feedbackContent = feedback
       }
 
       if (results.length > 0) {
@@ -241,6 +268,10 @@ export default {
       this.$store.commit('updateCity', { type: type, slug: slug })
     },
 
+    updateScoremeter (scoremeter) {
+      this.$store.commit('updateScoremeter', scoremeter)
+    },
+
     hideAllElements() {
       this.$store.commit('hideNotice')
       this.$store.commit('hideReadyNotice')
@@ -285,6 +316,36 @@ export default {
 .intro-title {
   padding-bottom: 1.5rem;
   font-size: var(--font-size-big);
+}
+
+.badge {
+  height: 40px;
+  width: auto;
+}
+
+.badges {
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 75px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.geld.positive {
+  padding: .2rem;
+  background-color: green;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.geld.negative {
+  padding: .2rem;
+  background-color: red;
+  border-radius: 50%;
+  height: 40px;
 }
 
 </style>

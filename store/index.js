@@ -19,6 +19,11 @@ const createStore = () => {
     seenFeedback: false,
     seenReadyNotice: false,
     continuePlaying: false,
+    scoremeter: {
+      geld: 0,
+      pers: 0,
+      burgers: 0,
+    }
   }
 
   return new Vuex.Store({
@@ -98,6 +103,16 @@ const createStore = () => {
         if (type === 'removeBuilding') {
           state.currentScenario = state.currentScenario.filter(building => building !== slug)
         }
+      },
+
+      updateScoremeter(state, { geld, pers, burgers }) {
+        if (geld === null) { geld = 0 }
+        if (pers === null) { pers = 0 }
+        if (burgers === null) { burgers = 0 }
+
+        state.scoremeter.geld = state.scoremeter.geld + geld
+        state.scoremeter.pers = state.scoremeter.pers + pers
+        state.scoremeter.burgers = state.scoremeter.burgers + burgers
       },
 
       followUpQuestion (state, payload) {
