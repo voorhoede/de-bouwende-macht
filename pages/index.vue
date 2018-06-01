@@ -25,14 +25,12 @@
 
     <div class="buttons">
       <info-button @onClick="showAbout = !showAbout" />
-
+      <sound-button @onClick="playSound = !playSound" />
       <share-button
         class="share-button-rounded"
         v-if="continuePlaying"
         :slug="currentScenario.join('-')"
       />
-
-      <sound-button @onClick="playSound = !playSound" />
     </div>
 
     <transition name="bounce">
