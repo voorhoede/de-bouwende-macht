@@ -121,8 +121,7 @@ export default {
     startGame () {
       this.$store.commit('startGame')
       this.$store.commit('nextQuestion')
-      
-      this.play()
+      this.$store.commit('showNotice')
     },
 
     play () {
