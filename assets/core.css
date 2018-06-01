@@ -89,7 +89,12 @@ p {
   border-radius: var(--border-radius-smooth);
   text-align: center;
   max-width: 600px;
-  margin: 0 auto;
+}
+
+@media screen and (min-width: 632px) {
+  .card {
+    margin: 0 auto;
+  }
 }
 
 .full-screen {
@@ -121,4 +126,9 @@ p {
 
 .content {
   font-family: var(--font);
+}
+
+.postal-card svg {
+  height: auto!important;
+  width: auto!important;
 }

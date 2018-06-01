@@ -6,8 +6,8 @@ module.exports = {
     title: 'De Bouwende Macht',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'De Bouwende Macht' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, minimal-ui' },
+      { hid: 'description', name: 'description', content: 'Wie heeft de macht in Rotterdam?' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -33,6 +33,11 @@ module.exports = {
       config.module.rules.push({
         test: /\.svg$/,
         loader: 'vue-svg-loader',
+        options: {
+          svgo: {
+            plugins: [ { cleanupIDs: false } ]
+          }
+        }
       });
 
       if (isDev && isClient) {
@@ -42,7 +47,7 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      }
+      };
     }
   },
   modules: [

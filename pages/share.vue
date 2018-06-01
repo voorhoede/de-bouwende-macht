@@ -90,6 +90,21 @@ export default {
   padding: var(--spacing-double) var(--spacing-normal);
 }
 
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: var(--spacing-double);
+}
+
+.content:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 250px;
+  margin: 2rem auto 0 auto;
+  background-color: var(--green);
+}
+
 .page-title {
   margin-bottom: 3rem;
 }
@@ -115,8 +130,20 @@ export default {
 .postal-card-text {
   margin-bottom: 0;
   font-family: 'Dancing Script';
-  font-size: var(--font-size-big);
+  font-weight: bold;
   color: var(--pink);
+}
+
+@media screen and (min-width: 632px) {
+  .postal-card-text {
+    font-size: var(--font-size-big);
+  }
+}
+
+.postal-card .city-map {
+  height: auto;
+  width: auto;
+  overflow: hidden;
 }
 
 .sharing-buttons {
