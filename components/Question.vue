@@ -1,6 +1,7 @@
 <template>
   <div :class="`question toast card${(minified) ? ' minified' : ''}`">
       <button class="minify-button" @click="toggleMinified">
+        <chevron />
         <span class="a11y-sr-only">Minify</span>
       </button>
       <p class="current-question">
@@ -23,7 +24,10 @@
 
 <script>
 
+import Chevron from '~/static/images/chevron-down.svg'
+
 export default {
+  components: { Chevron },
   data () {
     return { minified: false }
   },
@@ -68,7 +72,19 @@ export default {
 .minified {
   transform: translateY(calc(100% - 2rem));
 }
-.minified .minify-button {
+.minified .minify-button svg {
   transform: rotateZ(180deg);
 }
+.minify-button svg {
+  fill: var(--green);
+}
+.minify-button:hover svg,
+.minify-button:focus svg {
+  fill: var(--green-dark);
+}
+.minify-button:active {
+  box-shadow: none;
+  transform: none;
+}
+
 </style>

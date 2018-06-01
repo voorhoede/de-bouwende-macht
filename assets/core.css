@@ -122,3 +122,8 @@ p {
 .content {
   font-family: var(--font);
 }
+
+.postal-card svg {
+  height: auto!important;
+  width: auto!important;
+}
