@@ -67,7 +67,8 @@ export default {
   position: absolute;
   top: 0;
   transition: transform .5s;
-  margin-left: -2rem;
+  margin-left: -1rem;
+  background-color: transparent;
 }
 .minified {
   transform: translateY(calc(100% - 2rem));
