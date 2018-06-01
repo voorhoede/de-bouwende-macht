@@ -14,7 +14,7 @@ npm-debug.log
 dist
 
 # Content from Dato CMS
-src/static/data/
+static/data/
 
 #DS_Store
 
