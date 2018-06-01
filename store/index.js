@@ -20,9 +20,9 @@ const createStore = () => {
     seenReadyNotice: false,
     continuePlaying: false,
     scoremeter: {
-      geld: 0,
-      pers: 0,
-      burgers: 0,
+      geld: 5,
+      pers: 5,
+      burgers: 5,
     }
   }
 
@@ -113,6 +113,8 @@ const createStore = () => {
         state.scoremeter.geld = state.scoremeter.geld + geld
         state.scoremeter.pers = state.scoremeter.pers + pers
         state.scoremeter.burgers = state.scoremeter.burgers + burgers
+
+        console.log(state.scoremeter.geld, state.scoremeter.pers, state.scoremeter.burgers)
       },
 
       followUpQuestion (state, payload) {
