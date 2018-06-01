@@ -5,11 +5,12 @@
   "author": "De Voorhoede (https://www.voorhoede.nl)",
   "private": true,
   "scripts": {
+    "prebuild": "touch ./.env && rimraf dist/ && npm run data",
+    "build": "nuxt generate",
+    "predev": "rimraf dist/ && npm run data",
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt start",
     "data": "dato dump",
-    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "proxy": "ngrok http 3000"
@@ -29,6 +30,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
     "ngrok": "^3.0.1",
+    "rimraf": "2.6.2",
     "yamljs": "0.3.0"
   }
 }
