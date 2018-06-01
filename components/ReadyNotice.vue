@@ -2,13 +2,13 @@
   <div class="toast card ready-notice">
     <bob-bouwer class="character" />
     <p>Goed bezig, je bent al lekker op weg met het bouwen aan jouw Rotterdam!</p>
-    <p>Als je wilt, kan je vanaf nu jouw Rotterdam delen!</p>
+    <p>Je bent nu halverwege het spel. Als je wilt, kan je vanaf nu jouw Rotterdam delen.</p>
     <share-button
       class="button-secondary"
       :slug="slug"
       :label="'Dit is mijn Rotterdam!'"
     />
-    <p>Je kan natuurlijk ook nog verder bouwen!</p>
+    <p>Is de stad nog niet af? Je kan natuurlijk ook nog verder bouwen:</p>
     <button class="button-primary" @click="onClickButton()">Ik bouw nog verder</button>
   </div>
 </template>
