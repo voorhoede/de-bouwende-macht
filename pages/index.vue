@@ -1,14 +1,14 @@
 <template>
-  <section class="container">    
+  <section class="container">
     <a href="https://versbeton.nl/" class="logo" target="_blank">
       <img src="~static/images/vers-beton-logo.png" >
     </a>
 
-    <city-map />
+    <city-map ref="map" />
 
     <div v-if="!gameStarted" class="card center">
       <h1 class="page-title">{{ page.title }}</h1>
-    
+
       <div class="intro">
         <div class="content" v-html="page.content"></div>
         <button class="button-primary" @click="startGame()">{{ page.callToAction }}</button>
@@ -28,8 +28,8 @@
 
       <share-button
         class="share-button-rounded"
-        v-if="continuePlaying" 
-        :slug="currentScenario.join('-')" 
+        v-if="continuePlaying"
+        :slug="currentScenario.join('-')"
       />
     </div>
 
@@ -55,9 +55,9 @@
 
     <div class="toast card" v-if="gameEnded">
       <p>Dit is jouw Rotterdam!</p>
-      
-      <nuxt-link 
-        class="button button-primary" 
+
+      <nuxt-link
+        class="button button-primary"
         :to="'/share/?buildings=' + currentScenario.join('-')"
       >
         Delen
@@ -65,10 +65,10 @@
     </div>
 
     <transition name="slide-up">
-      <question 
-        v-if="showQuestion" 
-        :currentQuestion="currentQuestion" 
-        @onAnswer="handleAnswer" 
+      <question
+        v-if="showQuestion"
+        :currentQuestion="currentQuestion"
+        @onAnswer="handleAnswer"
       />
     </transition>
   </section>
@@ -130,11 +130,11 @@ export default {
       if (this.gameEnded) {
         return
       }
-      
+
       const shouldShowNotice = this.hasNotice && !this.seenNotice
       const shouldShowReadyNotice = this.hasReadyNotice && !this.seenReadyNotice
       const shouldShowFeedback = this.hasFeedback && !this.seenFeedback
-      
+
       if (shouldShowFeedback) {
         return this.$store.commit('showFeedback')
       } else if (shouldShowReadyNotice) {
@@ -153,7 +153,7 @@ export default {
 
       this.$store.commit('nextQuestion')
       this.$store.commit('seenNotice', false)
-    
+
       this.hasNotice = true
     },
 
@@ -171,6 +171,7 @@ export default {
       }
 
       if (results.length > 0) {
+
         results.map(result => {
           let building = result.slug
 
@@ -199,25 +200,26 @@ export default {
 
       if (hasFollowUpQuestions) {
         followUpQuestions.map(question => {
-          if (question.dependent) { 
-            this.$store.commit('addMainQuestion', question) 
+          if (question.dependent) {
+            this.$store.commit('addMainQuestion', question)
           }
 
-          if (question.followUp) { 
-            this.$store.commit('followUpQuestion', question) 
+          if (question.followUp) {
+            this.$store.commit('followUpQuestion', question)
           }
         })
       } else {
         this.nextQuestion()
       }
-     
+
       this.play()
     },
 
    updateCity (slug, type) {
       const id = slug.toUpperCase();
       const el = document.getElementById(id)
-      
+      const map = this.$refs.map.$el
+
       if (!el) {
         return false
       }
@@ -236,8 +238,60 @@ export default {
         el.classList.add('hidden')
         el.classList.remove('fade')
       }
-        
+
       this.$store.commit('updateCity', { type: type, slug: slug })
+
+      // Scroll to changed element:
+      const elBounds = el.getBoundingClientRect()
+      const mapContent = map.children[0] // transforms on wrapping div, not on svg
+      const mapImage = mapContent.querySelector('svg') // use sizing of svg
+      const mapWidth = mapImage.clientWidth
+      const mapHeight = mapImage.clientHeight
+      const viewWidth = document.body.clientWidth
+      const viewHeight = document.body.clientHeight
+      const minScrollLeft = 0
+      const minScrollTop = 0
+      const maxScrollLeft = mapWidth - viewWidth
+      const maxScrollTop = mapHeight - viewHeight
+      const tryTop = elBounds.top - viewHeight/2 + elBounds.height/2
+      const tryLeft = elBounds.left - viewWidth/2 + elBounds.width/2
+
+      let top
+      let left
+
+      if (map.scrollTop + tryTop < minScrollTop) {
+        // When trying to scroll lower than minimal scroll pos
+        top = minScrollTop - map.scrollTop
+      } else if (map.scrollTop + tryTop > maxScrollTop) {
+        // When trying to scroll higher than maximal scroll pos
+        top = maxScrollTop - map.scrollTop
+      } else {
+        top = tryTop
+      }
+      if (map.scrollLeft + tryLeft < minScrollLeft) {
+        // When trying to scroll lower than minimal scroll pos
+        left = minScrollLeft - map.scrollLeft
+      } else if (map.scrollLeft + tryLeft > maxScrollLeft) {
+        // When trying to scroll higher than maximal scroll pos
+        left = maxScrollLeft - map.scrollLeft
+      } else {
+        left = tryLeft
+      }
+
+      if ('transition' in mapContent.style && 'transform' in mapContent.style) {
+        mapContent.style.transition = 'transform 1s'
+        mapContent.style.transform = `translate(${-1* left}px, ${-1* top}px)`
+        mapContent.addEventListener('transitionend', () => {
+          mapContent.style.transition = ''
+          mapContent.style.transform = ''
+          map.scrollTop += top
+          map.scrollLeft += left
+        })
+      } else {
+        // jump to element
+        map.scrollTop += top
+        map.scrollLeft += left
+      }
     },
 
     hideAllElements() {
@@ -245,12 +299,13 @@ export default {
       this.$store.commit('hideReadyNotice')
       this.$store.commit('hideQuestion')
       this.$store.commit('hideFeedback')
+      },
     },
-  },
-  transition (to, from) {
-    if (!from) return 'slide-left'
-    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
-  },
+
+    transition (to, from) {
+      if (!from) return 'slide-left'
+      return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+    },
 }
 </script>
 

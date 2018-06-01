@@ -62,7 +62,7 @@ button:focus {
   background-color: var(--pink-light);
   text-shadow: none;
 }
-  
+
 .button-secondary {
   font-family: var(--font-bold);
   background-color: var(--white);
@@ -92,7 +92,7 @@ button:focus {
   background-color: var(--green-dark);
   text-shadow: none;
 }
-  
+
 .button-primary,
 .button-secondary,
 .answer-button,

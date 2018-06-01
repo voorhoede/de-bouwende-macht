@@ -119,6 +119,12 @@ export default {
   color: var(--pink);
 }
 
+.postal-card .city-map {
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
 .sharing-buttons {
   border-bottom: 2px solid var(--green);
   width: 250px;
