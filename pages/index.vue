@@ -241,6 +241,7 @@ export default {
             sound.play()
           }
           el.classList.add('fade')
+          window.navigator.vibrate([100]);
         }
       }
 
