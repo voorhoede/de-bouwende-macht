@@ -231,6 +231,7 @@ export default {
           el.classList.add('slide')
         } else {
           el.classList.add('fade')
+          window.navigator.vibrate([100]);
         }
       }
 
