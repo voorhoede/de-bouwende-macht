@@ -8,13 +8,15 @@
   --pink-secondary: #e95d78;
   --pink-dark: #da0029;
   --green: #239b9e;
-  --green-secondary: #26b999;
+  --green-secondary: #a2ffcb;
   --green-dark: #1c7b7e;
   --white: #fff;
   --black: #000;
   --blue: #0820df;
   --blue-dark: #050880;
   --red: #b92646;
+  --red-secondary: #fd748f;
+  --orange: #ffc38b;
  
   /* SPACING */
   --spacing-half: .5rem;

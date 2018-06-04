@@ -75,6 +75,7 @@ p {
   bottom: 0;
   left: var(--spacing-normal);
   right: var(--spacing-normal);
+  z-index: 10;
 }
 
 .card.toast {
@@ -89,6 +90,7 @@ p {
   border-radius: var(--border-radius-smooth);
   text-align: center;
   max-width: 600px;
+  z-index: 10;
 }
 
 @media screen and (min-width: 632px) {

@@ -37,12 +37,6 @@
   100% { transform: scale(0) }
 }
 
-@keyframes glow {
-  50% {
-    transform: scale(1.3);
-  }
-}
-
 @keyframes shake {
   10%, 90% {
     opacity: 1;
@@ -98,4 +92,14 @@
 .slow-slide-up-enter,
 .slide-up-leave-to {
   transform: translatey(100%);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all .5s ease;
+}
+
+.slide-right-enter,
+.slide-right-leave-to  {
+  transform: translatex(-100%);
 }
