@@ -6,6 +6,8 @@
       {{ page.title }}
       <small class="tagline">{{ page.subtitle }}</small>
     </h1>
+
+    <div class="content" v-html="page.content"></div>
     
     <div class="postal-card">
       <city-map class="city-map" />
@@ -37,10 +39,12 @@
         <twitter-logo />
       </a>
     </div>
-    
-    <div class="content" v-html="page.content"></div>
 
     <email-form />
+
+    <small class="credentials">
+      sound from <a class="link-external" href="http://www.freesound.org/people/klankbeeld/" target="_blank">http://www.freesound.org/people/klankbeeld/</a>
+    </small>
   </section>
 </template>
 
@@ -90,7 +94,7 @@ export default {
 
 .container {
   height: auto;
-  padding: var(--spacing-double) var(--spacing-normal);
+  padding: var(--spacing-double) var(--spacing-normal) var(--spacing-normal);
 }
 
 .content {

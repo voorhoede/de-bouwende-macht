@@ -38,7 +38,7 @@
 
 .email-form {
   max-width: 400px;
-  margin: 0 auto;  
+  margin: 0 auto 5rem auto;
 }
 
 .sub-title {
