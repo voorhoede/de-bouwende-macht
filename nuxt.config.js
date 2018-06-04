@@ -40,6 +40,11 @@ module.exports = {
         }
       });
 
+      config.module.rules.push({
+        test: /\.wav$/,
+        loader: 'url-loader'
+      });
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',

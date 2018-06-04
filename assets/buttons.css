@@ -25,6 +25,7 @@ button,
   display: inline-block;
   padding: var(--spacing-half) var(--spacing-normal);
   border: none;
+  background-color: transparent;
   font-size: var(--font-size-normal);
   text-decoration: none;
   transition: all 0.4s ease 0s
@@ -98,4 +99,25 @@ button:focus {
 .answer-button,
 .question {
   box-shadow: var(--button-shadow);
+}
+
+.button-round {
+  display: flex;
+  justify-content: center;
+  height: var(--button-size);
+  width: var(--button-size);
+  padding: 0;
+  background-color: var(--pink);
+  border-radius: 50%;
+  color: white;
+  font-family: var(--font-bold);
+  font-size: 1.75rem;
+  text-decoration: none;
+  line-height: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.button-round:hover,
+.button-round:focus {
+  background-color: var(--pink-secondary);
 }
