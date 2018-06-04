@@ -13,6 +13,7 @@
   top: 0.5rem;
   height: auto;
   width: 75px;
+  z-index: 1;
 }
 
 .logo img {
