@@ -20,9 +20,9 @@ const createStore = () => {
     seenReadyNotice: false,
     continuePlaying: false,
     scoremeter: {
-      geld: 5,
-      pers: 5,
-      burgers: 5,
+      money: 5,
+      press: 5,
+      citizens: 5,
     }
   }
 
@@ -110,11 +110,9 @@ const createStore = () => {
         if (pers === null) { pers = 0 }
         if (burgers === null) { burgers = 0 }
 
-        state.scoremeter.geld = state.scoremeter.geld + geld
-        state.scoremeter.pers = state.scoremeter.pers + pers
-        state.scoremeter.burgers = state.scoremeter.burgers + burgers
-
-        console.log(state.scoremeter.geld, state.scoremeter.pers, state.scoremeter.burgers)
+        state.scoremeter.money = state.scoremeter.money + geld
+        state.scoremeter.press = state.scoremeter.press + pers
+        state.scoremeter.citizens = state.scoremeter.citizens + burgers
       },
 
       followUpQuestion (state, payload) {
