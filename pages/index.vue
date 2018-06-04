@@ -25,7 +25,10 @@
 
     <div class="buttons">
       <info-button @onClick="showAbout = !showAbout" />
-
+      <sound-button
+        @onClick="playSound = !playSound"
+        :playSound="playSound"
+      />
       <share-button
         class="share-button-rounded"
         v-if="continuePlaying"
@@ -83,12 +86,14 @@ import ReadyNotice from '~/components/ReadyNotice.vue'
 import Feedback from '~/components/Feedback.vue'
 import CityMap from '~/components/Map.vue'
 import InfoButton from '~/components/InfoButton.vue'
+import SoundButton from '~/components/SoundButton.vue'
 import ShareButton from '~/components/ShareButton.vue'
 import { setTimeout } from 'timers';
 import page from '~/static/data/onboarding.json'
+import Sound from '~/static/sounds/heipaal.wav'
 
 export default {
-  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton },
+  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton, SoundButton },
   data () {
     return {
       hasNotice: false,
@@ -96,6 +101,7 @@ export default {
       hasReadyNotice: false,
       toasterText: '',
       showAbout: false,
+      playSound: true,
       lastChoice: '',
       page,
     }
@@ -230,6 +236,10 @@ export default {
         if (id === 'VIEZELUCHT') {
           el.classList.add('slide')
         } else {
+          if (this.playSound) {
+            const sound = new Audio(Sound)
+            sound.play()
+          }
           el.classList.add('fade')
         }
       }
