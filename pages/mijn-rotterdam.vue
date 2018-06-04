@@ -41,7 +41,7 @@ export default {
 @import '~/assets/core.css';
 
 .container {
-  padding: var(--spacing-double) 1rem;
+  padding: var(--spacing-double) var(--spacing-normal);
 }
 
 .page-title {
@@ -90,15 +90,15 @@ export default {
   }
 }
 
-@media screen and (max-width: 632px) {
-  .postal-card-text {
-    font-size: 1.5rem;
-  }
-}
-
 @media screen and (max-width: 532px) {
   .page-title {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 632px) {
+  .postal-card-text {
+    font-size: 1.5rem;
   }
 }
 
