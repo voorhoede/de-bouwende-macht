@@ -113,7 +113,7 @@ export default {
 }
 
 .page-title {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-double);
 }
 
 .tagline {
