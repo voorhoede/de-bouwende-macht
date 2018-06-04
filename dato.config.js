@@ -9,6 +9,7 @@ module.exports = (dato, root) => {
     dir.createDataFile('about.json', 'json', pageToJson(dato.about))
     dir.createDataFile('onboarding.json', 'json', pageToJson(dato.collectionsByType.onboarding))
     dir.createDataFile('share.json', 'json', pageToJson(dato.collectionsByType.share))
+    dir.createDataFile('mijnRotterdam.json', 'json', pageToJson(dato.collectionsByType.mijnRotterdam))
   })
 }
 
