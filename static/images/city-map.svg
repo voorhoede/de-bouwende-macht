@@ -5514,7 +5514,7 @@
         <polygon class="cls-9" points="153.94 79.66 215.85 99.14 223.64 81.05 153.94 79.66"/>
       </g>
     </g>
-    <g id="ARCHITECTONISCHICOON">
+    <g class="hidden" id="ARCHITECTONISCHICOON">
       <g>
         <polygon class="cls-17" points="25.22 167.18 108.14 142.78 171.17 161.74 88.25 186.16 25.22 167.18"/>
         <path class="cls-24" d="M46.2,164.9l43.24,13L150.19,160,107,147Z"/>
@@ -8370,7 +8370,7 @@
         </g>
       </g>
     </g>
-    <g id="tunnel_kf">
+    <g class="hidden" id="TUNNEl_KF">
       <g>
         <polygon class="cls-29" points="623.21 248.41 616.03 243.06 613.82 239.78 658.39 225.97 677.16 231.7 623.21 248.41"/>
         <polygon class="cls-21" points="677.16 231.7 705.82 223.14 687.05 217.41 658.39 225.97 677.16 231.7"/>
