@@ -1,7 +1,11 @@
 <template>
   <section class="container">
     <logo class="logo" />
-    <h1 class="page-title">Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam</h1>
+    <h1 class="page-title">{{ page.title }}
+      <small class="tagline">{{ page.subtitle }}</small>
+    </h1>
+
+    <div v-if="page.content" v-html="page.content"></div>
     
     <div class="postal-card">
       <city-map />
@@ -17,9 +21,15 @@ import CityMap from '~/components/Map.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
 import Logo from '~/components/Logo.vue'
+import page from '~/static/data/mijnRotterdam.json'
 
 export default {
   components: { CityMap, Logo },
+  data () {
+    return {
+      page,
+    }
+  },
 
   mounted () {
     const urlParams = queryString.parse(location.search)
@@ -46,11 +56,16 @@ export default {
 
 .page-title {
   text-align: center;
-  font-size: 1.5rem;
   font-family: var(--font-bold);
   font-weight: normal;
   margin: 3rem auto;
   width: 80%;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: var(--spacing-double);
 }
 
 .postal-card {
@@ -77,7 +92,7 @@ export default {
 @media screen and (max-width: 430px) {
   .page-title {
     margin: var(--spacing-double) auto 1.5rem auto;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .tagline {
