@@ -1,16 +1,16 @@
 <template>
   <div class="feedback toast card">
-    <ambtenaar class="character" />
+    <civil-servant class="character" />
     <p>{{ feedback }}</p>
     <button class="button-primary" @click="onClickButton">Bouw verder</button>
   </div>
 </template>
 
 <script>
-import Ambtenaar from '~/static/images/ambtenaar.svg'
+import CivilServant from '~/static/images/civil-servant.svg'
 
 export default {
-  components: { Ambtenaar },
+  components: { CivilServant },
   props: ['feedback'],
   methods: {
     onClickButton () {
