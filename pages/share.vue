@@ -146,14 +146,11 @@ export default {
   .tagline {
     font-size: 1.2rem;
   }
+
   .postal-card {
     margin-bottom: 1.5rem;
     padding: var(--spacing-half);
     width: 95%;
-  }
-
-  .postal-card-text {
-    font-size: 1.5rem;
   }
 
   .sharing-buttons {
@@ -161,7 +158,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 632px) {
+@media screen and (max-width: 632px) {
   .postal-card-text {
     font-size: 1.5rem;
   }
@@ -171,6 +168,7 @@ export default {
   .postal-card {
     margin-bottom: var(--spacing-normal);
   }
+  
   .postal-card-text {
     font-size: var(--font-size-big);
   }
