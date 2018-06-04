@@ -4,6 +4,8 @@
       {{ page.title }}
       <small class="tagline">{{ page.subtitle }}</small>
     </h1>
+
+    <div class="content" v-html="page.content"></div>
     
     <div class="postal-card">
       <city-map class="city-map" />
@@ -35,8 +37,6 @@
         <twitter-logo />
       </a>
     </div>
-    
-    <div class="content" v-html="page.content"></div>
 
     <email-form />
   </section>
