@@ -119,7 +119,7 @@ export default {
 
 @media screen and (min-width: 600px) {
   .page-title {
-    margin-top: 1rem;
+    margin-top: var(--spacing-normal);
   }
 
   .postal-card-text {
