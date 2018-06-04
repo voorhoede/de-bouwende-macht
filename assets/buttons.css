@@ -105,6 +105,7 @@ button:focus {
   justify-content: center;
   height: var(--button-size);
   width: var(--button-size);
+  padding: 0;
   background-color: var(--pink);
   border-radius: 50%;
   color: white;

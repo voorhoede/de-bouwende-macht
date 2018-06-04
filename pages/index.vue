@@ -25,7 +25,10 @@
 
     <div class="buttons">
       <info-button @onClick="showAbout = !showAbout" />
-      <sound-button @onClick="playSound = !playSound" />
+      <sound-button
+        @onClick="playSound = !playSound"
+        :playSound="playSound"
+      />
       <share-button
         class="share-button-rounded"
         v-if="continuePlaying"
