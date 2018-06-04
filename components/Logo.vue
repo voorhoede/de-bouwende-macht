@@ -9,10 +9,11 @@
 
 .logo {
   position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
+  left: var(--spacing-half);
+  top: var(--spacing-half);
   height: auto;
   width: 75px;
+  z-index: 1;
 }
 
 .logo img {
