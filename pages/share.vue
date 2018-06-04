@@ -103,15 +103,6 @@ export default {
   padding-bottom: var(--spacing-double);
 }
 
-.content:after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 250px;
-  margin: var(--spacing-double) auto 0 auto;
-  background-color: var(--green);
-}
-
 .page-title {
   margin-bottom: var(--spacing-double);
 }
