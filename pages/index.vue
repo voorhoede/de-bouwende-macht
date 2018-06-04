@@ -1,8 +1,6 @@
 <template>
   <section class="container">
-    <a href="https://versbeton.nl/" class="logo" target="_blank">
-      <img src="~static/images/vers-beton-logo.png" >
-    </a>
+    <logo />
 
     <scoremeter 
       :scoremeter="scoremeter"
@@ -90,9 +88,10 @@ import InfoButton from '~/components/InfoButton.vue'
 import ShareButton from '~/components/ShareButton.vue'
 import page from '~/static/data/onboarding.json'
 import Scoremeter from '~/components/Scoremeter.vue'
+import Logo from '~/components/Logo.vue'
 
 export default {
-  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton, Scoremeter },
+  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton, Logo, Scoremeter },
   data () {
     return {
       hasNotice: false,
@@ -324,24 +323,6 @@ export default {
 
 <style scoped>
 @import '~/assets/core.css';
-
-.logo {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
-  height: auto;
-  width: 75px;
-}
-
-.logo img {
-  max-width: 100%;
-}
-
-@media screen and (min-width: 600px) {
-  .logo {
-    width: 120px;
-  }
-}
 
 .buttons {
   position: absolute;

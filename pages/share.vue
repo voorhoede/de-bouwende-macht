@@ -1,5 +1,7 @@
 <template>
   <section class="container">
+    <logo />
+
     <h1 class="page-title">
       {{ page.title }}
       <small class="tagline">{{ page.subtitle }}</small>
@@ -45,6 +47,7 @@
 <script>
 import CityMap from '~/components/Map.vue'
 import EmailForm from '~/components/EmailForm.vue'
+import Logo from '~/components/Logo.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
 import page from '~/static/data/share.json'
@@ -53,7 +56,7 @@ import TwitterLogo from '~/static/images/twitter.svg'
 import WhatsappLogo from '~/static/images/whatsapp.svg'
 
 export default {
-  components: { CityMap, EmailForm, TwitterLogo, FacebookLogo, WhatsappLogo },
+  components: { CityMap, EmailForm, Logo, TwitterLogo, FacebookLogo, WhatsappLogo },
   data() {
     return {
       url: '',
@@ -101,12 +104,12 @@ export default {
   display: block;
   height: 2px;
   width: 250px;
-  margin: 2rem auto 0 auto;
+  margin: var(--spacing-double) auto 0 auto;
   background-color: var(--green);
 }
 
 .page-title {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .tagline {
@@ -114,10 +117,10 @@ export default {
 }
 
 .postal-card {
-  padding: var(--spacing-normal);
+  padding: .8rem;
   box-shadow: var(--box-shadow);
   transform: rotate(-4deg);
-  margin: 0 auto 4rem auto;
+  margin: 0 auto var(--spacing-normal) auto;
   width: 80%;
   max-width: 600px;
   background-color: var(--white);
@@ -134,7 +137,38 @@ export default {
   color: var(--pink);
 }
 
+@media screen and (max-width: 430px) {
+  .page-title {
+    font-size: 1.8rem;
+    margin: var(--spacing-normal) auto 1.5rem auto;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .postal-card {
+    margin-bottom: 1.5rem;
+    padding: var(--spacing-half);
+    width: 95%;
+  }
+
+  .sharing-buttons {
+    margin-top: var(--spacing-normal);
+  }
+}
+
+@media screen and (max-width: 632px) {
+  .postal-card-text {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (min-width: 632px) {
+  .postal-card {
+    margin-bottom: var(--spacing-normal);
+  }
+  
   .postal-card-text {
     font-size: var(--font-size-big);
   }
@@ -149,7 +183,7 @@ export default {
 .sharing-buttons {
   border-bottom: 2px solid var(--green);
   width: 250px;
-  margin: var(--spacing-double) auto;
+  margin: var(--spacing-double) auto;;
   padding-bottom: var(--spacing-double);
 }
 
