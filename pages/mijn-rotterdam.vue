@@ -58,7 +58,7 @@ export default {
   text-align: center;
   font-family: var(--font-bold);
   font-weight: normal;
-  margin: 3rem auto;
+  margin: 0 auto 3rem auto;
   width: 80%;
 }
 
@@ -111,13 +111,17 @@ export default {
   }
 }
 
-@media screen and (max-width: 632px) {
-  .postal-card-text {
-    font-size: 1.5rem;
+@media screen and (max-width: 600px) {
+  .page-title{
+    font-size: 1.7rem;
   }
 }
 
-@media screen and (min-width: 632px) {
+@media screen and (min-width: 600px) {
+  .page-title {
+    margin-top: 1rem;
+  }
+
   .postal-card-text {
     font-size: var(--font-size-big);
   }
