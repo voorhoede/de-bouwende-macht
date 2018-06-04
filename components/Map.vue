@@ -37,8 +37,6 @@ export default {
 @import '~/assets/core.css';
 
 .city-map {
-  height: 100vh;
-  width: 100vw;
   overflow: scroll;
   padding: 0;
 }
