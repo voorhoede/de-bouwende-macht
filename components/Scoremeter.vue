@@ -1,104 +1,96 @@
 <template>
   <button class="scoremeter" @click="toggleExpand">
-    <div v-if="!expand" class="scoremeter-small">
-      <pers-positief class="badge pers" v-if="pers.score >= 5" />
-      <pers-negatief class="badge pers" v-if="pers.score < 5" />
-      <burgers-happy class="badge burgers" v-if="burgers.score >= 5" />
-      <burgers-bozen class="badge burgers" v-if="burgers.score < 5" />
-      <geld class="badge geld" v-if="geld.score >= 5" />
-      <geen-geld class="badge geld" v-if="geld.score < 5" />
-    </div>
-  
-    <div v-else class="scoremeter-expanded">
-      <div class="meter">
-          <div class="meter-gauge" :class="pers.persClass">
-            <span :style="`width: ${pers.persPercentage}%`"></span>
-          </div>
-        <pers-positief class="pers" />
+    <div class="scoremeter-icons">
+      <div class="icon">
+        <press class="press" v-if="press.score >= 5" />
+        <press-negative class="press" v-if="press.score < 5" />
       </div>
-      <div class="meter">
-        <div class="meter-gauge" :class="burgers.burgersClass">
-          <span :style="`width: ${burgers.burgersPercentage}%`"></span>
-        </div>
-        <burgers-happy class="burger" />
+      
+      <div class="icon">
+        <citizen class="citizen" v-if="citizens.score >= 5" />
+        <citizen-angry class="citizen" v-if="citizens.score < 5" />
       </div>
-      <div class="meter">
-        <div class="meter-gauge" :class="geld.geldClass">
-          <span :style="`width: ${geld.geldPercentage}%`"></span>
-        </div>
-        <geld class="geld" />
+      
+      <div class="icon">
+        <money class="money" v-if="money.score >= 5" />
+        <money-negative class="money" v-if="money.score < 5" />
       </div>
     </div>
+
+    <transition name="slide-right">
+    <div v-if="expand" class="scoremeter-meters">
+      <div class="meter">
+        <div class="meter-gauge" :class="press.meterClass">
+          <span :style="`width:${press.meterPercentage}%`"></span>
+        </div>
+      </div>
+      
+      <div class="meter">
+        <div class="meter-gauge" :class="citizens.meterClass">
+          <span :style="`width: ${citizens.meterPercentage}%`"></span>
+        </div>
+      </div>
+      
+      <div class="meter">
+        <div class="meter-gauge" :class="money.meterClass">
+          <span :style="`width: ${money.meterPercentage}%`"></span>
+        </div>
+      </div>
+    </div>
+    </transition>
   </button>
 </template>
 
 <script>
-import PersNegatief from '~/static/images/pers-negatief.svg'
-import PersPositief from '~/static/images/pers-positief.svg'
-import BurgersHappy from '~/static/images/smile.svg'
-import BurgersBozen from '~/static/images/burgers-bozen.svg'
-import Geld from '~/static/images/money.svg'
-import GeenGeld from '~/static/images/dollar.svg'
+import PressNegative from '~/static/images/press-negative.svg'
+import Press from '~/static/images/press.svg'
+import Citizen from '~/static/images/citizen.svg'
+import CitizenAngry from '~/static/images/citizen-angry.svg'
+import Money from '~/static/images/money.svg'
+import MoneyNegative from '~/static/images/money-negative.svg'
 
 export default {
-  components: { PersNegatief, PersPositief, BurgersHappy, BurgersBozen, Geld, GeenGeld },
+  components: { PressNegative, Press, Citizen, CitizenAngry, Money, MoneyNegative },
   props: ['scoremeter'],
   data () {
     return {
       expand: false,
+      lowScore: 4,
+      highScore: 6
     }
   },
   computed: {
-    geld () {
-      const score = this.scoremeter.geld
-      const geldPercentage = (this.scoremeter.geld / 10) * 100
-      let geldClass;
-
-      if (score <= 3) { geldClass = 'red' }
-      if (score > 3 && score <= 6) { geldClass = 'orange'}
-      if (score > 6) { geldClass = 'green'}
-      
-      return {
-        score,
-        geldPercentage,
-        geldClass
-      }
+    money () {
+      return this.calculateMeters(this.scoremeter.money)
     },
-    pers () {
-      const score = this.scoremeter.pers
-      const persPercentage = (this.scoremeter.pers / 10) * 100
-      let persClass;
-
-      if (score <= 3) { persClass = 'red' }
-      if (score > 3 && score <= 6) { persClass = 'orange'}
-      if (score > 6) { persClass = 'green'}
-      
-      return {
-        score,
-        persPercentage,
-        persClass
-      }
+    press () {
+      return this.calculateMeters(this.scoremeter.press)
     },
-    burgers () {
-      const score = this.scoremeter.burgers
-      const burgersPercentage = (this.scoremeter.burgers / 10) * 100
-      let burgersClass;
-
-      if (score <= 3) { burgersClass = 'red' }
-      if (score > 3 && score <= 6) { burgersClass = 'orange'}
-      if (score > 6) { burgersClass = 'green'}
-      
-      return {
-        score,
-        burgersPercentage,
-        burgersClass
-      }
+    citizens () {
+      return this.calculateMeters(this.scoremeter.citizens)
     }
   },
   methods: {
     toggleExpand() {
       this.expand = !this.expand
     },
+
+    calculateMeters(score) {
+      let meterClass;
+      let meterPercentage = (score / 10) * 100
+      
+      if (meterPercentage < 5) { meterPercentage = 5 }
+
+      if (score <= this.lowScore) { meterClass = 'negative' }
+      if (score > this.lowScore && score < this.highScore) { meterClass = 'neutral'}
+      if (score >= this.highScore) { meterClass = 'positive'}
+      
+      return {
+        score,
+        meterPercentage,
+        meterClass
+      }
+    }
   }
 }
 </script>
@@ -106,79 +98,105 @@ export default {
 <style scoped>
 @import '~/assets/core.css';
 
-.badge {
-  height: 30px;
+.icon {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.money,
+.citizen {
+  width: 45px;
+}
+
+.press {
   width: 30px;
-  position: relative;
+  transform: rotate(-20deg);
 }
 
-.pers,
-.geld,
-.burger {
-  height: 30px;
-  widows: 30px;
+.scoremeter {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  margin-top: var(--spacing-double);
+  padding: 0;
+  height: 145px;
+  background-color: transparent;
+  z-index: 1;
 }
 
-.meter-gauge { 
-  border-radius: 3px;
-  display: block;
-  margin: 0 1rem;
-  width: 100px;
-  height: 20px;
-  background: none;
-  background-color: #eee; 
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
-  overflow: hidden;
+@media screen and (max-width: 600px) {
+  .scoremeter {
+    margin-top: 0;
+    top: 60px;
+  }
 }
 
-.meter-gauge.orange > span {
-  background-color: orange;
+.scoremeter-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-half);
+  background-color: var(--white);
+  height: 145px;
 }
-.meter-gauge.green > span {
-  background-color: green;
-}
-.meter-gauge.red > span {
-  background-color: red;
-}
-  
-.meter-gauge > span {
-  height: inherit;  
-  display: block;
+
+.scoremeter-meters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-half);
+  background-color: var(--white);
+  height: 145px;
+  z-index: -1;
 }
 
 .meter {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
+  height: 40px;
 }
 
-.badge:not(:last-child),
-.meter:not(:last-child) {
-  margin-bottom: 10px;
+.meter-gauge { 
+  display: block;
+  border: 2px solid var(--black);
+  border-radius: 30px;
+  width: 100px;
+  height: 25px;
+  background: none;
+  overflow: hidden;
 }
 
-.scoremeter {
-  height: 135px;
-  position: absolute;
-  top: 20%;
-  right: 0;
-  background-color: var(--white);
-  box-shadow: var(--box-shadow);
-  margin-top: 2rem;
+.meter-gauge > span {
+  display: block; 
+  height: inherit;  
+}
+
+.meter-gauge.neutral > span {
+  background-color: var(--orange);
+}
+.meter-gauge.positive > span {
+  background-color: var(--green-secondary);
+}
+.meter-gauge.negative > span {
+  background-color: var(--red-secondary);
 }
 
 button,
 .button {
-  padding: 0 .5rem;
+  padding: 0 var(--spacing-half);
+  transition: none;
 }
 
-.scoremeter-small,
-.scoremeter-expanded {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+button:active,
+.button:active {
+  transform: none;
+  box-shadow: none;
 }
-
 </style>
