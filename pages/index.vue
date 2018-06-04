@@ -1,8 +1,10 @@
 <template>
   <section class="container">
-    <a href="https://versbeton.nl/" class="logo" target="_blank">
-      <img src="~static/images/vers-beton-logo.png" >
-    </a>
+    <logo />
+
+    <scoremeter 
+      :scoremeter="scoremeter"
+    />
 
     <city-map ref="map" />
 
@@ -88,12 +90,13 @@ import CityMap from '~/components/Map.vue'
 import InfoButton from '~/components/InfoButton.vue'
 import SoundButton from '~/components/SoundButton.vue'
 import ShareButton from '~/components/ShareButton.vue'
-import { setTimeout } from 'timers';
 import page from '~/static/data/onboarding.json'
+import Scoremeter from '~/components/Scoremeter.vue'
+import Logo from '~/components/Logo.vue'
 import Sound from '~/static/sounds/heipaal.wav'
 
 export default {
-  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton, SoundButton },
+  components: { About, Question, QuestionNotice, ReadyNotice, Feedback, CityMap, ShareButton, InfoButton, SoundButton, Logo, Scoremeter },
   data () {
     return {
       hasNotice: false,
@@ -103,6 +106,7 @@ export default {
       showAbout: false,
       playSound: true,
       lastChoice: '',
+      showBadges: false,
       page,
     }
   },
@@ -121,7 +125,8 @@ export default {
     'continuePlaying',
     'seenNotice',
     'seenFeedback',
-    'seenReadyNotice'
+    'seenReadyNotice',
+    'scoremeter',
   ]),
   methods: {
     startGame () {
@@ -164,16 +169,19 @@ export default {
     },
 
     handleAnswer (answer) {
-      this.$store.commit('hideQuestion')
-      const followUpQuestions = answer.outcome.filter(outcome => outcome.itemType === 'question')
-      const results = answer.outcome.filter(outcome => outcome.itemType === 'result')
-      const consequences = answer.outcome.filter(outcome => outcome.itemType === 'consequence')
+      const { outcome, geld, pers, burgers, feedback } = answer
+      const followUpQuestions = outcome.filter(outcome => outcome.itemType === 'question')
+      const results = outcome.filter(outcome => outcome.itemType === 'result')
+      const consequences = outcome.filter(outcome => outcome.itemType === 'consequence')
       const hasFollowUpQuestions = followUpQuestions.length > 0
 
-      if (answer.feedback && (answer.feedback.length > 1)) {
+      this.$store.commit('hideQuestion')
+      this.updateScoremeter({geld, pers, burgers})
+
+      if (feedback && (feedback.length > 1)) {
         this.hasFeedback = true
         this.$store.commit('seenFeedback', false)
-        this.feedbackContent = answer.feedback
+        this.feedbackContent = feedback
       }
 
       if (results.length > 0) {
@@ -305,6 +313,10 @@ export default {
       }
     },
 
+    updateScoremeter (scoremeter) {
+      this.$store.commit('updateScoremeter', scoremeter)
+    },
+
     hideAllElements() {
       this.$store.commit('hideNotice')
       this.$store.commit('hideReadyNotice')
@@ -322,24 +334,6 @@ export default {
 
 <style scoped>
 @import '~/assets/core.css';
-
-.logo {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
-  height: auto;
-  width: 75px;
-}
-
-.logo img {
-  max-width: 100%;
-}
-
-@media screen and (min-width: 600px) {
-  .logo {
-    width: 120px;
-  }
-}
 
 .buttons {
   position: absolute;
