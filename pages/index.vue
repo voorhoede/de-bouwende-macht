@@ -58,7 +58,7 @@
       />
     </transition>
 
-    <div class="toast card" v-if="gameEnded">
+    <div class="toast card" v-if="gameEnded && this.seenFeedback">
       <p>Dit is jouw Rotterdam!</p>
 
       <nuxt-link
@@ -138,7 +138,7 @@ export default {
     play () {
       this.hideAllElements()
 
-      if (this.gameEnded) {
+      if (this.gameEnded && this.seenFeedback) {
         return
       }
 
