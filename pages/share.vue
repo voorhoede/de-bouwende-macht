@@ -9,10 +9,7 @@
 
     <div class="content" v-html="page.content"></div>
     
-    <div class="postal-card">
-      <city-map class="city-map" />
-      <p class="postal-card-text">Groeten uit mijn Rotterdam</p>
-    </div>
+    <postal-card :buildings="currentScenario" />
 
     <div class="sharing-buttons">
       <a 
@@ -55,37 +52,39 @@ import Logo from '~/components/Logo.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
 import page from '~/static/data/share.json'
+import results from '~/static/data/results.json'
 import FacebookLogo from '~/static/images/facebook.svg'
 import TwitterLogo from '~/static/images/twitter.svg'
 import WhatsappLogo from '~/static/images/whatsapp.svg'
+import PostalCard from '~/components/PostalCard.vue'
 
 export default {
-  components: { CityMap, EmailForm, Logo, TwitterLogo, FacebookLogo, WhatsappLogo },
+  components: { CityMap, EmailForm, Logo, TwitterLogo, FacebookLogo, WhatsappLogo, PostalCard },
+  computed: mapState([
+              'currentScenario',
+            ]),
   data() {
     return {
       url: '',
-      text: 'Ik heb het spel “De Bouwende Macht” gespeeld. Dit is mijn Rotterdam! ',
-      slug: '',
+      text: 'Ik heb het spel “Bouwen is Macht” gespeeld. Dit is mijn Rotterdam! ',
       page,
+      results,
+      slug: '',
     }
   },
-
   mounted () {
     const urlOrigin = location.origin + '/mijn-rotterdam/?buildings='
-    const urlParams = queryString.parse(location.search)
-    const slug = urlParams.buildings
-    const cityBuildings = slug.split('-')
+    let shortSlugs = []
 
-    this.slug = slug
-    this.url = urlOrigin
-
-    cityBuildings.map(building => {
-      const id = building.toUpperCase()
-      const el = document.getElementById(id)
+    this.currentScenario.map(building => {
+      const result = this.results.find(result => result.slug === building)
       
-      el.classList.remove('hidden')
+      shortSlugs.push(result.shortSlug)
     })
-  },
+
+    this.url = urlOrigin
+    this.slug = shortSlugs.join('-')
+  }
 }
 </script>
 
@@ -97,12 +96,6 @@ export default {
   padding: var(--spacing-double) var(--spacing-normal) var(--spacing-normal);
 }
 
-.content {
-  max-width: 500px;
-  margin: 0 auto;
-  padding-bottom: var(--spacing-double);
-}
-
 .page-title {
   margin-bottom: var(--spacing-double);
 }
@@ -111,25 +104,11 @@ export default {
   display: block;
 }
 
-.postal-card {
-  padding: .8rem;
-  box-shadow: var(--box-shadow);
-  transform: rotate(-4deg);
-  margin: 0 auto var(--spacing-normal) auto;
-  width: 80%;
-  max-width: 600px;
-  background-color: var(--white);
-}
-
-.city-map {
-  width: 100%;
-}
-
-.postal-card-text {
-  margin-bottom: 0;
-  font-family: 'Dancing Script';
-  font-weight: bold;
-  color: var(--pink);
+.sharing-buttons {
+  border-bottom: 2px solid var(--green);
+  width: 250px;
+  margin: var(--spacing-double) auto;;
+  padding-bottom: var(--spacing-double);
 }
 
 @media screen and (max-width: 430px) {
@@ -142,47 +121,13 @@ export default {
     font-size: 1.2rem;
   }
 
-  .postal-card {
-    margin-bottom: 1.5rem;
-    padding: var(--spacing-half);
-    width: 95%;
-  }
-
   .sharing-buttons {
     margin-top: var(--spacing-normal);
   }
 }
 
-@media screen and (max-width: 632px) {
-  .postal-card-text {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 632px) {
-  .postal-card {
-    margin-bottom: var(--spacing-normal);
-  }
-  
-  .postal-card-text {
-    font-size: var(--font-size-big);
-  }
-}
-
-.postal-card .city-map {
-  height: auto;
-  width: auto;
-  overflow: hidden;
-}
-
-.sharing-buttons {
-  border-bottom: 2px solid var(--green);
-  width: 250px;
-  margin: var(--spacing-double) auto;;
-  padding-bottom: var(--spacing-double);
-}
-
 .share-logo:not(:last-child) {
   margin-right: var(--spacing-normal);
 }
+
 </style>

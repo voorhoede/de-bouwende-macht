@@ -6,6 +6,7 @@ module.exports = (dato, root) => {
     const mainQuestions = questions.filter(question => !question.followUp && !question.dependent)
 
     dir.createDataFile('questions.json', 'json', mapCollection(mainQuestions))
+    dir.createDataFile('results.json', 'json', mapCollection(dato.collectionsByType.results))
     dir.createDataFile('about.json', 'json', pageToJson(dato.about))
     dir.createDataFile('onboarding.json', 'json', pageToJson(dato.collectionsByType.onboarding))
     dir.createDataFile('share.json', 'json', pageToJson(dato.collectionsByType.share))

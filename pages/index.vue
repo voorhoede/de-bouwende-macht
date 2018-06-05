@@ -6,7 +6,7 @@
       :scoremeter="scoremeter"
     />
 
-    <city-map ref="map" />
+    <city-map ref="map" :visibleBuildings="currentScenario" />
 
     <div v-if="!gameStarted" class="card center">
       <h1 class="page-title">{{ page.title }}</h1>
@@ -17,10 +17,9 @@
       </div>
     </div>
 
-    <transition name="slide-up">
+    <transition name="slow-slide-up">
       <ready-notice
         v-if="showReadyNotice"
-        :slug="currentScenario.join('-')"
         @onClick="play"
       />
     </transition>
@@ -34,7 +33,6 @@
       <share-button
         class="share-button-rounded"
         v-if="continuePlaying"
-        :slug="currentScenario.join('-')"
       />
     </div>
 
@@ -42,7 +40,7 @@
       <about v-if="showAbout" @onClick="showAbout = !showAbout" />
     </transition>
 
-    <transition name="slide-up">
+    <transition name="slow-slide-up">
       <question-notice
         v-if="showNotice"
         :content="currentQuestion.toastertekst"
@@ -63,7 +61,7 @@
 
       <nuxt-link
         class="button button-primary"
-        :to="'/share/?buildings=' + currentScenario.join('-')"
+        :to="'/share'"
       >
         Delen
       </nuxt-link>
@@ -110,6 +108,7 @@ export default {
       page,
     }
   },
+
   computed: mapState([
     'questions',
     'questionsCount',
@@ -185,7 +184,6 @@ export default {
       }
 
       if (results.length > 0) {
-
         results.map(result => {
           let building = result.slug
 
@@ -248,7 +246,7 @@ export default {
             const sound = new Audio(Sound)
             sound.play()
           }
-          el.classList.add('fade')
+          el.classList.add('shake')
           if (window.navigator.vibrate) {
             window.navigator.vibrate([100]);
           }
@@ -257,7 +255,7 @@ export default {
 
       if (type === 'removeBuilding') {
         el.classList.add('hidden')
-        el.classList.remove('fade')
+        el.classList.remove('shake')
       }
 
       this.$store.commit('updateCity', { type: type, slug: slug })
@@ -319,18 +317,22 @@ export default {
       this.$store.commit('updateScoremeter', scoremeter)
     },
 
-    hideAllElements() {
+    hideAllElements () {
       this.$store.commit('hideNotice')
       this.$store.commit('hideReadyNotice')
       this.$store.commit('hideQuestion')
       this.$store.commit('hideFeedback')
-      },
     },
 
-    transition (to, from) {
-      if (!from) return 'slide-left'
-      return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
-    },
+    redirectToSharePage () {
+      return this.$router.push('/share')
+    }
+  },
+
+  transition (to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  },
 }
 </script>
 
