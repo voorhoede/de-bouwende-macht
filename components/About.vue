@@ -1,7 +1,6 @@
 <template>
   <section class="full-screen">
-
-    <div class="">
+    <div>
       <button
         class="close-button"
         @click="onClickButton()"
@@ -46,6 +45,10 @@ export default {
 .close-button:hover,
 .close-button:focus {
   color: var(--pink-secondary);
+}
+
+.full-screen > div {
+  margin: 0 auto;
 }
 
 </style>
