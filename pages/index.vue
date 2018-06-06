@@ -105,6 +105,7 @@ export default {
       playSound: true,
       lastChoice: '',
       showBadges: false,
+      feedbackContent: '',
       page,
     }
   },
@@ -152,7 +153,9 @@ export default {
       } else if (shouldShowNotice) {
         return this.$store.commit('showNotice')
       } else {
-        return this.$store.commit('showQuestion')
+        return this.$nextTick(() => {
+          this.$store.commit('showQuestion')
+        })
       }
     },
 
@@ -281,6 +284,7 @@ export default {
       if (map.scrollTop + tryTop < minScrollTop) {
         // When trying to scroll lower than minimal scroll pos
         top = minScrollTop - map.scrollTop
+        //top = Math.max(map.scrollTop + tryTop, minScrollTop)
       } else if (map.scrollTop + tryTop > maxScrollTop) {
         // When trying to scroll higher than maximal scroll pos
         top = maxScrollTop - map.scrollTop
