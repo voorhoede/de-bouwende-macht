@@ -7,7 +7,12 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, minimal-ui' },
-      { hid: 'description', name: 'description', content: 'Wie heeft de macht in Rotterdam?' }
+      { hid: 'description', name: 'description', content: 'Wie heeft de macht in Rotterdam?' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: 'http://lorempixel.com/output/abstract-q-g-960-480-8.jpg' }, // TODO: replace with correct image
+      { name: 'og:title', content: 'Bouwen is Macht' },
+      { name: 'og:description', content: 'Bouw hier jouw Rotterdam' },
+      { name: 'og:image', content: 'http://lorempixel.com/output/abstract-q-g-960-480-8.jpg' } // TODO: replace with correct image
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
