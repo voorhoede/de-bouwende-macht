@@ -36,7 +36,7 @@ export default {
       
       el.classList.remove('hidden')
     })
-  }
+  },
 }
 
  </script>

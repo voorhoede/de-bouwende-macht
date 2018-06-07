@@ -288,8 +288,8 @@ export default {
       const elBounds = el.getBoundingClientRect()
       const mapContent = map.children[0] // transforms on wrapping div, not on svg
       const mapImage = mapContent.querySelector('svg') // use sizing of svg
-      const mapWidth = mapImage.clientWidth
-      const mapHeight = mapImage.clientHeight
+      const mapWidth = mapImage.clientWidth || mapContent.clientWidth // firefox fix
+      const mapHeight = mapImage.clientHeight || mapContent.clientHeight // firefox fix
       const viewWidth = document.body.clientWidth
       const viewHeight = document.body.clientHeight
       const minScrollLeft = 0
