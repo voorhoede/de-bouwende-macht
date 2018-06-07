@@ -9,7 +9,7 @@
 <script>
 import MapGraphic from '~/static/images/city-map.svg'
 
-const width = 764.75 
+const width = 764.75
 const height = 545.87
 const aspectRatio = width / height // higher is longer
 
@@ -29,7 +29,7 @@ export default {
     }
   },
   components: { MapGraphic }
-} 
+}
 
  </script>
 
@@ -39,6 +39,8 @@ export default {
 .city-map {
   overflow: scroll;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 .city-map__content {

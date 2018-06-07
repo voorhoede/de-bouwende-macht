@@ -2,7 +2,7 @@
   <section class="container">
     <logo />
 
-    <scoremeter 
+    <scoremeter
       :scoremeter="scoremeter"
     />
 
@@ -199,13 +199,24 @@ export default {
 
           this.updateCity(building, 'addBuilding')
         })
+
+        // Move to first result, otherwise map will jump around between
+        // multiple results
+        this.moveToElement(results[0].slug)
       }
 
       if (consequences.length) {
+        let building;
         consequences.map(consequence => {
-          const building = consequence.delete[0]
+          building = consequence.delete[0]
           this.updateCity(building.slug, 'removeBuilding')
         })
+
+        // If there is no result, we should move the map to the first
+        // consequence instead
+        if (results.length === 0) {
+          this.moveToElement(building.slug)
+        }
       }
 
       if ((this.questionsCount === 4 ) && !followUpQuestions.length) {
@@ -261,6 +272,16 @@ export default {
       }
 
       this.$store.commit('updateCity', { type: type, slug: slug })
+    },
+
+    moveToElement(slug = '') {
+      const id = slug.toUpperCase();
+      const el = document.getElementById(id)
+      const map = this.$refs.map.$el
+
+      if (!el) {
+        return false
+      }
 
       // Scroll to changed element:
       const elBounds = el.getBoundingClientRect()
@@ -302,16 +323,21 @@ export default {
       if ('transition' in mapContent.style && 'transform' in mapContent.style) {
         mapContent.style.transition = 'transform 1s'
         mapContent.style.transform = `translate(${-1* left}px, ${-1* top}px)`
-        mapContent.addEventListener('transitionend', () => {
-          mapContent.style.transition = ''
-          mapContent.style.transform = ''
-          map.scrollTop += top
-          map.scrollLeft += left
-        })
+        mapContent.addEventListener('transitionend', endTransition)
       } else {
         // jump to element
         map.scrollTop += top
         map.scrollLeft += left
+      }
+
+      // Callback after transition, needs to be a separate function
+      // so that event listener can be removed
+      function endTransition() {
+        mapContent.style.transition = ''
+        mapContent.style.transform = ''
+        map.scrollTop += top
+        map.scrollLeft += left
+        mapContent.removeEventListener('transitionend', endTransition)
       }
     },
 
