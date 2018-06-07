@@ -9,10 +9,10 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1, minimal-ui' },
       { hid: 'description', name: 'description', content: 'Wie heeft de macht in Rotterdam?' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:image', content: 'http://lorempixel.com/output/abstract-q-g-960-480-8.jpg' }, // TODO: replace with correct image
+      { name: 'twitter:image', content: 'https://www.datocms-assets.com/5547/1528381276-bouwen-is-macht.png' },
       { name: 'og:title', content: 'Bouwen is Macht' },
       { name: 'og:description', content: 'Bouw hier jouw Rotterdam' },
-      { name: 'og:image', content: 'http://lorempixel.com/output/abstract-q-g-960-480-8.jpg' } // TODO: replace with correct image
+      { name: 'og:image', content: 'https://www.datocms-assets.com/5547/1528381276-bouwen-is-macht.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
