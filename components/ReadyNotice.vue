@@ -5,7 +5,6 @@
     <p>Je bent nu halverwege het spel. Als je wilt, kan je vanaf nu jouw Rotterdam delen.</p>
     <share-button
       class="button-secondary"
-      :slug="slug"
       :label="'Dit is mijn Rotterdam!'"
     />
     <p>Is de stad nog niet af? Je kan natuurlijk ook nog verder bouwen:</p>
@@ -19,7 +18,6 @@ import ConstructionWorker from '~/static/images/construction-worker.svg'
 
 export default {
   components: { ShareButton, ConstructionWorker },
-  props: ['slug'],
   methods: {
     onClickButton () {
       this.$store.commit('seenReadyNotice')

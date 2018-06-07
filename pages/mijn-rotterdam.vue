@@ -6,42 +6,44 @@
     </h1>
 
     <div v-if="page.content" v-html="page.content"></div>
-    
-    <div class="postal-card">
-      <city-map />
-      <p class="postal-card-text">Groeten uit mijn Rotterdam!</p>
-    </div>
+
+    <postal-card :buildings="buildings" />
 
     <nuxt-link class="button button-primary" to="/">Bouw jouw Rotterdam</nuxt-link>
   </section>
 </template>
 
 <script>
-import CityMap from '~/components/Map.vue'
+import PostalCard from '~/components/PostalCard.vue'
 import { mapState } from 'vuex'
 import queryString from 'query-string'
 import Logo from '~/components/Logo.vue'
 import page from '~/static/data/mijnRotterdam.json'
+import results from '~/static/data/results.json'
 
 export default {
-  components: { CityMap, Logo },
+  components: { Logo, PostalCard },
   data () {
     return {
       page,
+      results,
+      buildings: [],
     }
   },
-
-  mounted () {
+  beforeMount () {
     const urlParams = queryString.parse(location.search)
     const slug = urlParams.buildings
-    const cityBuildings = slug.split('-')
+    const shortSlugs = slug.split('-')
+    
+    let cityBuildings = []
 
-    cityBuildings.map(building => {
-      const id = building.toUpperCase()
-      const el = document.getElementById(id)
-      
-      el.classList.remove('hidden')
+    shortSlugs.map(shortSlug => {
+      const building = this.results.find(item => item.shortSlug === shortSlug)
+
+      cityBuildings.push(building.slug)
     })
+
+    this.buildings = cityBuildings
   }
 }
 </script>
@@ -62,33 +64,6 @@ export default {
   width: 80%;
 }
 
-.content {
-  max-width: 500px;
-  margin: 0 auto;
-  padding-bottom: var(--spacing-double);
-}
-
-.postal-card {
-  padding: .8rem;
-  box-shadow: var(--box-shadow);
-  transform: rotate(-4deg);
-  margin: 0 auto 3rem auto;
-  width: 80%;
-  max-width: 600px;
-  background-color: var(--white);
-}
-
-.city-map {
-  width: 100%;
-}
-
-.postal-card-text {
-  margin-bottom: 0;
-  font-family: 'Dancing Script';
-  font-weight: bold;
-  color: var(--pink);
-}
-
 @media screen and (max-width: 430px) {
   .page-title {
     margin: var(--spacing-double) auto 1.5rem auto;
@@ -98,22 +73,12 @@ export default {
   .tagline {
     font-size: 1.2rem;
   }
-
-  .postal-card {
-    padding: var(--spacing-half);
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 532px) {
-  .page-title {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 600px) {
   .page-title{
     font-size: 1.7rem;
+    width: 90%;
   }
 }
 
@@ -122,15 +87,9 @@ export default {
     margin-top: var(--spacing-normal);
   }
 
-  .postal-card-text {
-    font-size: var(--font-size-big);
+  .button {
+    margin-top: var(--spacing-double);
   }
-}
-
-.postal-card .city-map {
-  height: auto;
-  width: auto;
-  overflow: hidden;
 }
 
 </style>

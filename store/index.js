@@ -8,7 +8,7 @@ const createStore = () => {
     totalQuestions: questions.length,
     questionsCount: 0,
     currentQuestion: {},
-    currentScenario: [],
+    currentScenario: ['marconitorens', 'wijkgebouw', 'newyork', 'kerk', 'dekuip'],
     gameStarted: false,
     gameEnded: false,
     showQuestion: false,

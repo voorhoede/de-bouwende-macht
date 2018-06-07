@@ -1,7 +1,7 @@
 <template>
   <nuxt-link 
     class="share-button"
-    :to="'/share/?buildings=' + slug"
+    :to="'/share'"
   >
     <share-icon class="share-icon" />
     {{ label }}
@@ -12,7 +12,7 @@
 import ShareIcon from '~/static/images/share-icon.svg'
 
 export default {
-  props: ['slug', 'label'],
+  props: ['label'],
   components: { ShareIcon }
 }
 
@@ -57,22 +57,6 @@ export default {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-}
-
-.share-button-rounded:before {
-  content: '';
-  width: var(--button-size);
-  height: var(--button-size);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 50%;
-  animation-name: glow;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 5;
 }
 
 .share-button-rounded .share-icon {
