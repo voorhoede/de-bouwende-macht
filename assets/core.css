@@ -110,8 +110,8 @@ p {
   width: 100%;
   height: 100%;
   background: white;
-  z-index: 1;
-  padding: 2rem;
+  z-index: 20;
+  padding: var(--spacing-double);
 }
 
 .page-title {
@@ -128,6 +128,9 @@ p {
 
 .content {
   font-family: var(--font);
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: var(--spacing-double);
 }
 
 .postal-card svg {
@@ -138,5 +141,5 @@ p {
 .tagline {
   display: block;
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: var(--spacing-normal);
 }

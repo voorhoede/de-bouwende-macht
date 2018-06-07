@@ -14,6 +14,7 @@ const height = 545.87
 const aspectRatio = width / height // higher is longer
 
 export default {
+  props: ['visibleBuildings'],
   data () {
     return { aspectRatio }
   },
@@ -28,7 +29,14 @@ export default {
       return (this.aspectRatio > this.windowAspectRatio) ? '104vh' : `${Math.floor(104 / this.aspectRatio)}vw`
     }
   },
-  components: { MapGraphic }
+  components: { MapGraphic },
+  mounted () {
+    this.visibleBuildings.forEach(building => {
+      const el = document.getElementById(building.toUpperCase())
+      
+      el.classList.remove('hidden')
+    })
+  }
 } 
 
  </script>
@@ -49,16 +57,11 @@ export default {
   opacity: 0;
 }
 
-.city-map .fade-in {
-  -webkit-animation: bounce-in 1s;
-  animation: bounce-in 1s;
-}
-
 .slide {
   animation: slideIn 1.2s;
 }
 
-.fade {
+.shake {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
