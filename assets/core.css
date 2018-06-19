@@ -32,6 +32,17 @@ p {
   margin-bottom: var(--spacing-normal);
 }
 
+a:not(.button),
+a:visited:not(.button) {
+  color: var(--blue);
+  transition: all 0.3s ease 0s;
+}
+
+a:hover:not(.button),
+a:focus:not(.button) {
+  color: var(--blue-dark);
+}
+
 .a11y-sr-only {
   overflow: hidden;
   position: absolute;

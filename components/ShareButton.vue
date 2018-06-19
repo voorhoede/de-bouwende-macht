@@ -23,6 +23,7 @@ export default {
 @import '~/assets/core.css';
 
 .share-button {
+  color: var(--pink) !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +38,7 @@ export default {
 .share-button:hover,
 .share-button:focus {
   background-color: var(--pink-secondary);
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .share-button:hover .share-icon {

@@ -53,7 +53,8 @@ export default {
 @import '~/assets/core.css';
 
 .container {
-  padding: var(--spacing-double) var(--spacing-normal);
+  height: auto;
+  padding: var(--spacing-double) var(--spacing-normal) 4rem;
 }
 
 .page-title {
