@@ -39,9 +39,11 @@
 
     <email-form />
 
-    <small class="credentials">
-      sound from <a class="link-external" href="http://www.freesound.org/people/klankbeeld/" target="_blank">http://www.freesound.org/people/klankbeeld/</a>
-    </small>
+    <div class="credentials">
+      <small>Ontwerp door <a class="link-external" href="http://www.matzwartwerk.nl/" target="_blank">Matzwart</a> | </small>
+      <small>Development door <a class="link-external" href="https://www.voorhoede.nl/" target="_blank">De Voorhoede</a> | </small>
+      <small>Geluid van <a class="link-external" href="http://www.freesound.org/people/klankbeeld/" target="_blank">http://www.freesound.org/people/klankbeeld/</a></small>
+    </div>
   </section>
 </template>
 
@@ -129,5 +131,4 @@ export default {
 .share-logo:not(:last-child) {
   margin-right: var(--spacing-normal);
 }
-
 </style>
