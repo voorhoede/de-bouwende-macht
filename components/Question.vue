@@ -38,8 +38,8 @@ export default {
         this.$ga.event({
           eventCategory: 'question',
           eventAction: 'answer',
-          eventLabel: currentQuestion.question,
-          eventValue: answer.label
+          eventLabel: `${currentQuestion.question}: ${answer.label}`,
+          eventValue: 1
         })
       }
       this.$nextTick( () => {
