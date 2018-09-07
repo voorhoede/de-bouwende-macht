@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import 'babel-polyfill'
+
 import { mapState } from 'vuex'
 import svgClassList from '~/lib/svg-class-list.js'
 
