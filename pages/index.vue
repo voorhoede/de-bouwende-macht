@@ -79,6 +79,8 @@
 
 <script>
 import { mapState } from 'vuex'
+import svgClassList from '~/lib/svg-class-list.js'
+
 import About from '~/components/About.vue'
 import Question from '~/components/Question.vue'
 import QuestionNotice from '~/components/QuestionNotice.vue'
@@ -251,16 +253,16 @@ export default {
       }
 
       if (type === 'addBuilding') {
-        el.classList.remove('hidden')
+        svgClassList(el).remove('hidden')
 
         if (id === 'VIEZELUCHT') {
-          el.classList.add('slide')
+          svgClassList(el).add('slide')
         } else {
           if (this.playSound) {
             const sound = new Audio(Sound)
             sound.play()
           }
-          el.classList.add('shake')
+          svgClassList(el).add('shake')
           if (window.navigator.vibrate) {
             window.navigator.vibrate([100]);
           }
@@ -268,8 +270,8 @@ export default {
       }
 
       if (type === 'removeBuilding') {
-        el.classList.add('hidden')
-        el.classList.remove('shake')
+        svgClassList(el).add('hidden')
+        svgClassList(el).remove('shake')
       }
 
       this.$store.commit('updateCity', { type: type, slug: slug })

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import svgClassList from '~/lib/svg-class-list.js'
 import MapGraphic from '~/static/images/city-map.svg'
 
 const width = 764.75
@@ -32,9 +33,8 @@ export default {
   components: { MapGraphic },
   mounted () {
     this.visibleBuildings.forEach(building => {
-      const el = document.getElementById(building.toUpperCase())
-      
-      el.classList.remove('hidden')
+      svgClassList(document.getElementById(building.toUpperCase()))
+        .remove('hidden')
     })
   },
 }
