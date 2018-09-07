@@ -106,7 +106,7 @@ a:focus:not(.button) {
 
 @media screen and (min-width: 632px) {
   .card {
-    margin: 0 auto;
+    margin: 0 calc(50% - 300px);
   }
 }
 
