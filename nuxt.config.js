@@ -16,7 +16,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
   },
   /*
   ** Customize the progress bar color
@@ -26,14 +26,14 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
+    babel: {
+      presets: ['vue-app', ['env', { useBuiltIns: true }]],
+    },
 
     extend (config, { isDev, isClient }) {
       const urlLoader = config.module.rules.find(rule => rule.loader === 'url-loader');
       urlLoader.test = /\.(png|jpe?g|gif)$/;
-        
+
       // Add svg loader (see above)
       config.module.rules.push({
         test: /\.svg$/,

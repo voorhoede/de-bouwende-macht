@@ -16,6 +16,7 @@
     "proxy": "ngrok http 3000"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@nuxtjs/google-analytics": "2.0.2",
     "lodash": "^4.17.10",
     "nuxt": "^1.0.0",
@@ -35,5 +36,10 @@
     "rimraf": "2.6.2",
     "url-loader": "1.0.1",
     "yamljs": "0.3.0"
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "IE 11"
+  ]
 }
