@@ -26,13 +26,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    babel: {
-      presets: ['vue-app', ['env', { useBuiltIns: true }]],
-    },
-
-    extend (config, { isDev, isClient }) {
-      const urlLoader = config.module.rules.find(rule => rule.loader === 'url-loader');
-      urlLoader.test = /\.(png|jpe?g|gif)$/;
+    extend (config, { isDev }) {
+      config.module.rules.forEach((rule) => {
+        if (rule.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/') {
+          rule.test = /\.(png|jpe?g|gif|webp)$/
+        }
+      })
 
       // Add svg loader (see above)
       config.module.rules.push({
@@ -50,7 +49,7 @@ module.exports = {
         loader: 'url-loader'
       });
 
-      if (isDev && isClient) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
